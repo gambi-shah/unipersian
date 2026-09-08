@@ -1,0 +1,5719 @@
+{
+  "overview": {
+    "entries": 59,
+    "defined": 42,
+    "mentioned_only": 0,
+    "requires_manual_review": 0,
+    "not_found": 17,
+    "files_scanned": 239,
+    "roots": [
+      {
+        "package": "unipersian",
+        "root": "/home/amer/Dropbox/Latex/packages/unipersian",
+        "exists": true,
+        "files_scanned": 14
+      },
+      {
+        "package": "babel",
+        "root": "/usr/local/texlive/2026/texmf-dist/tex/generic/babel",
+        "exists": true,
+        "files_scanned": 60
+      },
+      {
+        "package": "bidi",
+        "root": "/usr/local/texlive/2026/texmf-dist/tex/latex/bidi",
+        "exists": true,
+        "files_scanned": 161
+      },
+      {
+        "package": "luabidi",
+        "root": "/usr/local/texlive/2026/texmf-dist/tex/lualatex/luabidi",
+        "exists": true,
+        "files_scanned": 1
+      },
+      {
+        "package": "fontspec",
+        "root": "/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec",
+        "exists": true,
+        "files_scanned": 3
+      }
+    ]
+  },
+  "scan": {
+    "roots": [
+      {
+        "package": "unipersian",
+        "root": "/home/amer/Dropbox/Latex/packages/unipersian",
+        "exists": true,
+        "files_scanned": 14
+      },
+      {
+        "package": "babel",
+        "root": "/usr/local/texlive/2026/texmf-dist/tex/generic/babel",
+        "exists": true,
+        "files_scanned": 60
+      },
+      {
+        "package": "bidi",
+        "root": "/usr/local/texlive/2026/texmf-dist/tex/latex/bidi",
+        "exists": true,
+        "files_scanned": 161
+      },
+      {
+        "package": "luabidi",
+        "root": "/usr/local/texlive/2026/texmf-dist/tex/lualatex/luabidi",
+        "exists": true,
+        "files_scanned": 1
+      },
+      {
+        "package": "fontspec",
+        "root": "/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec",
+        "exists": true,
+        "files_scanned": 3
+      }
+    ],
+    "files_scanned": 239,
+    "files_read_errors": 0,
+    "extension_filter": [
+      ".def",
+      ".sty"
+    ],
+    "follow_directory_symlinks": false,
+    "masked_containers": {}
+  },
+  "warnings": [],
+  "static_limitation": "Pure static analysis: TeX expansion, catcodes, package load order and runtime redefinitions are NOT modelled; results may differ from actual runtime behaviour.",
+  "input_meta": {
+    "entry_count": 59
+  },
+  "results": [
+    {
+      "command": "autofootnoterule",
+      "description": "ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﺧﻮﺩﮐﺎﺭ",
+      "kind": "command",
+      "normalized_name": "autofootnoterule",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "let",
+          "line": 42,
+          "entity_kind": "command",
+          "name": "autofootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "dblfnote-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 80,
+          "entity_kind": "command",
+          "name": "autofootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extrafootnotefeatures-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 140,
+          "entity_kind": "command",
+          "name": "autofootnoterule",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 275,
+          "entity_kind": "command",
+          "name": "autofootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "@empty",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "ftnright-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 809,
+          "entity_kind": "command",
+          "name": "autofootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 271,
+          "entity_kind": "command",
+          "name": "autofootnoterule",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "bidi.sty",
+        "line": 122,
+        "snippet": "n = \\AtEndOfPackage{\\autofootnoterule} ,     footnoterule / left .c"
+      },
+      "mentions_count": 2,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "bidi.sty",
+          "line": 122,
+          "snippet": "n = \\AtEndOfPackage{\\autofootnoterule} ,     footnoterule / left .c"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 278,
+          "snippet": "n{autofootnoterule}{\\autofootnoterule} \\DeclareOption{textwidthfoot"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "footnote-xetex-bidi.def",
+      "line": 140,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "AutoMathDigits",
+      "description": "ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎﺧﻮﺩﮐﺎﺭ",
+      "kind": "command",
+      "normalized_name": "AutoMathDigits",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "DefaultMathDigits",
+      "description": "ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎﻻﺗﯿﻦ",
+      "kind": "command",
+      "normalized_name": "DefaultMathDigits",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "deflatinfont",
+      "description": "ﺗﻌﺮﯾﻒ ﻗﻠﻢ ﻻﺗﯿﻦ",
+      "kind": "command",
+      "normalized_name": "deflatinfont",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "xparse_command",
+          "line": 152,
+          "entity_kind": "command",
+          "name": "deflatinfont",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "DeclareDocumentCommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "unipersian",
+          "file": "unipersian-fonts.def"
+        }
+      ],
+      "defining_packages": [
+        "unipersian"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "DeclareDocumentCommand",
+      "package": "unipersian",
+      "file": "unipersian-fonts.def",
+      "line": 152,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "defpersianfont",
+      "description": "ﺗﻌﺮﯾﻒ ﻗﻠﻢپارسی",
+      "kind": "command",
+      "normalized_name": "defpersianfont",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "xparse_command",
+          "line": 147,
+          "entity_kind": "command",
+          "name": "defpersianfont",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "DeclareDocumentCommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "unipersian",
+          "file": "unipersian-fonts.def"
+        }
+      ],
+      "defining_packages": [
+        "unipersian"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "DeclareDocumentCommand",
+      "package": "unipersian",
+      "file": "unipersian-fonts.def",
+      "line": 147,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "hboxL",
+      "description": "ﮐﺎﺩﺭﺍﭼﭗ",
+      "kind": "command",
+      "normalized_name": "hboxL",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 63,
+          "entity_kind": "command",
+          "name": "hboxL",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 63,
+          "entity_kind": "command",
+          "name": "hboxL",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 99,
+          "entity_kind": "command",
+          "name": "hboxL",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "algorithm2e-xetex-bidi.def",
+        "line": 68,
+        "snippet": "oxR     \\else       \\hboxL     \\fi   }{}{} }  \\@ifpackag"
+      },
+      "mentions_count": 6,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "algorithm2e-xetex-bidi.def",
+          "line": 68,
+          "snippet": "oxR     \\else       \\hboxL     \\fi   }{}{} }  \\@ifpackag"
+        },
+        {
+          "package": "bidi",
+          "file": "bidi.sty",
+          "line": 276,
+          "snippet": "\\if@twocolumn       \\hboxL to \\columnwidth     \\else"
+        },
+        {
+          "package": "bidi",
+          "file": "bidi.sty",
+          "line": 278,
+          "snippet": "dth     \\else       \\hboxL to \\textwidth     \\fi   \\fi }"
+        },
+        {
+          "package": "bidi",
+          "file": "framed-xetex-bidi.def",
+          "line": 166,
+          "snippet": "\\centerline{#2{\\hboxL{\\box\\tw@}}}               \\el"
+        },
+        {
+          "package": "bidi",
+          "file": "framed-xetex-bidi.def",
+          "line": 183,
+          "snippet": "\\centerline{#1{\\hboxL{\\box\\@tempboxa}}}   \\fi } \\ca"
+        },
+        {
+          "package": "bidi",
+          "file": "lineno-xetex-bidi.def",
+          "line": 45,
+          "snippet": "akeLineNumber} }{   \\hboxL to \\z@{\\makeLineNumber} }{}{}"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 63,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "hboxR",
+      "description": "ﮐﺎﺩﺭﺍﺳﺖ",
+      "kind": "command",
+      "normalized_name": "hboxR",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 53,
+          "entity_kind": "command",
+          "name": "hboxR",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 53,
+          "entity_kind": "command",
+          "name": "hboxR",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 95,
+          "entity_kind": "command",
+          "name": "hboxR",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "algorithm2e-xetex-bidi.def",
+        "line": 66,
+        "snippet": "{     \\if@RTL       \\hboxR     \\else       \\hboxL     \\f"
+      },
+      "mentions_count": 3,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "algorithm2e-xetex-bidi.def",
+          "line": 66,
+          "snippet": "{     \\if@RTL       \\hboxR     \\else       \\hboxL     \\f"
+        },
+        {
+          "package": "bidi",
+          "file": "bidi.sty",
+          "line": 270,
+          "snippet": "\\if@twocolumn       \\hboxR to \\columnwidth     \\else"
+        },
+        {
+          "package": "bidi",
+          "file": "bidi.sty",
+          "line": 272,
+          "snippet": "dth     \\else       \\hboxR to \\textwidth     \\fi   \\else"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 53,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "keyval@eq@alias@key",
+      "description": "ﻣﻌﺎﺩﻝ@ﮐﻠﯿﺪ",
+      "kind": "command",
+      "normalized_name": "keyval@eq@alias@key",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "Latincite",
+      "description": "ﻣﺮﺟﻊ ﻻﺗﯿﻦ",
+      "kind": "command",
+      "normalized_name": "Latincite",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "latinfont",
+      "description": "ﻗﻠﻢ ﻻﺗﯿﻦ",
+      "kind": "command",
+      "normalized_name": "latinfont",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "latintoday",
+      "description": "ﺍﻣﺮﻭﺯﻻﺗﯿﻦ",
+      "kind": "command",
+      "normalized_name": "latintoday",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "latex_declare",
+          "line": 416,
+          "entity_kind": "command",
+          "name": "latintoday",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "DeclareRobustCommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "unipersian",
+          "file": "unipersian.sty"
+        }
+      ],
+      "defining_packages": [
+        "unipersian"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "DeclareRobustCommand",
+      "package": "unipersian",
+      "file": "unipersian.sty",
+      "line": 416,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "leftfootnoterule",
+      "description": "ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﭼﭗ",
+      "kind": "command",
+      "normalized_name": "leftfootnoterule",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "let",
+          "line": 44,
+          "entity_kind": "command",
+          "name": "leftfootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "dblfnote-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 82,
+          "entity_kind": "command",
+          "name": "leftfootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extrafootnotefeatures-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 122,
+          "entity_kind": "command",
+          "name": "leftfootnoterule",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 272,
+          "entity_kind": "command",
+          "name": "leftfootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "@empty",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "ftnright-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 810,
+          "entity_kind": "command",
+          "name": "leftfootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 268,
+          "entity_kind": "command",
+          "name": "leftfootnoterule",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "bidi.sty",
+        "line": 123,
+        "snippet": "n = \\AtEndOfPackage{\\leftfootnoterule} ,     footnoterule / right ."
+      },
+      "mentions_count": 3,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "bidi.sty",
+          "line": 123,
+          "snippet": "n = \\AtEndOfPackage{\\leftfootnoterule} ,     footnoterule / right ."
+        },
+        {
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def",
+          "line": 125,
+          "snippet": "\\let\\LRfootnoterule=\\leftfootnoterule \\def\\rightfootnoterule{ \\bidi"
+        },
+        {
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def",
+          "line": 357,
+          "snippet": "\\@RTLfootnotetext} \\leftfootnoterule \\endinput"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "footnote-xetex-bidi.def",
+      "line": 122,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "lr",
+      "description": "ﻣﺘﻦ ﻻﺗﯿﻦ",
+      "kind": "command",
+      "normalized_name": "lr",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 285,
+          "entity_kind": "command",
+          "name": "lr",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "unipersian",
+          "file": "unipersian.sty"
+        },
+        {
+          "type": "xparse_command",
+          "line": 351,
+          "entity_kind": "command",
+          "name": "lr",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "ProvideDocumentCommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "unipersian",
+          "file": "unipersian.sty"
+        }
+      ],
+      "defining_packages": [
+        "unipersian"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "def",
+      "package": "unipersian",
+      "file": "unipersian.sty",
+      "line": 285,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "LRE",
+      "description": "ﭼﭗﺑﺮﺍﺳﺖ",
+      "kind": "command",
+      "normalized_name": "LRE",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "latex_def",
+          "line": 311,
+          "entity_kind": "command",
+          "name": "LRE",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "providecommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "unipersian",
+          "file": "unipersian.sty"
+        },
+        {
+          "type": "let",
+          "line": 580,
+          "entity_kind": "command",
+          "name": "LRE",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "@firstofone",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "hyperref-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 88,
+          "entity_kind": "command",
+          "name": "LRE",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi",
+        "unipersian"
+      ],
+      "first_mention": {
+        "package": "unipersian",
+        "file": "unipersian.sty",
+        "line": 344,
+        "snippet": "\\endgroup }  \\let\\LR\\LRE \\let\\RL\\RLE      \\ProvideDocu"
+      },
+      "mentions_count": 10,
+      "mentions": [
+        {
+          "package": "unipersian",
+          "file": "unipersian.sty",
+          "line": 344,
+          "snippet": "\\endgroup }  \\let\\LR\\LRE \\let\\RL\\RLE      \\ProvideDocu"
+        },
+        {
+          "package": "bidi",
+          "file": "bidi.sty",
+          "line": 256,
+          "snippet": "\\bidi@newrobustcmd*{\\LRE}{\\protect\\pLRE} \\def\\pLRE{\\pr"
+        },
+        {
+          "package": "bidi",
+          "file": "bidi.sty",
+          "line": 310,
+          "snippet": "olumnwidth     {\\hss\\LRE{\\bfseries Typeset {\\today} at"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 117,
+          "snippet": "LTR=\\setRTL \\let\\LR=\\LRE \\let\\RL=\\RLE \\def\\@ensure@RTL"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 120,
+          "snippet": "ensure@LTR#1{\\if@RTL\\LRE{#1}\\else#1\\fi} \\let\\@ensure@R"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 97,
+          "snippet": "LTR=\\setRTL \\let\\LR=\\LRE \\let\\RL=\\RLE \\def\\@ensure@RTL"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 100,
+          "snippet": "ensure@LTR#1{\\if@RTL\\LRE{#1}\\else#1\\fi} \\let\\@ensure@R"
+        },
+        {
+          "package": "bidi",
+          "file": "todonotes-xetex-bidi.def",
+          "line": 53,
+          "snippet": "onotes@textdirection\\LRE   \\fi} \\define@choicekey{todo"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 92,
+          "snippet": "de\\luabidi@bracetext\\LRE\\@RTLfalse\\luabidi@setdir\\line"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 108,
+          "snippet": "LTR=\\setRTL \\let\\LR=\\LRE \\let\\RL=\\RLE        \\let\\luab"
+        }
+      ],
+      "definition_type": "providecommand",
+      "package": "unipersian",
+      "file": "unipersian.sty",
+      "line": 311,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "LTRdblcol",
+      "description": "ﺩﻭﺳﺘﻮﯽﻧ ﭼﭗ",
+      "kind": "command",
+      "normalized_name": "LTRdblcol",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "latex_def",
+          "line": 544,
+          "entity_kind": "command",
+          "name": "LTRdblcol",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "newcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "newcommand",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 544,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "LTRfootnote",
+      "description": "ﭘﺎﻧﻮﯾﺲ",
+      "kind": "command",
+      "normalized_name": "LTRfootnote",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "let",
+          "line": 50,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "article-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 124,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "article-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 53,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidiftnxtra.sty"
+        },
+        {
+          "type": "latex_def",
+          "line": 525,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftesidenote.sty"
+        },
+        {
+          "type": "let",
+          "line": 65,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "book-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 139,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "book-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 49,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 123,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 173,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        },
+        {
+          "type": "latex_def",
+          "line": 45,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnotebackref-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 66,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 172,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 49,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 137,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 64,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "report-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 138,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "report-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 188,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrartcl-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 189,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 189,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "LTRthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def"
+        },
+        {
+          "type": "xparse_command",
+          "line": 206,
+          "entity_kind": "command",
+          "name": "LTRfootnote",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "DeclareDocumentCommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "beamerbaseframecomponents-xetex-bidi.def",
+        "line": 420,
+        "snippet": "t}  \\renewcommand<>{\\LTRfootnote}[1][]{   \\let\\beamer@LTRfootn"
+      },
+      "mentions_count": 7,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "beamerbaseframecomponents-xetex-bidi.def",
+          "line": 420,
+          "snippet": "t}  \\renewcommand<>{\\LTRfootnote}[1][]{   \\let\\beamer@LTRfootn"
+        },
+        {
+          "package": "bidi",
+          "file": "bidiftnxtra.sty",
+          "line": 45,
+          "snippet": "t\\FN@sf@@LTRfootnote\\LTRfootnote \\let\\FN@sf@@RTLfootnote\\RTLfo"
+        },
+        {
+          "package": "bidi",
+          "file": "bidituftetitle.sty",
+          "line": 66,
+          "snippet": "mand{\\LTRthanks}[1]{\\LTRfootnote{#1}} \\renewcommand{\\RTLthanks"
+        },
+        {
+          "package": "bidi",
+          "file": "fnpct-xetex-bidi.def",
+          "line": 57,
+          "snippet": "\\AdaptNote \\LTRfootnote{d<>o+m} [\\beamer@mpfn]"
+        },
+        {
+          "package": "bidi",
+          "file": "fnpct-xetex-bidi.def",
+          "line": 67,
+          "snippet": "\\AdaptNote  \\LTRfootnote {o+m} [\\@mpfn]           { \\I"
+        },
+        {
+          "package": "bidi",
+          "file": "footnotebackref-xetex-bidi.def",
+          "line": 42,
+          "snippet": "HFN@OldLTRFootnote}{\\LTRfootnote} \\LetLtxMacro{\\BHFN@OldRTLFoo"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 229,
+          "snippet": "CommandCopy\\Footnote\\LTRfootnote         \\newlength\\footnoteru"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "bidiftnxtra.sty",
+      "line": 53,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "LTRfootnotetext",
+      "description": "ﻣﺘﻦﭘﺎﻧﻮﯾﺲ",
+      "kind": "command",
+      "normalized_name": "LTRfootnotetext",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 332,
+          "entity_kind": "command",
+          "name": "LTRfootnotetext",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "bidiftnxtra.sty",
+        "line": 111,
+        "snippet": "\\bidi@p@ftn\\noexpand\\LTRfootnotetext[\\the\\csname c@\\@mpfn\\endcsnam"
+      },
+      "mentions_count": 9,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "bidiftnxtra.sty",
+          "line": 111,
+          "snippet": "\\bidi@p@ftn\\noexpand\\LTRfootnotetext[\\the\\csname c@\\@mpfn\\endcsnam"
+        },
+        {
+          "package": "bidi",
+          "file": "bidiftnxtra.sty",
+          "line": 121,
+          "snippet": "fter{\\the\\bidi@p@ftn\\LTRfootnotetext[#1]{#2}}}  \\long\\def\\bidi@p@x"
+        },
+        {
+          "package": "bidi",
+          "file": "bidipoem.sty",
+          "line": 234,
+          "snippet": "ipoem@p@ftn\\noexpand\\LTRfootnotetext[\\the\\csname c@\\@mpfn\\endcsnam"
+        },
+        {
+          "package": "bidi",
+          "file": "bidipoem.sty",
+          "line": 244,
+          "snippet": "{\\the\\bidipoem@p@ftn\\LTRfootnotetext[#1]{#2}}}  \\long\\def\\bidipoem"
+        },
+        {
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def",
+          "line": 330,
+          "snippet": "nks         \\protect\\LTRfootnotetext[\\the\\c@footnote]{#1}} } \\def\\"
+        },
+        {
+          "package": "bidi",
+          "file": "hyperref-xetex-bidi.def",
+          "line": 215,
+          "snippet": "tn         \\noexpand\\LTRfootnotetext[\\the\\c@footnote]       }"
+        },
+        {
+          "package": "bidi",
+          "file": "longtable-xetex-bidi.def",
+          "line": 170,
+          "snippet": "he\\LT@p@ftn\\noexpand\\LTRfootnotetext[\\the\\c@footnote]}   \\global\\L"
+        },
+        {
+          "package": "bidi",
+          "file": "tabularx-xetex-bidi.def",
+          "line": 104,
+          "snippet": "\\the\\TX@ftn\\noexpand\\LTRfootnotetext                     [\\the\\csn"
+        },
+        {
+          "package": "bidi",
+          "file": "tabularx-xetex-bidi.def",
+          "line": 108,
+          "snippet": "andafter{\\the\\TX@ftn\\LTRfootnotetext[#1]{#2}}}  \\long\\def\\TX@RTLft"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "footnote-xetex-bidi.def",
+      "line": 332,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "LTRthanks",
+      "description": "ﭘﺎﻧﻮﯾﺲ ﻋﻨﻮﺍﻥ",
+      "kind": "command",
+      "normalized_name": "LTRthanks",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "let",
+          "line": 70,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "article-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 105,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "article-xetex-bidi.def"
+        },
+        {
+          "type": "latex_def",
+          "line": 66,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftetitle.sty"
+        },
+        {
+          "type": "latex_def",
+          "line": 74,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftetitle.sty"
+        },
+        {
+          "type": "latex_def",
+          "line": 91,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftetitle.sty"
+        },
+        {
+          "type": "latex_def",
+          "line": 107,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftetitle.sty"
+        },
+        {
+          "type": "latex_def",
+          "line": 117,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftetitle.sty"
+        },
+        {
+          "type": "let",
+          "line": 85,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "book-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 120,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "book-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 69,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 104,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 328,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 45,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "memoir-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 106,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 152,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 79,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 119,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 84,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "report-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 119,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "report-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 367,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrartcl-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 368,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 368,
+          "entity_kind": "command",
+          "name": "LTRthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "article-xetex-bidi.def",
+        "line": 50,
+        "snippet": "\\let \\LTRfootnote \\LTRthanks   \\let \\RTLfootnote \\RTLthank"
+      },
+      "mentions_count": 15,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "article-xetex-bidi.def",
+          "line": 50,
+          "snippet": "\\let \\LTRfootnote \\LTRthanks   \\let \\RTLfootnote \\RTLthank"
+        },
+        {
+          "package": "bidi",
+          "file": "article-xetex-bidi.def",
+          "line": 124,
+          "snippet": "\\let \\LTRfootnote \\LTRthanks   \\let \\RTLfootnote \\RTLthank"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 65,
+          "snippet": "\\let \\LTRfootnote \\LTRthanks   \\let \\RTLfootnote \\RTLthank"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 139,
+          "snippet": "\\let \\LTRfootnote \\LTRthanks   \\let \\RTLfootnote \\RTLthank"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 49,
+          "snippet": "\\let \\LTRfootnote \\LTRthanks   \\let \\RTLfootnote \\RTLthank"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 123,
+          "snippet": "\\let \\LTRfootnote \\LTRthanks   \\let \\RTLfootnote \\RTLthank"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 66,
+          "snippet": "\\let \\LTRfootnote \\LTRthanks     \\let \\RTLfootnote \\RTLtha"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 172,
+          "snippet": "\\let \\LTRfootnote \\LTRthanks     \\let \\RTLfootnote \\RTLtha"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 49,
+          "snippet": "s   \\let\\LTRfootnote\\LTRthanks   \\let\\RTLfootnote\\RTLthanks"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 137,
+          "snippet": "\\let \\LTRfootnote \\LTRthanks     \\let \\RTLfootnote \\RTLtha"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 64,
+          "snippet": "\\let \\LTRfootnote \\LTRthanks   \\let \\RTLfootnote \\RTLthank"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 138,
+          "snippet": "\\let \\LTRfootnote \\LTRthanks   \\let \\RTLfootnote \\RTLthank"
+        },
+        {
+          "package": "bidi",
+          "file": "scrartcl-xetex-bidi.def",
+          "line": 188,
+          "snippet": "\\let\\LTRfootnote\\LTRthanks       \\let\\RTLfootnote\\RTLtha"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 189,
+          "snippet": "\\let\\LTRfootnote\\LTRthanks       \\let\\RTLfootnote\\RTLtha"
+        },
+        {
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def",
+          "line": 189,
+          "snippet": "\\let\\LTRfootnote\\LTRthanks       \\let\\RTLfootnote\\RTLtha"
+        }
+      ],
+      "definition_type": "renewcommand",
+      "package": "bidi",
+      "file": "bidituftetitle.sty",
+      "line": 66,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "persianday",
+      "description": "ﺭﻭﺯپارسی",
+      "kind": "command",
+      "normalized_name": "persianday",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "persianfont",
+      "description": "ﻗﻠﻢپارسی",
+      "kind": "command",
+      "normalized_name": "persianfont",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "PersianMathDigits",
+      "description": "ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎپارسی",
+      "kind": "command",
+      "normalized_name": "PersianMathDigits",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "persianmonth",
+      "description": "ﻣﺎﻩپارسی",
+      "kind": "command",
+      "normalized_name": "persianmonth",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "persianyear",
+      "description": "ﺳﺎﻝپارسی",
+      "kind": "command",
+      "normalized_name": "persianyear",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "plq",
+      "description": "ﻋﻼﻣﺖ ﭼﭗ ﻧﻘﻞ ﻗﻮﻝپارسی",
+      "kind": "command",
+      "normalized_name": "plq",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "prq",
+      "description": "ﻋﻼﻣﺖ ﺭﺍﺳﺖ ﻧﻘﻞ ﻗﻮﻝپارسی",
+      "kind": "command",
+      "normalized_name": "prq",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "rightfootnoterule",
+      "description": "ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ",
+      "kind": "command",
+      "normalized_name": "rightfootnoterule",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "let",
+          "line": 43,
+          "entity_kind": "command",
+          "name": "rightfootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "dblfnote-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 81,
+          "entity_kind": "command",
+          "name": "rightfootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extrafootnotefeatures-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 126,
+          "entity_kind": "command",
+          "name": "rightfootnoterule",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 273,
+          "entity_kind": "command",
+          "name": "rightfootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "@empty",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "ftnright-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 811,
+          "entity_kind": "command",
+          "name": "rightfootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 269,
+          "entity_kind": "command",
+          "name": "rightfootnoterule",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "bidi.sty",
+        "line": 124,
+        "snippet": "n = \\AtEndOfPackage{\\rightfootnoterule} ,     footnoterule / split ."
+      },
+      "mentions_count": 1,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "bidi.sty",
+          "line": 124,
+          "snippet": "n = \\AtEndOfPackage{\\rightfootnoterule} ,     footnoterule / split ."
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "footnote-xetex-bidi.def",
+      "line": 126,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "rl",
+      "description": "ﻣﺘﻦپارسی",
+      "kind": "command",
+      "normalized_name": "rl",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 286,
+          "entity_kind": "command",
+          "name": "rl",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "unipersian",
+          "file": "unipersian.sty"
+        },
+        {
+          "type": "xparse_command",
+          "line": 362,
+          "entity_kind": "command",
+          "name": "rl",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "ProvideDocumentCommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "unipersian",
+          "file": "unipersian.sty"
+        }
+      ],
+      "defining_packages": [
+        "unipersian"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "def",
+      "package": "unipersian",
+      "file": "unipersian.sty",
+      "line": 286,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "RLE",
+      "description": "ﺭﺍﺳﺖﺑﭽﭗ",
+      "kind": "command",
+      "normalized_name": "RLE",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "latex_def",
+          "line": 303,
+          "entity_kind": "command",
+          "name": "RLE",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "providecommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "unipersian",
+          "file": "unipersian.sty"
+        },
+        {
+          "type": "let",
+          "line": 582,
+          "entity_kind": "command",
+          "name": "RLE",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "@firstofone",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "hyperref-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 89,
+          "entity_kind": "command",
+          "name": "RLE",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi",
+        "unipersian"
+      ],
+      "first_mention": {
+        "package": "unipersian",
+        "file": "unipersian.sty",
+        "line": 345,
+        "snippet": "\\let\\LR\\LRE \\let\\RL\\RLE      \\ProvideDocumentCommand{"
+      },
+      "mentions_count": 11,
+      "mentions": [
+        {
+          "package": "unipersian",
+          "file": "unipersian.sty",
+          "line": 345,
+          "snippet": "\\let\\LR\\LRE \\let\\RL\\RLE      \\ProvideDocumentCommand{"
+        },
+        {
+          "package": "bidi",
+          "file": "bidi.sty",
+          "line": 258,
+          "snippet": "\\bidi@newrobustcmd*{\\RLE}{\\protect\\pRLE} \\def\\pRLE{\\pr"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 118,
+          "snippet": "let\\LR=\\LRE \\let\\RL=\\RLE \\def\\@ensure@RTL#1{\\if@RTL#1\\"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 119,
+          "snippet": "RTL#1{\\if@RTL#1\\else\\RLE{#1}\\fi} \\def\\@ensure@LTR#1{\\i"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 123,
+          "snippet": "ensure@dir#1{\\if@RTL\\RLE{#1}\\else{#1}\\fi} \\let\\@ensure"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 98,
+          "snippet": "let\\LR=\\LRE \\let\\RL=\\RLE \\def\\@ensure@RTL#1{\\if@RTL#1\\"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 99,
+          "snippet": "RTL#1{\\if@RTL#1\\else\\RLE{#1}\\fi} \\def\\@ensure@LTR#1{\\i"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 103,
+          "snippet": "ensure@dir#1{\\if@RTL\\RLE{#1}\\else{#1}\\fi} \\let\\@ensure"
+        },
+        {
+          "package": "bidi",
+          "file": "todonotes-xetex-bidi.def",
+          "line": 50,
+          "snippet": "onotes@textdirection\\RLE   \\or     \\@bidi@todonotes@te"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 93,
+          "snippet": "de\\luabidi@bracetext\\RLE\\@RTLtrue\\luabidi@setdir\\lined"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 109,
+          "snippet": "let\\LR=\\LRE \\let\\RL=\\RLE        \\let\\luabidi@eqno=\\@ke"
+        }
+      ],
+      "definition_type": "providecommand",
+      "package": "unipersian",
+      "file": "unipersian.sty",
+      "line": 303,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "RTLdblcol",
+      "description": "ﺩﻭﺳﺘﻮﯽﻧ ﺭﺍﺳﺖ",
+      "kind": "command",
+      "normalized_name": "RTLdblcol",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "latex_def",
+          "line": 543,
+          "entity_kind": "command",
+          "name": "RTLdblcol",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "newcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "newcommand",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 543,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "RTLfootnote",
+      "description": "ﭘﺎﻧﻮﺷﺖ",
+      "kind": "command",
+      "normalized_name": "RTLfootnote",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "let",
+          "line": 51,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "article-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 125,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "article-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 59,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidiftnxtra.sty"
+        },
+        {
+          "type": "latex_def",
+          "line": 526,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftesidenote.sty"
+        },
+        {
+          "type": "let",
+          "line": 66,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "book-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 140,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "book-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 50,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 124,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 164,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        },
+        {
+          "type": "latex_def",
+          "line": 51,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnotebackref-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 67,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 173,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 50,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 138,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 65,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "report-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 139,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "report-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 189,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrartcl-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 190,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 190,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let",
+          "rhs": "RTLthanks",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def"
+        },
+        {
+          "type": "xparse_command",
+          "line": 217,
+          "entity_kind": "command",
+          "name": "RTLfootnote",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "DeclareDocumentCommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "beamerbaseframecomponents-xetex-bidi.def",
+        "line": 394,
+        "snippet": "t}  \\renewcommand<>{\\RTLfootnote}[1][]{   \\let\\beamer@RTLfootn"
+      },
+      "mentions_count": 6,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "beamerbaseframecomponents-xetex-bidi.def",
+          "line": 394,
+          "snippet": "t}  \\renewcommand<>{\\RTLfootnote}[1][]{   \\let\\beamer@RTLfootn"
+        },
+        {
+          "package": "bidi",
+          "file": "bidiftnxtra.sty",
+          "line": 46,
+          "snippet": "t\\FN@sf@@RTLfootnote\\RTLfootnote \\def\\footnote{\\ifx\\protect\\@t"
+        },
+        {
+          "package": "bidi",
+          "file": "bidituftetitle.sty",
+          "line": 67,
+          "snippet": "mand{\\RTLthanks}[1]{\\RTLfootnote{#1}} } \\renewcommand{\\title}["
+        },
+        {
+          "package": "bidi",
+          "file": "fnpct-xetex-bidi.def",
+          "line": 51,
+          "snippet": "\\AdaptNote \\RTLfootnote{d<>o+m} [\\beamer@mpfn]"
+        },
+        {
+          "package": "bidi",
+          "file": "fnpct-xetex-bidi.def",
+          "line": 65,
+          "snippet": "\\AdaptNote  \\RTLfootnote {o+m} [\\@mpfn]           { \\I"
+        },
+        {
+          "package": "bidi",
+          "file": "footnotebackref-xetex-bidi.def",
+          "line": 43,
+          "snippet": "HFN@OldRTLFootnote}{\\RTLfootnote}  \\renewcommand*\\LTRfootnote{"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "bidiftnxtra.sty",
+      "line": 59,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "RTLfootnotetext",
+      "description": "ﻣﺘﻦﭘﺎﻧﻮﺷﺖ",
+      "kind": "command",
+      "normalized_name": "RTLfootnotetext",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 347,
+          "entity_kind": "command",
+          "name": "RTLfootnotetext",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": {
+        "package": "babel",
+        "file": "babel.sty",
+        "line": 4093,
+        "snippet": "adxebidi#1{     \\ifx\\RTLfootnotetext\\@undefined       \\AtEndOfPack"
+      },
+      "mentions_count": 10,
+      "mentions": [
+        {
+          "package": "babel",
+          "file": "babel.sty",
+          "line": 4093,
+          "snippet": "adxebidi#1{     \\ifx\\RTLfootnotetext\\@undefined       \\AtEndOfPack"
+        },
+        {
+          "package": "bidi",
+          "file": "bidiftnxtra.sty",
+          "line": 114,
+          "snippet": "\\bidi@p@ftn\\noexpand\\RTLfootnotetext[\\the\\csname c@\\@mpfn\\endcsnam"
+        },
+        {
+          "package": "bidi",
+          "file": "bidiftnxtra.sty",
+          "line": 124,
+          "snippet": "fter{\\the\\bidi@p@ftn\\RTLfootnotetext[#1]{#2}}}  \\def\\bidi@p@xfootn"
+        },
+        {
+          "package": "bidi",
+          "file": "bidipoem.sty",
+          "line": 237,
+          "snippet": "ipoem@p@ftn\\noexpand\\RTLfootnotetext[\\the\\csname c@\\@mpfn\\endcsnam"
+        },
+        {
+          "package": "bidi",
+          "file": "bidipoem.sty",
+          "line": 247,
+          "snippet": "{\\the\\bidipoem@p@ftn\\RTLfootnotetext[#1]{#2}}}  \\def\\bidipoem@p@xf"
+        },
+        {
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def",
+          "line": 344,
+          "snippet": "nks         \\protect\\RTLfootnotetext[\\the\\c@footnote]{#1}} } \\let\\"
+        },
+        {
+          "package": "bidi",
+          "file": "hyperref-xetex-bidi.def",
+          "line": 253,
+          "snippet": "tn         \\noexpand\\RTLfootnotetext[\\the\\c@footnote]       }"
+        },
+        {
+          "package": "bidi",
+          "file": "longtable-xetex-bidi.def",
+          "line": 173,
+          "snippet": "he\\LT@p@ftn\\noexpand\\RTLfootnotetext[\\the\\c@footnote]}   \\global\\L"
+        },
+        {
+          "package": "bidi",
+          "file": "tabularx-xetex-bidi.def",
+          "line": 111,
+          "snippet": "\\the\\TX@ftn\\noexpand\\RTLfootnotetext                     [\\the\\csn"
+        },
+        {
+          "package": "bidi",
+          "file": "tabularx-xetex-bidi.def",
+          "line": 115,
+          "snippet": "andafter{\\the\\TX@ftn\\RTLfootnotetext[#1]{#2}}} \\endinput"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "footnote-xetex-bidi.def",
+      "line": 347,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "RTLthanks",
+      "description": "ﭘﺎﻧﻮﺷﺖ ﻋﻨﻮﺍﻥ",
+      "kind": "command",
+      "normalized_name": "RTLthanks",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "let",
+          "line": 71,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "article-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 106,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "article-xetex-bidi.def"
+        },
+        {
+          "type": "latex_def",
+          "line": 67,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftetitle.sty"
+        },
+        {
+          "type": "latex_def",
+          "line": 75,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftetitle.sty"
+        },
+        {
+          "type": "latex_def",
+          "line": 92,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftetitle.sty"
+        },
+        {
+          "type": "latex_def",
+          "line": 108,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftetitle.sty"
+        },
+        {
+          "type": "latex_def",
+          "line": 118,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "renewcommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "bidituftetitle.sty"
+        },
+        {
+          "type": "let",
+          "line": 86,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "book-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 121,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "book-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 70,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 105,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 342,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 46,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "memoir-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 107,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 153,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 80,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 120,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 85,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "report-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 120,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "report-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 368,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrartcl-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 369,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 369,
+          "entity_kind": "command",
+          "name": "RTLthanks",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "article-xetex-bidi.def",
+        "line": 51,
+        "snippet": "\\let \\RTLfootnote \\RTLthanks   \\null\\vfil   \\vskip 60\\p@"
+      },
+      "mentions_count": 15,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "article-xetex-bidi.def",
+          "line": 51,
+          "snippet": "\\let \\RTLfootnote \\RTLthanks   \\null\\vfil   \\vskip 60\\p@"
+        },
+        {
+          "package": "bidi",
+          "file": "article-xetex-bidi.def",
+          "line": 125,
+          "snippet": "\\let \\RTLfootnote \\RTLthanks     {\\LARGE \\@title \\par}"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 66,
+          "snippet": "\\let \\RTLfootnote \\RTLthanks   \\null\\vfil   \\vskip 60\\p@"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 140,
+          "snippet": "\\let \\RTLfootnote \\RTLthanks     {\\LARGE \\@title \\par}"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 50,
+          "snippet": "\\let \\RTLfootnote \\RTLthanks   \\null\\vfil   \\vskip 60\\p@"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 124,
+          "snippet": "\\let \\RTLfootnote \\RTLthanks     {\\LARGE \\@title \\par}"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 67,
+          "snippet": "\\let \\RTLfootnote \\RTLthanks     \\long\\def\\@makefntext##1{"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 173,
+          "snippet": "\\let \\RTLfootnote \\RTLthanks     {\\LARGE \\TitleFont \\@titl"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 50,
+          "snippet": "s   \\let\\RTLfootnote\\RTLthanks   \\renewcommand\\thefootnote{\\"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 138,
+          "snippet": "\\let \\RTLfootnote \\RTLthanks     {\\secshape \\parskip\\z@ \\p"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 65,
+          "snippet": "\\let \\RTLfootnote \\RTLthanks   \\null\\vfil   \\vskip 60\\p@"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 139,
+          "snippet": "\\let \\RTLfootnote \\RTLthanks     {\\LARGE \\@title \\par}"
+        },
+        {
+          "package": "bidi",
+          "file": "scrartcl-xetex-bidi.def",
+          "line": 189,
+          "snippet": "\\let\\RTLfootnote\\RTLthanks       \\renewcommand*\\thefootn"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 190,
+          "snippet": "\\let\\RTLfootnote\\RTLthanks       \\renewcommand*\\thefootn"
+        },
+        {
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def",
+          "line": 190,
+          "snippet": "\\let\\RTLfootnote\\RTLthanks       \\renewcommand*\\thefootn"
+        }
+      ],
+      "definition_type": "renewcommand",
+      "package": "bidi",
+      "file": "bidituftetitle.sty",
+      "line": 67,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "@SepMark",
+      "description": "@ﻋﻼﻣﺖﺑﯿﻦ",
+      "kind": "command",
+      "normalized_name": "@SepMark",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 187,
+          "entity_kind": "command",
+          "name": "@SepMark",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "gdef",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "algorithm2e-xetex-bidi.def",
+        "line": 44,
+        "snippet": "ocf@within\\endcsname\\@SepMark\\@arabic\\c@algocf} \\fi \\ApplyP"
+      },
+      "mentions_count": 170,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "algorithm2e-xetex-bidi.def",
+          "line": 44,
+          "snippet": "ocf@within\\endcsname\\@SepMark\\@arabic\\c@algocf} \\fi \\ApplyP"
+        },
+        {
+          "package": "bidi",
+          "file": "algorithm2e-xetex-bidi.def",
+          "line": 74,
+          "snippet": "gocf@float\\endcsname\\@SepMark\\arabic{AlgoLine}} }{}  \\@ifpa"
+        },
+        {
+          "package": "bidi",
+          "file": "amsart-xetex-bidi.def",
+          "line": 59,
+          "snippet": "tion    {\\thesection\\@SepMark\\arabic{subsection}} \\renewcom"
+        },
+        {
+          "package": "bidi",
+          "file": "amsart-xetex-bidi.def",
+          "line": 60,
+          "snippet": "ion {\\thesubsection \\@SepMark\\arabic{subsubsection}} \\renew"
+        },
+        {
+          "package": "bidi",
+          "file": "amsart-xetex-bidi.def",
+          "line": 61,
+          "snippet": "{\\thesubsubsection\\@SepMark\\arabic{paragraph}} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "amsart-xetex-bidi.def",
+          "line": 62,
+          "snippet": "raph  {\\theparagraph\\@SepMark\\arabic{subparagraph}} \\def\\pa"
+        },
+        {
+          "package": "bidi",
+          "file": "amsbook-xetex-bidi.def",
+          "line": 59,
+          "snippet": "tion    {\\thesection\\@SepMark\\arabic{subsection}} \\renewcom"
+        },
+        {
+          "package": "bidi",
+          "file": "amsbook-xetex-bidi.def",
+          "line": 60,
+          "snippet": "ion {\\thesubsection \\@SepMark\\arabic{subsubsection}} \\renew"
+        },
+        {
+          "package": "bidi",
+          "file": "amsbook-xetex-bidi.def",
+          "line": 61,
+          "snippet": "{\\thesubsubsection\\@SepMark\\arabic{paragraph}} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "amsbook-xetex-bidi.def",
+          "line": 62,
+          "snippet": "raph  {\\theparagraph\\@SepMark\\arabic{subparagraph}} \\def\\th"
+        },
+        {
+          "package": "bidi",
+          "file": "amsmath-xetex-bidi.def",
+          "line": 49,
+          "snippet": "the#3\\endcsname \\@nx\\@SepMark\\@nx#1{#2}}}} } \\def\\tagform@#"
+        },
+        {
+          "package": "bidi",
+          "file": "amsthm-xetex-bidi.def",
+          "line": 42,
+          "snippet": "\\def\\@thmcountersep{\\@SepMark} \\endinput"
+        },
+        {
+          "package": "bidi",
+          "file": "article-xetex-bidi.def",
+          "line": 179,
+          "snippet": "ction   {\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "article-xetex-bidi.def",
+          "line": 180,
+          "snippet": "ction{\\thesubsection\\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "article-xetex-bidi.def",
+          "line": 181,
+          "snippet": "{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "article-xetex-bidi.def",
+          "line": 182,
+          "snippet": "graph {\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\Appl"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel1-xetex-bidi.def",
+          "line": 136,
+          "snippet": "bsection{\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel1-xetex-bidi.def",
+          "line": 137,
+          "snippet": "ction{\\thesubsection\\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel1-xetex-bidi.def",
+          "line": 138,
+          "snippet": "ph{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel1-xetex-bidi.def",
+          "line": 139,
+          "snippet": "agraph{\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel2-xetex-bidi.def",
+          "line": 141,
+          "snippet": "bsection{\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel2-xetex-bidi.def",
+          "line": 142,
+          "snippet": "ction{\\thesubsection\\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel2-xetex-bidi.def",
+          "line": 143,
+          "snippet": "ph{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel2-xetex-bidi.def",
+          "line": 144,
+          "snippet": "agraph{\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel3-xetex-bidi.def",
+          "line": 149,
+          "snippet": "bsection{\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel3-xetex-bidi.def",
+          "line": 150,
+          "snippet": "ction{\\thesubsection\\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel3-xetex-bidi.def",
+          "line": 151,
+          "snippet": "ph{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "artikel3-xetex-bidi.def",
+          "line": 152,
+          "snippet": "agraph{\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "boek-xetex-bidi.def",
+          "line": 153,
+          "snippet": "esection{\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "boek-xetex-bidi.def",
+          "line": 154,
+          "snippet": "bsection{\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "boek-xetex-bidi.def",
+          "line": 155,
+          "snippet": "ction{\\thesubsection\\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "boek-xetex-bidi.def",
+          "line": 156,
+          "snippet": "ph{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "boek-xetex-bidi.def",
+          "line": 157,
+          "snippet": "agraph{\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "boek-xetex-bidi.def",
+          "line": 159,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi\\@arabic\\c@equation} \\renew"
+        },
+        {
+          "package": "bidi",
+          "file": "boek-xetex-bidi.def",
+          "line": 161,
+          "snippet": "apter>\\z@\\thechapter\\@SepMark\\fi\\@arabic\\c@figure} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "boek-xetex-bidi.def",
+          "line": 163,
+          "snippet": "apter>\\z@\\thechapter\\@SepMark\\fi\\@arabic\\c@table} \\renewcom"
+        },
+        {
+          "package": "bidi",
+          "file": "boek3-xetex-bidi.def",
+          "line": 153,
+          "snippet": "esection{\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "boek3-xetex-bidi.def",
+          "line": 154,
+          "snippet": "bsection{\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "boek3-xetex-bidi.def",
+          "line": 155,
+          "snippet": "ction{\\thesubsection\\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "boek3-xetex-bidi.def",
+          "line": 156,
+          "snippet": "ph{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "boek3-xetex-bidi.def",
+          "line": 157,
+          "snippet": "agraph{\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "boek3-xetex-bidi.def",
+          "line": 159,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi\\@arabic\\c@equation} \\renew"
+        },
+        {
+          "package": "bidi",
+          "file": "boek3-xetex-bidi.def",
+          "line": 161,
+          "snippet": "apter>\\z@\\thechapter\\@SepMark\\fi\\@arabic\\c@figure} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "boek3-xetex-bidi.def",
+          "line": 163,
+          "snippet": "apter>\\z@\\thechapter\\@SepMark\\fi\\@arabic\\c@table} \\renewcom"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 197,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@equation} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 199,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@figure} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 201,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@table} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 203,
+          "snippet": "section {\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 204,
+          "snippet": "ction   {\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 205,
+          "snippet": "tion{\\thesubsection \\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 206,
+          "snippet": "{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "book-xetex-bidi.def",
+          "line": 207,
+          "snippet": "graph {\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\def\\"
+        },
+        {
+          "package": "bidi",
+          "file": "extarticle-xetex-bidi.def",
+          "line": 199,
+          "snippet": "ction   {\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "extarticle-xetex-bidi.def",
+          "line": 200,
+          "snippet": "tion{\\thesubsection \\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "extarticle-xetex-bidi.def",
+          "line": 201,
+          "snippet": "{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "extarticle-xetex-bidi.def",
+          "line": 202,
+          "snippet": "graph {\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\endi"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 153,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@equation} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 155,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@figure} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 157,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@table} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 159,
+          "snippet": "section {\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 160,
+          "snippet": "ction   {\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 161,
+          "snippet": "tion{\\thesubsection \\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 162,
+          "snippet": "{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "extbook-xetex-bidi.def",
+          "line": 163,
+          "snippet": "graph {\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\def\\"
+        },
+        {
+          "package": "bidi",
+          "file": "extreport-xetex-bidi.def",
+          "line": 207,
+          "snippet": "on      {\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "extreport-xetex-bidi.def",
+          "line": 208,
+          "snippet": "ction   {\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "extreport-xetex-bidi.def",
+          "line": 209,
+          "snippet": "tion{\\thesubsection \\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "extreport-xetex-bidi.def",
+          "line": 210,
+          "snippet": "{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "extreport-xetex-bidi.def",
+          "line": 211,
+          "snippet": "graph {\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "extreport-xetex-bidi.def",
+          "line": 213,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi\\@arabic\\c@equation} \\renew"
+        },
+        {
+          "package": "bidi",
+          "file": "extreport-xetex-bidi.def",
+          "line": 215,
+          "snippet": "apter>\\z@\\thechapter\\@SepMark\\fi \\@arabic\\c@figure} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "extreport-xetex-bidi.def",
+          "line": 217,
+          "snippet": "apter>\\z@\\thechapter\\@SepMark\\fi\\@arabic\\c@table} \\endinput"
+        },
+        {
+          "package": "bidi",
+          "file": "float-xetex-bidi.def",
+          "line": 48,
+          "snippet": "the#2\\endcsname\\@SepMark\\noexpand\\arabic{#1}}}     {\\P"
+        },
+        {
+          "package": "bidi",
+          "file": "floatrow-xetex-bidi.def",
+          "line": 46,
+          "snippet": "the#1\\endcsname\\@SepMark\\noexpand\\arabic{\\FB@captype}}"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 160,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@equation} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 162,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@figure} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 164,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@table} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 166,
+          "snippet": "section {\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 167,
+          "snippet": "ction   {\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 168,
+          "snippet": "tion{\\thesubsection \\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 169,
+          "snippet": "{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 170,
+          "snippet": "graph {\\theparagraph\\@SepMark\\@arabic\\c@subparagraph}} \\IfC"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 173,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@equation} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 175,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@figure} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 177,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@table} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 179,
+          "snippet": "section {\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 180,
+          "snippet": "ction   {\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 181,
+          "snippet": "tion{\\thesubsection \\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 182,
+          "snippet": "{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "flowfram-xetex-bidi.def",
+          "line": 183,
+          "snippet": "graph {\\theparagraph\\@SepMark\\@arabic\\c@subparagraph}} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "imsproc-xetex-bidi.def",
+          "line": 103,
+          "snippet": "tion    {\\thesection\\@SepMark\\arabic{subsection}} \\renewcom"
+        },
+        {
+          "package": "bidi",
+          "file": "imsproc-xetex-bidi.def",
+          "line": 104,
+          "snippet": "ion {\\thesubsection \\@SepMark\\arabic{subsubsection}} \\renew"
+        },
+        {
+          "package": "bidi",
+          "file": "imsproc-xetex-bidi.def",
+          "line": 105,
+          "snippet": "{\\thesubsubsection\\@SepMark\\arabic{paragraph}} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "imsproc-xetex-bidi.def",
+          "line": 106,
+          "snippet": "raph  {\\theparagraph\\@SepMark\\arabic{subparagraph}} \\def\\ma"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 189,
+          "snippet": "\\def\\@thmcountersep{\\@SepMark} \\def\\setRTLbibitems{\\@RTLbib"
+        },
+        {
+          "package": "bidi",
+          "file": "listings-xetex-bidi.def",
+          "line": 141,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@lstlisting}   \\"
+        },
+        {
+          "package": "bidi",
+          "file": "memoir-xetex-bidi.def",
+          "line": 82,
+          "snippet": "section}{\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "memoir-xetex-bidi.def",
+          "line": 84,
+          "snippet": "\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "memoir-xetex-bidi.def",
+          "line": 86,
+          "snippet": "\\thesubsection\\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "memoir-xetex-bidi.def",
+          "line": 88,
+          "snippet": "\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "memoir-xetex-bidi.def",
+          "line": 90,
+          "snippet": "\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "memoir-xetex-bidi.def",
+          "line": 91,
+          "snippet": "section}{\\thechapter\\@SepMark\\Alph{section}} \\renewcommand{"
+        },
+        {
+          "package": "bidi",
+          "file": "memoir-xetex-bidi.def",
+          "line": 93,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@equation} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "memoir-xetex-bidi.def",
+          "line": 94,
+          "snippet": "efigure}{\\thechapter\\@SepMark\\@arabic\\c@figure} \\renewcomma"
+        },
+        {
+          "package": "bidi",
+          "file": "memoir-xetex-bidi.def",
+          "line": 95,
+          "snippet": "hetable}{\\thechapter\\@SepMark\\@arabic\\c@table} \\ifartopt"
+        },
+        {
+          "package": "bidi",
+          "file": "newfloat-xetex-bidi.def",
+          "line": 62,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi}{\\theHchapter\\@SepMark}"
+        },
+        {
+          "package": "bidi",
+          "file": "newfloat-xetex-bidi.def",
+          "line": 62,
+          "snippet": "ark\\fi}{\\theHchapter\\@SepMark}     \\else       \\def\\@tempb{"
+        },
+        {
+          "package": "bidi",
+          "file": "newfloat-xetex-bidi.def",
+          "line": 70,
+          "snippet": "thin{#1}{\\thesection\\@SepMark}{\\theHsection\\@SepMark}"
+        },
+        {
+          "package": "bidi",
+          "file": "newfloat-xetex-bidi.def",
+          "line": 70,
+          "snippet": "epMark}{\\theHsection\\@SepMark}         \\else           \\new"
+        },
+        {
+          "package": "bidi",
+          "file": "newfloat-xetex-bidi.def",
+          "line": 72,
+          "snippet": "tion>\\z@ \\thesection\\@SepMark\\fi}{\\theHsection\\@SepMark}"
+        },
+        {
+          "package": "bidi",
+          "file": "newfloat-xetex-bidi.def",
+          "line": 72,
+          "snippet": "ark\\fi}{\\theHsection\\@SepMark}         \\fi       \\else"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport1-xetex-bidi.def",
+          "line": 165,
+          "snippet": "esection{\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport1-xetex-bidi.def",
+          "line": 166,
+          "snippet": "bsection{\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport1-xetex-bidi.def",
+          "line": 167,
+          "snippet": "ction{\\thesubsection\\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport1-xetex-bidi.def",
+          "line": 168,
+          "snippet": "ph{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport1-xetex-bidi.def",
+          "line": 169,
+          "snippet": "agraph{\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport1-xetex-bidi.def",
+          "line": 171,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi\\@arabic\\c@equation} \\renew"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport1-xetex-bidi.def",
+          "line": 173,
+          "snippet": "apter>\\z@\\thechapter\\@SepMark\\fi\\@arabic\\c@figure} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport1-xetex-bidi.def",
+          "line": 175,
+          "snippet": "apter>\\z@\\thechapter\\@SepMark\\fi\\@arabic\\c@table} \\if@title"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 274,
+          "snippet": "esection{\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 275,
+          "snippet": "bsection{\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 276,
+          "snippet": "ction{\\thesubsection\\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 277,
+          "snippet": "ph{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 278,
+          "snippet": "agraph{\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 280,
+          "snippet": "apter>\\z@\\thechapter\\@SepMark\\fi\\@arabic\\c@figure} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 282,
+          "snippet": "apter>\\z@\\thechapter\\@SepMark\\fi\\@arabic\\c@table} \\renewcom"
+        },
+        {
+          "package": "bidi",
+          "file": "rapport3-xetex-bidi.def",
+          "line": 284,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi\\@arabic\\c@equation} \\renew"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 193,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@equation} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 195,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@figure} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 197,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@table} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 198,
+          "snippet": "n       {\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 199,
+          "snippet": "tion    {\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 200,
+          "snippet": "ion {\\thesubsection \\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 201,
+          "snippet": "{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "refrep-xetex-bidi.def",
+          "line": 202,
+          "snippet": "raph  {\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 195,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@equation} \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 197,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@figure} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 199,
+          "snippet": "pter>\\z@ \\thechapter\\@SepMark\\fi \\@arabic\\c@table} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 201,
+          "snippet": "section {\\thechapter\\@SepMark\\@arabic\\c@section} \\renewcomm"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 202,
+          "snippet": "ction   {\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 203,
+          "snippet": "tion{\\thesubsection \\@SepMark\\@arabic\\c@subsubsection} \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 204,
+          "snippet": "{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "report-xetex-bidi.def",
+          "line": 205,
+          "snippet": "graph {\\theparagraph\\@SepMark\\@arabic\\c@subparagraph} \\def\\"
+        },
+        {
+          "package": "bidi",
+          "file": "scrartcl-xetex-bidi.def",
+          "line": 399,
+          "snippet": "{\\if@altsecnumformat\\@SepMark\\fi} \\renewcommand*{\\thesubsec"
+        },
+        {
+          "package": "bidi",
+          "file": "scrartcl-xetex-bidi.def",
+          "line": 400,
+          "snippet": "section}{\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "scrartcl-xetex-bidi.def",
+          "line": 402,
+          "snippet": "n}{   \\thesubsection\\@SepMark\\@arabic\\c@subsubsection } \\re"
+        },
+        {
+          "package": "bidi",
+          "file": "scrartcl-xetex-bidi.def",
+          "line": 404,
+          "snippet": "h}{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "scrartcl-xetex-bidi.def",
+          "line": 406,
+          "snippet": "ph}{   \\theparagraph\\@SepMark\\@arabic\\c@subparagraph } \\ren"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 399,
+          "snippet": "{\\if@altsecnumformat\\@SepMark\\fi} \\renewcommand*\\thesection"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 402,
+          "snippet": "ainmatter\\thechapter\\@SepMark\\fi   \\else   \\thechapter\\@Sep"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 404,
+          "snippet": "\\else   \\thechapter\\@SepMark   \\fi   \\@arabic\\c@section }"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 408,
+          "snippet": "section}{\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 410,
+          "snippet": "n}{   \\thesubsection\\@SepMark\\@arabic\\c@subsubsection } \\re"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 412,
+          "snippet": "h}{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 414,
+          "snippet": "ph}{   \\theparagraph\\@SepMark\\@arabic\\c@subparagraph } \\exp"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 417,
+          "snippet": "hefigure{\\thechapter\\@SepMark\\@arabic\\c@figure} \\fi \\expand"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 420,
+          "snippet": "thetable{\\thechapter\\@SepMark\\@arabic\\c@table} \\fi \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 424,
+          "snippet": "ainmatter\\thechapter\\@SepMark\\fi   \\else     \\thechapter\\@S"
+        },
+        {
+          "package": "bidi",
+          "file": "scrbook-xetex-bidi.def",
+          "line": 426,
+          "snippet": "else     \\thechapter\\@SepMark   \\fi   \\@arabic\\c@equation }"
+        },
+        {
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def",
+          "line": 399,
+          "snippet": "{\\if@altsecnumformat\\@SepMark\\fi} \\renewcommand*\\thesection"
+        },
+        {
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def",
+          "line": 401,
+          "snippet": "ction{   \\thechapter\\@SepMark   \\@arabic\\c@section } \\renew"
+        },
+        {
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def",
+          "line": 404,
+          "snippet": "section}{\\thesection\\@SepMark\\@arabic\\c@subsection} \\renewc"
+        },
+        {
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def",
+          "line": 406,
+          "snippet": "n}{   \\thesubsection\\@SepMark\\@arabic\\c@subsubsection } \\re"
+        },
+        {
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def",
+          "line": 408,
+          "snippet": "h}{\\thesubsubsection\\@SepMark\\@arabic\\c@paragraph} \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def",
+          "line": 410,
+          "snippet": "ph}{   \\theparagraph\\@SepMark\\@arabic\\c@subparagraph } \\exp"
+        },
+        {
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def",
+          "line": 413,
+          "snippet": "hefigure{\\thechapter\\@SepMark\\@arabic\\c@figure} \\fi \\expand"
+        },
+        {
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def",
+          "line": 416,
+          "snippet": "thetable{\\thechapter\\@SepMark\\@arabic\\c@table} \\fi \\renewco"
+        },
+        {
+          "package": "bidi",
+          "file": "scrreprt-xetex-bidi.def",
+          "line": 419,
+          "snippet": "ation{   \\thechapter\\@SepMark   \\@arabic\\c@equation } \\rene"
+        },
+        {
+          "package": "bidi",
+          "file": "tocloft-xetex-bidi.def",
+          "line": 44,
+          "snippet": "se r\\fi} \\let\\cftdot\\@SepMark \\if@cfthaspart \\renewcommand*"
+        },
+        {
+          "package": "bidi",
+          "file": "tocloft-xetex-bidi.def",
+          "line": 288,
+          "snippet": "name the#1\\endcsname\\@SepMark\\noexpand\\arabic{#2}}}     \\fi"
+        }
+      ],
+      "definition_type": "gdef",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 187,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "SepMark",
+      "description": "ﻋﻼﻣﺖﺑﯿﻦ",
+      "kind": "command",
+      "normalized_name": "SepMark",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 187,
+          "entity_kind": "command",
+          "name": "SepMark",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "latex-xetex-bidi.def",
+        "line": 188,
+        "snippet": "\\gdef\\@SepMark{#1}} \\SepMark{.} \\def\\@thmcountersep{\\@SepM"
+      },
+      "mentions_count": 1,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 188,
+          "snippet": "\\gdef\\@SepMark{#1}} \\SepMark{.} \\def\\@thmcountersep{\\@SepM"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 187,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "setdefaultbibitems",
+      "description": "ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﻋﺎﺩﯼ",
+      "kind": "command",
+      "normalized_name": "setdefaultbibitems",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 192,
+          "entity_kind": "command",
+          "name": "setdefaultbibitems",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 192,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "setdefaultmarginpar",
+      "description": "ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﻋﺎﺩﯼ",
+      "kind": "command",
+      "normalized_name": "setdefaultmarginpar",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 693,
+          "entity_kind": "command",
+          "name": "setdefaultmarginpar",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 693,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "setmathdigitfont",
+      "description": "ﮔﺰﯾﻨﺶ ﻗﻠﻢ ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎ",
+      "kind": "command",
+      "normalized_name": "setmathdigitfont",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "setfootnoteLR",
+      "description": "ﺑﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﭼﭗ",
+      "kind": "command",
+      "normalized_name": "setfootnoteLR",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 185,
+          "entity_kind": "command",
+          "name": "setfootnoteLR",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "footnote-xetex-bidi.def",
+      "line": 185,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "setfootnoteRL",
+      "description": "ﺑﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ",
+      "kind": "command",
+      "normalized_name": "setfootnoteRL",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 183,
+          "entity_kind": "command",
+          "name": "setfootnoteRL",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "footnote-xetex-bidi.def",
+      "line": 183,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "setlatintextfont",
+      "description": "ﮔﺰﯾﻨﺶ ﻗﻠﻢ ﻻﺗﯿﻦ ﻣﺘﻦ",
+      "kind": "command",
+      "normalized_name": "setlatintextfont",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "xparse_command",
+          "line": 52,
+          "entity_kind": "command",
+          "name": "setlatintextfont",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "NewDocumentCommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "unipersian",
+          "file": "unipersian-fonts.def"
+        }
+      ],
+      "defining_packages": [
+        "unipersian"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "NewDocumentCommand",
+      "package": "unipersian",
+      "file": "unipersian-fonts.def",
+      "line": 52,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "setLTR",
+      "description": "ﺑﮕﺬﺍﺭﻣﺘﻦ ﭼﭗ",
+      "kind": "command",
+      "normalized_name": "setLTR",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 114,
+          "entity_kind": "command",
+          "name": "setLTR",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 94,
+          "entity_kind": "command",
+          "name": "setLTR",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 70,
+          "entity_kind": "command",
+          "name": "setLTR",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "latex-xetex-bidi.def",
+        "line": 115,
+        "snippet": "gged} \\let\\unsetRTL=\\setLTR \\let\\unsetLTR=\\setRTL \\let\\LR"
+      },
+      "mentions_count": 12,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 115,
+          "snippet": "gged} \\let\\unsetRTL=\\setLTR \\let\\unsetLTR=\\setRTL \\let\\LR"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 128,
+          "snippet": "ifx\\saved@@dir\\@@LTR\\setLTR\\else\\relax\\fi\\fi} \\let\\@@TeX\\"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 156,
+          "snippet": "=\\setRTL \\let\\setLR=\\setLTR \\let\\unsetRL=\\setLTR \\def\\bid"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 157,
+          "snippet": "setLTR \\let\\unsetRL=\\setLTR \\def\\bidi@tabular@RTLcases{\\l"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 95,
+          "snippet": "alse} \\let\\unsetRTL=\\setLTR \\let\\unsetLTR=\\setRTL \\let\\LR"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 108,
+          "snippet": "ifx\\saved@@dir\\@@LTR\\setLTR\\else\\relax\\fi\\fi} \\let\\@@TeX\\"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 133,
+          "snippet": "=\\setRTL \\let\\setLR=\\setLTR \\let\\unsetRL=\\setLTR \\let\\bid"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 134,
+          "snippet": "setLTR \\let\\unsetRL=\\setLTR \\let\\bidi@saved@eqno=\\eqno \\l"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 80,
+          "snippet": "otected\\def\\LTR{\\par\\setLTR} \\protected\\def\\endLTR{\\par}"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 105,
+          "snippet": "=\\setRTL \\let\\setLR=\\setLTR \\let\\unsetRTL=\\setLTR \\let\\un"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 106,
+          "snippet": "etLTR \\let\\unsetRTL=\\setLTR \\let\\unsetLTR=\\setRTL \\let\\LR"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 213,
+          "snippet": "alnumeral{#1}}}     \\setLTR\\footnotetext{#2}   \\endgroup"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 114,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "setLTRbibitems",
+      "description": "ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﭼﭗ",
+      "kind": "command",
+      "normalized_name": "setLTRbibitems",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 191,
+          "entity_kind": "command",
+          "name": "setLTRbibitems",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 191,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "setLTRmarginpar",
+      "description": "ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﭼﭗ",
+      "kind": "command",
+      "normalized_name": "setLTRmarginpar",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 692,
+          "entity_kind": "command",
+          "name": "setLTRmarginpar",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 692,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "setRTL",
+      "description": "ﺑﮕﺬﺍﺭﻣﺘﻦ ﺭﺍﺳﺖ",
+      "kind": "command",
+      "normalized_name": "setRTL",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 113,
+          "entity_kind": "command",
+          "name": "setRTL",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 93,
+          "entity_kind": "command",
+          "name": "setRTL",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 62,
+          "entity_kind": "command",
+          "name": "setRTL",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "latex-xetex-bidi.def",
+        "line": 116,
+        "snippet": "etLTR \\let\\unsetLTR=\\setRTL \\let\\LR=\\LRE \\let\\RL=\\RLE \\de"
+      },
+      "mentions_count": 15,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 116,
+          "snippet": "etLTR \\let\\unsetLTR=\\setRTL \\let\\LR=\\LRE \\let\\RL=\\RLE \\de"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 128,
+          "snippet": "ifx\\saved@@dir\\@@RTL\\setRTL\\else\\ifx\\saved@@dir\\@@LTR\\set"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 155,
+          "snippet": "aTeX}} } \\let\\setRL=\\setRTL \\let\\setLR=\\setLTR \\let\\unset"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 96,
+          "snippet": "etLTR \\let\\unsetLTR=\\setRTL \\let\\LR=\\LRE \\let\\RL=\\RLE \\de"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 108,
+          "snippet": "ifx\\saved@@dir\\@@RTL\\setRTL\\else\\ifx\\saved@@dir\\@@LTR\\set"
+        },
+        {
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def",
+          "line": 132,
+          "snippet": "TeX}}$}} \\let\\setRL=\\setRTL \\let\\setLR=\\setLTR \\let\\unset"
+        },
+        {
+          "package": "bidi",
+          "file": "todonotes-xetex-bidi.def",
+          "line": 76,
+          "snippet": "es@textdirection@RTL\\setRTL\\fi             \\draw node[inl"
+        },
+        {
+          "package": "bidi",
+          "file": "todonotes-xetex-bidi.def",
+          "line": 116,
+          "snippet": "es@textdirection@RTL\\setRTL\\fi         \\node(X){\\vphantom"
+        },
+        {
+          "package": "bidi",
+          "file": "todonotes-xetex-bidi.def",
+          "line": 150,
+          "snippet": "es@textdirection@RTL\\setRTL\\fi \\draw (2, -0.3) node[right"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 25,
+          "snippet": "urrvlist@dir \\@ne   \\setRTL }                  \\chardef\\l"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 78,
+          "snippet": "otected\\def\\RTL{\\par\\setRTL} \\protected\\def\\endRTL{\\par}"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 104,
+          "snippet": "@xt}     \\let\\setRL=\\setRTL \\let\\setLR=\\setLTR \\let\\unset"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 107,
+          "snippet": "etLTR \\let\\unsetLTR=\\setRTL \\let\\LR=\\LRE \\let\\RL=\\RLE"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 188,
+          "snippet": "ruptpicture${\\if@RTL\\setRTL\\fi}     \\luabidi@replmacro\\pg"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 224,
+          "snippet": "alnumeral{#1}}}     \\setRTL\\footnotetext{#2}   \\endgroup"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 113,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "setRTLbibitems",
+      "description": "ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﺭﺍﺳﺖ",
+      "kind": "command",
+      "normalized_name": "setRTLbibitems",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 190,
+          "entity_kind": "command",
+          "name": "setRTLbibitems",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 190,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "setRTLmarginpar",
+      "description": "ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﺭﺍﺳﺖ",
+      "kind": "command",
+      "normalized_name": "setRTLmarginpar",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 691,
+          "entity_kind": "command",
+          "name": "setRTLmarginpar",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 691,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "settextfont",
+      "description": "ﮔﺰﯾﻨﺶ ﻗﻠﻢ ﻣﺘﻦ",
+      "kind": "command",
+      "normalized_name": "settextfont",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "xparse_command",
+          "line": 40,
+          "entity_kind": "command",
+          "name": "settextfont",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "NewDocumentCommand",
+          "rhs": null,
+          "generated_names": null,
+          "package": "unipersian",
+          "file": "unipersian-fonts.def"
+        }
+      ],
+      "defining_packages": [
+        "unipersian"
+      ],
+      "first_mention": {
+        "package": "unipersian",
+        "file": "unipersian-fonts.def",
+        "line": 63,
+        "snippet": "stsTF{HM XNiloofar}{\\settextfont{HM XNiloofar}}     {\\IfFontEx"
+      },
+      "mentions_count": 5,
+      "mentions": [
+        {
+          "package": "unipersian",
+          "file": "unipersian-fonts.def",
+          "line": 63,
+          "snippet": "stsTF{HM XNiloofar}{\\settextfont{HM XNiloofar}}     {\\IfFontEx"
+        },
+        {
+          "package": "unipersian",
+          "file": "unipersian-fonts.def",
+          "line": 64,
+          "snippet": "ExistsTF{Vazirmatn}{\\settextfont[ItalicFont={Vazirmatn}]{Vazir"
+        },
+        {
+          "package": "unipersian",
+          "file": "unipersian-fonts.def",
+          "line": 65,
+          "snippet": "FontExistsTF{Amiri}{\\settextfont{Amiri}}             {\\IfFontE"
+        },
+        {
+          "package": "unipersian",
+          "file": "unipersian-fonts.def",
+          "line": 66,
+          "snippet": "ExistsTF{FreeSerif}{\\settextfont{FreeSerif}}                 {"
+        },
+        {
+          "package": "unipersian",
+          "file": "unipersian-fonts.def",
+          "line": 67,
+          "snippet": "ontExistsTF{Tahoma}{\\settextfont{Tahoma}}"
+        }
+      ],
+      "definition_type": "NewDocumentCommand",
+      "package": "unipersian",
+      "file": "unipersian-fonts.def",
+      "line": 40,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "textwidthfootnoterule",
+      "description": "ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲﭘﻬﻨﺎﯼ ﻣﺘﻦ",
+      "kind": "command",
+      "normalized_name": "textwidthfootnoterule",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "let",
+          "line": 45,
+          "entity_kind": "command",
+          "name": "textwidthfootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "dblfnote-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 83,
+          "entity_kind": "command",
+          "name": "textwidthfootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "relax",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "extrafootnotefeatures-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 129,
+          "entity_kind": "command",
+          "name": "textwidthfootnoterule",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 274,
+          "entity_kind": "command",
+          "name": "textwidthfootnoterule",
+          "role": "neutralizing_assignment",
+          "priority": 10,
+          "definition_type": "let",
+          "rhs": "@empty",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "ftnright-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 270,
+          "entity_kind": "command",
+          "name": "textwidthfootnoterule",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "bidi.sty",
+        "line": 126,
+        "snippet": "n = \\AtEndOfPackage{\\textwidthfootnoterule}   } \\keys_define:nn { bidi }"
+      },
+      "mentions_count": 3,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "bidi.sty",
+          "line": 126,
+          "snippet": "n = \\AtEndOfPackage{\\textwidthfootnoterule}   } \\keys_define:nn { bidi }"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 812,
+          "snippet": "ootnoterule\\relax   \\textwidthfootnoterule \\fi \\if@bidi@csundef{@idxitem"
+        },
+        {
+          "package": "luabidi",
+          "file": "luabidi.sty",
+          "line": 279,
+          "snippet": "twidthfootnoterule}{\\textwidthfootnoterule} \\ProcessOptions"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "footnote-xetex-bidi.def",
+      "line": 129,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "twocolumnstableofcontents",
+      "description": "ﻓﻬﺮﺳﺖ ﻣﻄﺎﻟﺐ ﺩﻭﺳﺘﻮﯽﻧ",
+      "kind": "command",
+      "normalized_name": "twocolumnstableofcontents",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "unsetfootnoteRL",
+      "description": "ﻧﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ",
+      "kind": "command",
+      "normalized_name": "unsetfootnoteRL",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 184,
+          "entity_kind": "command",
+          "name": "unsetfootnoteRL",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "footnote-xetex-bidi.def",
+        "line": 185,
+        "snippet": "\\def\\setfootnoteLR{\\unsetfootnoteRL}  \\newcommand*{\\bidi@@footnot"
+      },
+      "mentions_count": 1,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "footnote-xetex-bidi.def",
+          "line": 185,
+          "snippet": "\\def\\setfootnoteLR{\\unsetfootnoteRL}  \\newcommand*{\\bidi@@footnot"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "footnote-xetex-bidi.def",
+      "line": 184,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "unsetLTR",
+      "description": "ﻧﮕﺬﺍﺭﻣﺘﻦ ﭼﭗ",
+      "kind": "command",
+      "normalized_name": "unsetLTR",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "let",
+          "line": 116,
+          "entity_kind": "command",
+          "name": "unsetLTR",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let=",
+          "rhs": "setRTL",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 96,
+          "entity_kind": "command",
+          "name": "unsetLTR",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let=",
+          "rhs": "setRTL",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 107,
+          "entity_kind": "command",
+          "name": "unsetLTR",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let=",
+          "rhs": "setRTL",
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "let=",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 116,
+      "role": "assignment",
+      "priority": 50
+    },
+    {
+      "command": "unsetRTL",
+      "description": "ﻧﮕﺬﺍﺭﻣﺘﻦ ﺭﺍﺳﺖ",
+      "kind": "command",
+      "normalized_name": "unsetRTL",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "let",
+          "line": 115,
+          "entity_kind": "command",
+          "name": "unsetRTL",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let=",
+          "rhs": "setLTR",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 95,
+          "entity_kind": "command",
+          "name": "unsetRTL",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let=",
+          "rhs": "setLTR",
+          "generated_names": null,
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def"
+        },
+        {
+          "type": "let",
+          "line": 106,
+          "entity_kind": "command",
+          "name": "unsetRTL",
+          "role": "assignment",
+          "priority": 50,
+          "definition_type": "let=",
+          "rhs": "setLTR",
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "let=",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 115,
+      "role": "assignment",
+      "priority": 50
+    },
+    {
+      "command": "vboxL",
+      "description": "ﮐﺎﺩﺭﻭﺍﺯﭼﭗ",
+      "kind": "command",
+      "normalized_name": "vboxL",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 82,
+          "entity_kind": "command",
+          "name": "vboxL",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 81,
+          "entity_kind": "command",
+          "name": "vboxL",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 100,
+          "entity_kind": "command",
+          "name": "vboxL",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "rotating-xetex-bidi.def",
+        "line": 52,
+        "snippet": "rot@float@box\\z@    \\vboxL to \\textheight{     \\setkeys{"
+      },
+      "mentions_count": 2,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "rotating-xetex-bidi.def",
+          "line": 52,
+          "snippet": "rot@float@box\\z@    \\vboxL to \\textheight{     \\setkeys{"
+        },
+        {
+          "package": "bidi",
+          "file": "rotating-xetex-bidi.def",
+          "line": 97,
+          "snippet": "\\rot@float@box\\z@   \\vboxL to \\textheight{     \\setkeys{"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 82,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "vboxR",
+      "description": "ﮐﺎﺩﺭﻭﺍﺯﺭﺍﺳﺖ",
+      "kind": "command",
+      "normalized_name": "vboxR",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 73,
+          "entity_kind": "command",
+          "name": "vboxR",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 73,
+          "entity_kind": "command",
+          "name": "vboxR",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 96,
+          "entity_kind": "command",
+          "name": "vboxR",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "luabidi",
+          "file": "luabidi.sty"
+        }
+      ],
+      "defining_packages": [
+        "bidi",
+        "luabidi"
+      ],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "latex-xetex-bidi.def",
+      "line": 73,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "XeLaTeX",
+      "description": "ﺯﯼ ﻻﺗﮏ",
+      "kind": "command",
+      "normalized_name": "XeLaTeX",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 585,
+          "entity_kind": "command",
+          "name": "XeLaTeX",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "hyperref-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 45,
+          "entity_kind": "command",
+          "name": "XeLaTeX",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "xltxtra-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "latex-xetex-bidi.def",
+        "line": 149,
+        "snippet": "\\bidi@newrobustcmd*{\\XeLaTeX}{\\LR{\\leavevmode$\\smash{\\hbox"
+      },
+      "mentions_count": 4,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 149,
+          "snippet": "\\bidi@newrobustcmd*{\\XeLaTeX}{\\LR{\\leavevmode$\\smash{\\hbox"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 152,
+          "snippet": "t\\@bidi@orig@XeLaTeX\\XeLaTeX \\bidi@renewrobustcmd*{\\XeLaTe"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 153,
+          "snippet": "idi@renewrobustcmd*{\\XeLaTeX}{\\LR{\\@bidi@orig@XeLaTeX}} }"
+        },
+        {
+          "package": "bidi",
+          "file": "xltxtra-xetex-bidi.def",
+          "line": 44,
+          "snippet": "TeX}} \\let\\@@XeLaTeX\\XeLaTeX \\def\\XeLaTeX{\\@ensure@LTR{\\@@"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "hyperref-xetex-bidi.def",
+      "line": 585,
+      "role": "body_definition",
+      "priority": 100
+    },
+    {
+      "command": "XePersian",
+      "description": "ﺯﯼﭘﺮﺷﯿﻦ",
+      "kind": "command",
+      "normalized_name": "XePersian",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "xepersianversion",
+      "description": "ﮔﻮﻧﻪ ﺯﯼﭘﺮﺷﯿﻦ",
+      "kind": "command",
+      "normalized_name": "xepersianversion",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "xepersiandate",
+      "description": "ﺗﺎﺭﯾﺦ ﮔﻮﻧﻪ ﺯﯼﭘﺮﺷﯿﻦ",
+      "kind": "command",
+      "normalized_name": "xepersiandate",
+      "found_in_source": false,
+      "has_direct_definition": false,
+      "status": "not_found",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [],
+      "defining_packages": [],
+      "first_mention": null,
+      "mentions_count": 0,
+      "mentions": [],
+      "definition_type": null,
+      "package": null,
+      "file": null,
+      "line": null,
+      "role": null,
+      "priority": null
+    },
+    {
+      "command": "XeTeX",
+      "description": "ﺯﯼ ﺗﮏ",
+      "kind": "command",
+      "normalized_name": "XeTeX",
+      "found_in_source": true,
+      "has_direct_definition": true,
+      "status": "defined",
+      "requires_manual_review": false,
+      "definition_selection": "prefer highest role priority (body_definition 100 > declaration 80 > assignment 50 > neutralizing_assignment 10); among equal-priority candidates choose the first in stable scan order (package order, file, line).Every root (unipersian, babel, bidi, luabidi, fontspec) is scanned without short-circuit; all candidates from all packages are kept in `definitions`",
+      "definitions": [
+        {
+          "type": "primitive_def",
+          "line": 584,
+          "entity_kind": "command",
+          "name": "XeTeX",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "hyperref-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 130,
+          "entity_kind": "command",
+          "name": "XeTeX",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "plain-xetex-bidi.def"
+        },
+        {
+          "type": "primitive_def",
+          "line": 43,
+          "entity_kind": "command",
+          "name": "XeTeX",
+          "role": "body_definition",
+          "priority": 100,
+          "definition_type": "def",
+          "rhs": null,
+          "generated_names": null,
+          "package": "bidi",
+          "file": "xltxtra-xetex-bidi.def"
+        }
+      ],
+      "defining_packages": [
+        "bidi"
+      ],
+      "first_mention": {
+        "package": "bidi",
+        "file": "latex-xetex-bidi.def",
+        "line": 142,
+        "snippet": "\\bidi@newrobustcmd*{\\XeTeX}{\\LR{\\leavevmode$\\smash{\\hbox"
+      },
+      "mentions_count": 4,
+      "mentions": [
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 142,
+          "snippet": "\\bidi@newrobustcmd*{\\XeTeX}{\\LR{\\leavevmode$\\smash{\\hbox"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 145,
+          "snippet": "let\\@bidi@orig@XeTeX\\XeTeX \\bidi@renewrobustcmd*{\\XeTeX}"
+        },
+        {
+          "package": "bidi",
+          "file": "latex-xetex-bidi.def",
+          "line": 146,
+          "snippet": "idi@renewrobustcmd*{\\XeTeX}{\\LR{\\@bidi@orig@XeTeX}} } \\i"
+        },
+        {
+          "package": "bidi",
+          "file": "xltxtra-xetex-bidi.def",
+          "line": 42,
+          "snippet": "engine] \\let\\@@XeTeX\\XeTeX \\def\\XeTeX{\\@ensure@LTR{\\@@Xe"
+        }
+      ],
+      "definition_type": "def",
+      "package": "bidi",
+      "file": "hyperref-xetex-bidi.def",
+      "line": 584,
+      "role": "body_definition",
+      "priority": 100
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+% unipersian-listings-fallback.def
+%
+% UniPersian: Persian language support for LaTeX.
+%
+% Copyright (C) 2026 Amer Amikhteh
+%
+% This file is part of the UniPersian-listings package.
+%
+% This work is free software: you may redistribute it and/or modify
+% it under the terms of the LaTeX Project Public License as published
+% by the LaTeX Project, either version 1.3c of the License, or
+% (at your option) any later version.
+%
+% This work is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%
+% The full license text is available at:
+% https://www.latex-project.org/lppl/
+%
+% This work is "maintained" by Amer Amikhteh.
+%
+% The current maintainer of this work is Amer Amikhteh.
+
+\ProvidesFile{unipersian-listings-fallback.def}
+[2026/09/08 v0.1.0 Persian monospaced font fallback for xepersian]
+
+% This file only tries to find a suitable Persian monospaced font when the user has not set \setpersianmonofont.
+% The file does not change any fonts when loaded and only applies a fallback at BeginDocument
+% if needed.
+
+\ExplSyntaxOn
+
+\bool_new:N \g_xpmf_setup_done_bool
+\bool_new:N \l_xpmf_found_bool
+
+\seq_new:N \g_xpmf_fallback_fonts_seq
+
+\seq_gset_from_clist:Nn \g_xpmf_fallback_fonts_seq
+{
+    Vazir~Code,
+    DejaVu~Sans~Mono,
+    Vazirmatn,
+    Tahoma,
+    Segoe~UI
+}
+
+\cs_new_protected:Nn \xpmf_set_fallback_fonts:n
+{
+    \seq_gset_from_clist:Nn \g_xpmf_fallback_fonts_seq {#1}
+}
+
+\prg_new_conditional:Npnn \xpmf_if_api_available: {T,F,TF}
+{
+    \cs_if_exist:NTF \setpersianmonofont
+    {
+        \cs_if_exist:NTF \persianttdefault
+        { \prg_return_true: }
+        { \prg_return_false: }
+    }
+    { \prg_return_false: }
+}
+
+\prg_new_conditional:Npnn \xpmf_if_persian_mono_defined: {T,F,TF}
+{
+    \cs_if_exist:NTF \persianttdefault
+    {
+        \tl_if_blank:oTF {\persianttdefault}
+        { \prg_return_false: }
+        { \prg_return_true: }
+    }
+    { \prg_return_false: }
+}
+
+\prg_new_conditional:Npnn \xpmf_if_font_has_persian:n #1 {T,F,TF}
+{
+    \cs_if_exist:NTF \fontspec
+    {
+        \group_begin:
+        \fontspec{#1}
+        \iffontchar\font"0627
+            \group_end:
+            \prg_return_true:
+        \else
+            \group_end:
+            \prg_return_false:
+        \fi
+    }
+    { \prg_return_false: }
+}
+
+\cs_new_protected:Nn \xpmf_try_from_family:nn
+{
+    \xpmf_if_persian_mono_defined:F
+    {
+        \tl_set:Nx \l_tmpa_tl {#2}
+
+        \tl_if_blank:VF \l_tmpa_tl
+        {
+            \prop_if_exist:cT { g__fontspec_fontinfo_\l_tmpa_tl _prop }
+            {
+                \prop_get:cnNT
+                { g__fontspec_fontinfo_\l_tmpa_tl _prop }
+                { fontname }
+                \l_tmpb_tl
+                {
+                    \xpmf_if_font_has_persian:nT {\l_tmpb_tl}
+                    {
+                        \setpersianmonofont{\l_tmpb_tl}
+                    }
+                }
+            }
+        }
+    }
+}
+
+\cs_new_protected:Nn \xpmf_try_ttdefault:
+{
+    \xpmf_if_persian_mono_defined:F
+    {
+        \cs_if_exist:NT \ttdefault
+        {
+            \tl_set:Nx \l_tmpa_tl {\ttdefault}
+
+            \tl_if_blank:VF \l_tmpa_tl
+            {
+                \str_if_eq:VnF \l_tmpa_tl {lmtt}
+                {
+                    \xpmf_try_from_family:nn
+                    {ttdefault}
+                    {\ttdefault}
+                }
+            }
+        }
+    }
+}
+
+\cs_new_protected:Nn \xpmf_try_rmdefault:
+{
+    \xpmf_if_persian_mono_defined:F
+    {
+        \cs_if_exist:NT \rmdefault
+        {
+            \xpmf_try_from_family:nn
+            {rmdefault}
+            {\rmdefault}
+        }
+    }
+}
+
+\cs_new_protected:Nn \xpmf_try_fallback_list:
+{
+    \xpmf_if_persian_mono_defined:F
+    {
+        \cs_if_exist:NT \IfFontExistsTF
+        {
+            \bool_set_false:N \l_xpmf_found_bool
+
+            \seq_map_inline:Nn \g_xpmf_fallback_fonts_seq
+            {
+                \bool_if:NF \l_xpmf_found_bool
+                {
+                    \IfFontExistsTF{##1}
+                    {
+                        \xpmf_if_font_has_persian:nT {##1}
+                        {
+                            \setpersianmonofont{##1}
+                            \bool_set_true:N \l_xpmf_found_bool
+                            \seq_map_break:
+                        }
+                    }
+                    {}
+                }
+            }
+        }
+    }
+}
+
+\cs_new_protected:Nn \xpmf_setup:
+{
+    \bool_if:NF \g_xpmf_setup_done_bool
+    {
+        \xpmf_if_api_available:T
+        {
+            \xpmf_try_ttdefault:
+            \xpmf_try_rmdefault:
+            \xpmf_try_fallback_list:
+        }
+
+        \bool_gset_true:N \g_xpmf_setup_done_bool
+    }
+}
+
+\NewDocumentCommand{\XepersianMonoFallbackSetup}{}
+{
+    \xpmf_setup:
+}
+
+
+\ExplSyntaxOff
+
+\AtBeginDocument
+{
+    \XepersianMonoFallbackSetup
+}
+
+\endinput

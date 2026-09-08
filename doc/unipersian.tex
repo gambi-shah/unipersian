@@ -1,0 +1,706 @@
+% !TeX program = lualatex
+\documentclass[a4paper,11pt]{article}
+
+
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{facode}
+
+\usepackage{shamsi}
+
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+\usepackage{unipersian}
+\settextfont{HM XNiloofar}
+\setlatintextfont{Times New Roman}
+\setlatinmonofont{JetBrains Mono}
+\setpersianmonofont{Vazir Code}
+
+\newcommand{\code}[1]{\lr{\texttt{#1}}}
+
+
+\title{بسته \code{unipersian}}
+\author{عامر آمیخته}
+
+\makeatletter
+
+\NewMiladi{unipersian}{\uper@year}{\uper@month}{\uper@day}
+
+\date{\Shamsi{unipersian}
+    نسخه
+    \lr{\uper@version}
+}
+
+  \newcommand{\Command}[1]{%
+    \lr{\texttt{\textbackslash{}#1}}%
+}
+
+
+
+\def\XeTeX{%
+    \lr{%
+        \leavevmode
+        \hbox{%
+            X%
+            \lower.5ex\hbox{%
+                \kern-.125em
+                \scalebox{-1}[1]{E}%
+            }%
+            \kern-.1667em
+            \TeX
+        }%
+    }%
+}
+
+
+\def\PdfTeX{%
+    \lr{%
+        \leavevmode
+        \hbox{%
+            P%
+            \kern-.18em
+            \raise-.42ex\hbox{\scriptsize Df}%
+            \kern-.08em
+            \TeX
+        }%
+    }%
+}
+
+\def\LuaTeX{%
+    \lr{%
+        \leavevmode
+        \hbox{%
+            L%
+            \kern-.16em
+            \raise.28ex\hbox{\scriptsize Ua}%
+            \kern-.16em
+            \TeX
+        }%
+    }%
+}
+
+\let\rlLaTeX\LaTeX
+\def\LaTeX{\lr{\rlLaTeX}}
+\let\rlTeX\TeX
+\def\TeX{\lr{\rlTeX}}
+\makeatother
+
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    بسته‌ی \code{unipersian} افزونه‌ای مبتنی بر \code{Babel} برای
+    حروف‌چینی فارسی در اسناد چندزبانه‌ی \LaTeX با زبان اصلی فارسی
+    است. این بسته با تمرکز اصلی بر \LuaTeX طراحی شده است، از \XeTeX
+    نیز پشتیبانی می‌کند و امکانات پایه‌ای حروف‌چینی فارسی را برای
+    \PdfTeX فراهم می‌آورد. مدیریت جهت نوشتار، نمایش اعداد و
+    شمارنده‌ها به شیوه‌های گوناگون، و پشتیبانی جامع از کلاس‌های
+    استانداردی مانند \code{book} و
+    \code{article} از قابلیت‌های اصلی آن است. این بسته
+    همچنین از کلاس \code{beamer} پشتیبانی می‌کند. در طراحی
+    رابط‌های بسته نیز، تا حد امکان، الگوهای رایج در اسناد مبتنی بر
+    بسته‌ی
+    \code{xepersian}
+    در نظر گرفته شده‌اند.
+\end{abstract}
+
+
+
+
+
+
+\section{مقدمه}
+
+بسته‌ی
+\code{unipersian}
+افزونه‌ای مبتنی بر
+\code{Babel}
+برای حروف‌چینی فارسی در
+\LaTeX
+است. این بسته با تمرکز اصلی بر موتور
+\LuaTeX
+طراحی شده است و از
+\XeTeX
+نیز پشتیبانی می‌کند. همچنین، امکانات پایه‌ای حروف‌چینی فارسی برای
+\PdfTeX
+فراهم شده است.
+
+انگیزه‌ی اصلی برای توسعه‌ی این بسته، فراهم کردن امکان حروف‌چینی
+فارسی با
+\LuaTeX
+بوده است. در حال حاضر،
+\XeTeX
+به‌کمک بسته‌ی
+\code{xepersian}
+گزینه‌ی اصلی برای حروف‌چینی اسناد فارسی به شمار می‌رود؛
+اما بسته‌ی
+\code{xepersian}
+موتور
+\LuaTeX
+را پشتیبانی نمی‌کند و نسخه‌ی فعلی آن
+(\lr{26.01.01})
+استفاده از این موتور را به‌طور
+صریح متوقف می‌کند.
+
+برای مثال، سند زیر در صورت کامپایل با
+\LuaTeX
+با خطا مواجه می‌شود:
+
+\begin{latex}
+    \documentclass{article}
+    \usepackage{xepersian}
+    \settextfont{HM XNiloofar}
+
+    \begin{document}
+    ^\hfill\fa{سلام دنیا!}\hspace*{2cm}^
+    \end{document}
+\end{latex}
+
+در این حالت،
+\LuaTeX
+خطایی مشابه خطای زیر ایجاد می‌کند:
+
+\begin{facode}
+    Fatal Package xepersian Error: Oops! can not use luatex.
+\end{facode}
+
+
+انگیزه‌ی دیگر برای توسعه‌ی این بسته، استفاده از زیرساخت چندزبانه‌ی
+\code{Babel}
+است؛ به‌جای آنکه لایه‌ای زبانی و مستقل صرفاً برای زبان فارسی ایجاد
+شود. به این ترتیب، زبان فارسی را می‌توان در کنار زبان‌های دیگرِ
+پشتیبانی‌شده توسط
+\code{Babel}
+به کار برد، در حالی که ساختار سند و رابط‌های آشنای اسناد فارسی تا
+حد زیادی حفظ می‌شوند.
+
+بر این اساس، طراحی بسته‌ی
+\code{unipersian}
+بر دو هدف اصلی استوار است:
+
+\begin{enumerate}
+    \item
+          فراهم کردن حروف‌چینی فارسی با تمرکز اصلی بر
+          \LuaTeX،
+          پشتیبانی از
+          \XeTeX،
+          و ارائه‌ی امکانات پایه‌ای برای
+          \PdfTeX؛
+
+    \item
+          ارائه‌ی رابط‌ها و الگوهای رایج آشنا برای کاربران
+          \code{xepersian}
+          با تکیه بر زیرساخت چندزبانه‌ی
+          \code{Babel}،
+          به‌گونه‌ای که انتقال اسناد موجود، با
+          تغییرات محدودی انجام شود.
+\end{enumerate}
+
+
+\section{موتورهای پشتیبانی‌شده}
+
+بسته‌ی
+\code{unipersian}
+برای استفاده با موتورهای
+\TeX
+زیر طراحی شده است:
+
+\begin{center}
+    \begin{tabular}{cc}
+        \toprule
+        موتور   & وضعیت                 \\
+        \midrule
+        \LuaTeX & موتور اصلی و توصیه‌شده \\
+        \XeTeX  & پشتیبانی می‌شود        \\
+        \PdfTeX & پشتیبانی پایه‌ای       \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+موتور
+\TeX
+به‌صورت خودکار تشخیص داده می‌شود و بسته، تعریف‌ها و تنظیمات متناسب
+با موتور مورد استفاده را بارگذاری می‌کند. برای استفاده از ورودی
+\lr{Unicode}
+در اسناد فارسی، استفاده از
+\LuaTeX
+یا
+\XeTeX
+ضروری است؛ بااین‌حال،
+\LuaTeX
+به‌دلیل پشتیبانی بهتر و تمرکز توسعه‌ی فعلی بسته، گزینه‌ی توصیه‌شده است.
+
+\subsection{\XeTeX}
+
+در
+\XeTeX،
+بسته از
+\code{Babel}
+به همراه سامانه‌ی جهت‌دهی
+\code{bidi-r}
+استفاده می‌کند. این شاخه برای حروف‌چینی فارسی و متن‌های دوجهته
+پشتیبانی فراهم می‌کند و با هدف ارائه‌ی رابط‌هایی آشنا برای کاربرانی
+که پیش‌تر با
+\code{xepersian}
+کار کرده‌اند، طراحی شده است.
+
+این هدف به معنای سازگاری کامل یا یکسانی رفتار با
+\code{xepersian}
+نیست. همچنین، راهنمای فعلی
+\code{Babel}
+استفاده از
+\XeTeX
+را برای حروف‌چینی فارسی دیگر توصیه
+نمی‌کند.\LR{\footnote{%
+        \url{https://latex3.github.io/babel/guides/locale-persian.html}%
+    }}
+
+\subsection{\LuaTeX}
+
+\LuaTeX
+موتور اصلی در طراحی و توسعه‌ی بسته‌ی
+\code{unipersian}
+است و برای حروف‌چینی اسناد فارسی توصیه می‌شود. این موتور ورودی
+\lr{Unicode}
+را به‌صورت مستقیم پردازش می‌کند و امکان توسعه‌ی فرآیند حروف‌چینی را
+از طریق زبان
+\lr{Lua}\footnote{\lr{Lua}
+    زبانی برنامه‌نویسی سبک و قابل جاسازی است که در
+    \LuaTeX
+    برای پردازش و تغییر متن و توسعه‌ی امکانات حروف‌چینی به کار می‌رود.}
+فراهم
+می‌آورد.
+
+بسته در این شاخه، از
+\code{Babel}
+همراه با سامانه‌ی
+\code{basic}
+برای مدیریت جهت نوشتار و حروف‌چینی دوجهته استفاده می‌کند و تعریف‌های
+اضافی مخصوص
+\LuaTeX
+را نیز فراهم می‌آورد.
+
+تنظیمات پیش‌فرض
+\code{layout}
+در این شاخه، مؤلفه‌هایی مانند
+\code{counters}،
+\code{tabular}،
+\code{graphics}
+و
+\code{footnotes}
+را دربرمی‌گیرد. پیاده‌سازی
+\LuaTeX
+همچنین تنظیمات لازم برای مدیریت جهت نوشتار در پانویس‌ها، جدول‌ها،
+بسته‌ی
+\code{tikz}
+و بسته‌ی
+\code{fancyhdr}
+را فراهم می‌کند.
+
+\subsection{\PdfTeX}
+
+\PdfTeX
+با استفاده از سازوکارهای سنتی
+\LaTeX
+برای مدیریت ورودی و کدگذاری فونت، در کنار
+\code{Babel}
+پشتیبانی می‌شود. این پشتیبانی برای حروف‌چینی پایه‌ای فارسی فراهم شده
+است، اما از نظر پردازش مستقیم
+\lr{Unicode}
+و مدیریت فونت، محدودتر از پشتیبانی دو موتور دیگر است.
+
+ازاین‌رو، برای اسناد فارسی مبتنی بر
+\lr{Unicode}
+استفاده از
+\PdfTeX
+باید تنها در صورت وجود محدودیت‌های فنی یا اجرایی مورد استفاده قرار گیرد.
+
+\section{بارگذاری بسته و گزینه‌ها}
+
+بسته به شیوه‌ی معمول \LaTeX بارگذاری می‌شود:
+
+\begin{latex}
+    \usepackage[<options>]{unipersian}
+\end{latex}
+
+\code{<options>}
+همان گزینه‌های بستهٔ
+\code{Babel}
+است.
+
+توجه کنید که مانند
+\code{xepersian}
+و دیگر بسته‌های زبانی، بسته‌ی
+\code{unipersian}
+نیز باید به عنوان آخرین بسته بارگذاری شود.
+
+در
+\XeTeX
+و
+\LuaTeX
+می‌توان فونت متن را با
+\Command{settextfont}
+یا سازوکار متناظر هر موتور تعیین کرد. برای مثال:
+
+\begin{latex}
+    \settextfont{Vazirmatn}
+\end{latex}
+
+برخلاف
+\code{xepersian}،
+تعیین فونت الزامی نیست. اگر فونت به‌صورت صریح تعیین نشود، بسته در صورت
+یافتن فونت‌های مناسبِ پیش‌فرض از آن‌ها استفاده می‌کند؛ در غیر این صورت،
+باید فونت مورد نظر را با
+\Command{settextfont}
+مشخص کرد.
+
+\section{سازگاری با \code{xepersian}}
+
+یکی از اهداف بسته‌ی
+\code{unipersian}
+فراهم‌کردن مسیر مهاجرت ساده برای اسنادی است که پیش‌تر با بسته‌ی
+\code{xepersian}
+نوشته شده‌اند. در حالت مطلوب، جایگزین‌کردن
+
+\begin{latex}
+    \usepackage{xepersian}
+\end{latex}
+
+با
+
+\begin{latex}
+    \usepackage{unipersian}
+\end{latex}
+
+باید با حداقل تغییر در سایر بخش‌های سند امکان‌پذیر باشد.
+
+
+در چنین مواردی، بسته تلاش می‌کند دستورهای پرکاربرد و رفتار عمومی سند،
+از جمله حروف‌چینی متن فارسی، متن چپ‌به‌راست و تنظیم فونت را تا حد امکان
+حفظ کند. بااین‌حال، یکسانی کامل میان خروجی دو بسته تضمین نمی‌شود؛ زیرا
+\code{unipersian}
+بر پایه‌ی
+\code{Babel}
+پیاده‌سازی شده است، درحالی‌که
+\code{xepersian}
+از سازوکارها و رابط برنامه‌نویسی متفاوتی استفاده می‌کند.
+
+این دو بسته جایگزین یکدیگرند و نباید به‌صورت هم‌زمان در یک سند بارگذاری
+شوند. همچنین بعضی از دستورها یا امکانات اختصاصی
+\code{xepersian}
+که هنوز در رابط برنامه‌نویسی بسته‌ی
+\code{unipersian}
+پیاده‌سازی نشده‌اند، ممکن است پس از مهاجرت نیازمند تغییر باشند.
+
+نسخه‌ی فعلی همه‌ی دستورها و امکانات ارائه‌شده توسط
+\code{xepersian}
+را پیاده‌سازی نمی‌کند. تمرکز فعلی بر پشتیبانی از بخش‌های مهم و پرکاربرد
+رابط برنامه‌نویسی آن است. این سازگاری در نسخه‌های آینده، متناسب با نیازهای
+کاربران و توسعه‌ی بسته، گسترش خواهد یافت.
+
+\section{دستورها و محیط‌های بسته}
+
+در ادامه، فهرست مهم‌ترین دستورها و محیط‌های بستهٔ
+\code{xepersian}
+ارائه می‌شود که برای حفظ سازگاری بستهٔ
+\code{unipersian}
+با بستهٔ \code{xepersian} در آن تعریف شده‌اند.
+این فهرست شامل برخی دستورها و محیط‌هایی است که در اصل به بستهٔ
+وابستهٔ \code{bidi} مربوط می‌شوند.
+
+
+
+\begin{center}
+    \begin{tabular}{@{}lr@{}}
+        \Command{deflatinfont}
+         & تعریف یک قلم لاتین با یک نام دلخواه        \\
+        \Command{defpersianfont}
+         & تعریف یک قلم فارسی با یک نام دلخواه        \\
+        \Command{latintoday}
+         & نمایش تاریخ امروز با رقم‌ها و نام ماه لاتین \\
+        \Command{lr}
+         & حروف‌چینی متن چپ‌به‌راست                      \\
+        \Command{LRE}
+         & آغاز یک بخش چپ‌به‌راستِ توکار                 \\
+        \Command{rl}
+         & حروف‌چینی متن راست‌به‌چپ                      \\
+        \Command{RLE}
+         & آغاز یک بخش راست‌به‌چپِ توکار                 \\
+        \Command{setlatintextfont}
+         & انتخاب قلم متن لاتین                       \\
+        \Command{setlatinmonofont}
+         & انتخاب قلم تک‌عرض لاتین                     \\
+        \Command{setpersianmonofont}
+         & انتخاب قلم تک‌عرض فارسی                     \\
+        \Command{settextfont}
+         & انتخاب قلم اصلی متن                        \\
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{@{}lr@{}}
+        \code{latin}
+         & حروف‌چینی یک بخش به زبان لاتین و در جهت چپ‌به‌راست \\
+        \code{persian}
+         & حروف‌چینی یک بخش به زبان فارسی و در جهت راست‌به‌چپ \\
+        \code{LTR}
+         & حروف‌چینی یک بخش چپ‌به‌راست                        \\
+        \code{RTL}
+         & حروف‌چینی یک بخش راست‌به‌چپ                        \\
+    \end{tabular}
+\end{center}
+
+\section{کدنویسی}
+
+بستهٔ \code{unipersian} امکان نمایش قطعه‌کدها و متن‌های با چیدمان ثابت
+را در اسناد فارسی فراهم می‌کند و جهت نوشتار آن‌ها را مستقل از متن
+پیرامون مدیریت می‌کند.
+
+
+برای نمایش قطعه‌کدهایی که با بستهٔ \code{listings} حروف‌چینی
+می‌شوند، بستهٔ \code{unipersian-listings} به‌صورت خودکار در بارگذاری می‌شود. گزینهٔ \code{escapeinside} امکان استفاده از دستورات لاتک را
+در محیط \code{lstlisting} فراهم می‌کند. دستورهایی مانند
+\Command{fa} که باید درون کد اثر بگذارند، باید درون جداکننده‌های این
+گزینه نوشته شوند.
+\sloppy
+به عنوان مثال:
+
+
+\begin{latex}
+    \documentclass{article}
+    \usepackage{xcolor}
+    \usepackage{listings}
+    \usepackage{unipersian}
+
+    \setlatinmonofont{JetBrains Mono}
+    \setpersianmonofont{Vazir Code}
+    \begin{document}
+    \begin{lstlisting}[
+            language=Python,
+            escapeinside={@}{@},
+            basicstyle=\ttfamily\small,
+            keywordstyle=\color{blue},
+            commentstyle=\color{green!50!black},
+            showstringspaces=false]
+            # Greet the user
+            name = input("Name: ")
+            # @\fa{^\fa{نمایش پیام خوشامدگویی}^}@
+            print(f"@\fa{^\fa{سلام}^}@ {name}!")
+        \end{lstlisting}
+    \end{document}
+\end{latex}
+
+خروجی به این صورت خواهد بود:
+
+\begin{lstlisting}[
+    language=Python,
+    escapeinside={@}{@},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    showstringspaces=false
+    ]
+    # Greet the user
+    name = input("Name: ")
+    # @\fa{نمایش پیام خوشامدگویی}@
+    print(f"@\fa{سلام}@ {name}!")
+\end{lstlisting}
+
+در بستهٔ \code{unipersian}، دستور \Command{verb} و محیط
+\code{verbatim} برای نمایش چپ‌به‌راست محتوای لاتین در اسناد فارسی
+سازگار شده‌اند و می‌توان از آن‌ها برای نمایش متن با چیدمان ثابت و
+قطعه‌کدهای ساده استفاده کرد.
+
+
+بنابراین، اگر به امکاناتی مانند رنگ‌آمیزی نحوی، شماره‌گذاری خطوط یا
+درج متن فارسی در قطعه‌کد نیاز ندارید، می‌توانید برای نمایش کدهای ساده
+از همین امکانات پایهٔ لاتک، یعنی دستور \Command{verb} و محیط
+\code{verbatim}، استفاده کنید.
+
+\section{اعداد و شماره‌گذاری فارسی}
+
+بسته مجموعه‌ای از دستورات را برای نمایش اعداد و شماره‌گذاری به شیوه‌های
+رایج فارسی فراهم می‌کند.
+دستورات زیر نام یک شمارنده را به‌عنوان آرگومان می‌گیرند:
+
+\begin{latex}
+    \harfi{section}
+    \adadi{section}
+    \tartibi{section}
+    \Abjad{section}
+\end{latex}
+
+این دستورات، مقدار شمارنده را به ترتیب به صورت حروف الفبای فارسی، عدد
+به حروف، عدد ترتیبی و حروف ابجد نمایش می‌دهند.
+
+برای نمایش مستقیم یک مقدار عددی، می‌توان از دستورات متناظر زیر استفاده کرد:
+
+\begin{latex}
+    \harfin{3}
+    \adadinumeral{^\lr{11}^}
+    \tartibinumeral{^\lr{4}^}
+    \Abjadnumeral{^\lr{7}^}
+\end{latex}
+
+دستورهای
+\Command{harfi}
+و
+\Command{Abjad}
+به‌ترتیب مقادیر ۱ تا ۳۲ و ۱ تا ۲۸ را پشتیبانی می‌کنند. دستورهای
+\Command{adadi}
+و
+\Command{tartibi}
+نیز برای مقادیر صحیح مثبت تا ۹۹۹٬۹۹۹٬۹۹۹ قابل استفاده‌اند.
+
+\section{فارسی‌سازی عناوین و اصطلاحات}
+
+بستهٔ \code{unipersian}، همانند بستهٔ \code{xepersian}،
+ترجمهٔ فارسی عناوین استاندارد \LaTeX و اصطلاحات برخی بسته‌ها و کلاس‌های
+پرکاربرد را فراهم می‌کند. این ترجمه‌ها شامل عنوان‌هایی مانند «فهرست
+مطالب»، «شکل»، «جدول»، «منابع»، «نمایه» و «واژه‌نامه» است.
+
+ترجمه‌های مرتبط با هر بسته یا کلاس، در صورت بارگذاری آن به صورت شرطی
+فعال می‌شوند. برای نمونه، بسته‌های \code{algorithm},
+\code{hyperref}, \code{listings} و
+\code{minitoc}، و همچنین کلاس \code{beamer}، از این
+قابلیت پشتیبانی می‌کنند.
+
+این ترجمه‌ها با هدف ایجاد تجربه‌ای مشابه با \code{xepersian} و
+تسهیل استفاده از \code{unipersian} در سندهای فارسی ارائه شده‌اند.
+
+\section{پشتیبانی از کلاس \code{beamer}}
+
+بستهٔ \code{unipersian} امکان تهیهٔ ارائه‌های فارسی با کلاس
+\code{beamer} را فراهم می‌کند. یک نمونهٔ ساده به‌صورت زیر است:
+
+\begin{latex}
+    \documentclass{beamer}
+    \usepackage{unipersian}
+
+    \begin{document}
+    \begin{frame}
+        ^\hfill\fa{سلام دنیا!}\hspace*{2cm}^
+    \end{frame}
+    \end{document}
+\end{latex}
+
+هر سه موتور
+\PdfTeX، \XeTeX و \LuaTeX
+قابل استفاده‌اند، اما مانند بقیه کلاس‌ها
+استفاده از \LuaTeX توصیه می‌شود. بسته در
+این موتور تنظیمات اختصاصی لازم برای بهبود چیدمان راست‌به‌چپ برخی اجزای
+\code{beamer}، از جمله کادرها، را اعمال می‌کند؛ ازاین‌رو نتیجه در
+تم‌ها و پیکربندی‌های گوناگون معمولاً مناسب‌تر است.
+
+برای تهیهٔ ارائه‌های فارسی، استفاده از کلاس
+\code{beamer-rl} همراه با بستهٔ \code{unipersian} توصیه می‌شود.
+این کلاس به‌طور ویژه برای ارائه‌های راست‌به‌چپ طراحی شده است و می‌تواند
+در تم‌ها و پیکربندی‌های گوناگون، چیدمان مناسب‌تری برای اجزای
+\code{beamer} فراهم کند. کلاس \code{beamer-rl} فقط با موتور
+\LuaTeX قابل استفاده است. نمونهٔ بارگذاری آن به‌صورت زیر است:
+
+\begin{latex}
+    \documentclass{beamer-rl}
+    \usepackage{unipersian}
+
+    \begin{document}
+    \begin{frame}
+        ^\hfill\fa{سلام دنیا!}\hspace*{2cm}^
+    \end{frame}
+    \end{document}
+\end{latex}
+
+
+در صورت بروز مشکل در یک تم، محیط یا پیکربندی خاص، می‌توان استفاده از
+\code{beamer-rl} را کنار گذاشت و سند را با کلاس استاندارد
+\code{beamer} تهیه کرد. بستهٔ \code{unipersian} برای استفادهٔ
+مستقیم با این کلاس نیز تنظیم شده است.
+
+
+
+پشتیبانی از \code{beamer} همچنان در مرحلهٔ آغازین توسعه قرار
+دارد و ممکن است در بعضی تم‌ها، محیط‌ها یا پیکربندی‌ها محدودیت‌هایی وجود
+داشته باشد. سازگاری با اجزای مختلف این کلاس در نسخه‌های آینده بهبود
+خواهد یافت و کاربران می‌توانند مشکلات مربوط به چیدمان و تم‌ها را گزارش
+کنند.
+
+\section{محدودیت‌های فعلی}
+
+نسخه‌ی فعلی هنوز کامل نیست و چند محدودیت شناخته‌شده دارد.
+
+مهم‌ترین موارد عبارت‌اند از:
+
+\begin{itemize}
+    \item همه‌ی قابلیت‌های \code{xepersian} هنوز پیاده‌سازی نشده‌اند.
+    \item پشتیبانی از \lr{Beamer} هنوز در حال تکمیل است.
+    \item پشتیبانی از \PdfTeX نسبت به \lr{XeTeX} و \LuaTeX محدودتر است.
+    \item سازگاری با همه‌ی بسته‌های جانبی \LaTeX به‌طور کامل آزموده نشده است.
+\end{itemize}
+
+\section{گزارش مشکلات}
+
+هنگام گزارش یک مشکل، لطفاً اطلاعات زیر را ارائه کنید:
+
+\begin{enumerate}
+    \item موتور \TeX{} و نسخه‌ی آن.
+    \item نسخه‌ی \LaTeX{}.
+    \item نسخه‌ی بسته‌ی \code{unipersian}.
+    \item یک مثال حداقلی قابل اجرا (\lr{MWE}).
+    \item در صورت امکان، متن کامل خطا.
+\end{enumerate}
+
+برای مثال:
+\begin{latin}
+    \begin{facode}
+        Engine: LuaTeX
+        LaTeX: TeX Live 2026
+        unipersian: ^\makeatletter
+        \uper@version
+        \makeatother^
+    \end{facode}
+\end{latin}
+
+برای بررسی یک مشکل، یک مثال کوچک و قابل بازتولید
+بسیار مفیدتر از یک سند بزرگ است.
+
+
+\section{مجوز}
+
+بسته‌ی \code{unipersian} تحت مجوز
+\lr{LaTeX Project Public License (LPPL)}
+نسخه‌ی \lr{1.3c} یا جدیدتر منتشر می‌شود.
+متن کامل مجوز در فایل \code{LICENSE} موجود است.
+
+
+\section{قدردانی}
+از آقای وفا خلیقی، نویسنده و نگهدارنده‌ی بسته‌های
+\code{xepersian} و \code{bidi}، صمیمانه قدردانی می‌کنیم.
+کارهای ایشان نقش مهمی در توسعه‌ی حروف‌چینی فارسی و راست‌به‌چپ
+و گسترش استفاده از \LaTeX{} در میان کاربران فارسی‌زبان داشته است.
+
+همچنین از توسعه‌دهندگان و نگهدارندگان پروژه‌ی \code{Babel}،
+و همه‌ی مشارکت‌کنندگان در اکوسیستم \LaTeX{} فارسی، قدردانی می‌کنیم.
+این پروژه‌ها و تجربه‌های به‌دست‌آمده از آن‌ها، بخشی از زمینه‌ی فنی
+و الهام‌بخش توسعه‌ی بسته‌ی \code{unipersian} را فراهم کرده‌اند.
+
+\section{نویسنده و نگهدارنده}
+
+
+
+بسته‌ی \code{unipersian} در حال حاضر توسط
+\textbf{عامر آمیخته}
+نگهداری و توسعه داده می‌شود.
+
+مخزن پروژه:
+\hfill \url{https://github.com/gambi-shah/unipersian}
+
+\end{document}

@@ -1,0 +1,32 @@
+\documentclass[]{article}
+\usepackage{iftex}
+\usepackage{debug}
+
+\newif\ifpersian
+
+%\persiantrue
+\persianfalse
+
+\ifpersian
+\usepackage{persian}
+\else
+\ifXeTeX
+\usepackage{bidi}
+\fi
+\ifLuaTeX
+\usepackage{luabidi}
+\fi
+\fi
+\begin{document}
+    
+    
+    \ifpersian\begin{latin}\fi
+    \dbgEngine
+   \dbgPackage{persian}
+    \ifpersian\end{latin}\fi
+    
+    
+    \vfil
+
+\hboxR{Hey World}
+\end{document}

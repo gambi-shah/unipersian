@@ -1,0 +1,170 @@
+% This file is a documentation support file for the unipersian package.
+%
+% It provides the date-conversion functionality required by shamsi
+% in the documentation of unipersian. It is not part of the unipersian
+% package itself.
+%
+% This file is currently distributed only as part of the source
+% of the unipersian documentation and is not intended as an
+% independently released package.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jalali-engine}[2026/09/08 Documentation support for the unipersian package]
+
+\RequirePackage{expl3}
+
+\ExplSyntaxOn
+
+% ------------------------------------------------
+% Global result variables (Public for Interface)
+% ------------------------------------------------
+\int_new:N \g_jd_gy_int
+\int_new:N \g_jd_gm_int
+\int_new:N \g_jd_gd_int
+
+\int_new:N \g_jd_jy_int
+\int_new:N \g_jd_jm_int
+\int_new:N \g_jd_jd_int
+
+\int_new:N \g_jd_wd_int
+
+% ------------------------------------------------
+% Local working variables
+% ------------------------------------------------
+\int_new:N \l_jd_days_int
+\int_new:N \l_jd_leap_int
+\int_new:N \l_jd_month_len_int
+\int_new:N \l_jd_wd_int
+\int_new:N \l_jd_tmp_int
+
+\int_new:N \l_jd_y_int
+\int_new:N \l_jd_m_int
+\int_new:N \l_jd_d_int
+
+% ------------------------------------------------
+% Sakamoto month code
+% ------------------------------------------------
+\cs_new:Npn \jd_sakamoto_month_code:n #1
+{
+    \int_case:nn {#1}
+    {
+        {1}{0} {2}{3} {3}{2} {4}{5} {5}{0} {6}{3}
+        {7}{5} {8}{1} {9}{4} {10}{6} {11}{2} {12}{4}
+    }
+}
+
+% ------------------------------------------------
+% Gregorian leap-year test
+% ------------------------------------------------
+\cs_new:Npn \jd_is_gregorian_leap:n #1
+{
+    \bool_if:nTF
+    {
+        ( \int_compare_p:nNn { \int_mod:nn {#1} {4} } = {0}
+        && ! \int_compare_p:nNn { \int_mod:nn {#1} {100} } = {0} )
+        || \int_compare_p:nNn { \int_mod:nn {#1} {400} } = {0}
+    } {1} {0}
+}
+
+% ------------------------------------------------
+% Weekday calculation (Result in \l_jd_wd_int)
+% ------------------------------------------------
+\cs_new_protected:Npn \jd_calculate_weekday_logic:nnn #1#2#3
+{
+    \int_set:Nn \l_jd_tmp_int {#1}
+    \int_compare:nT { #2 < 3 } { \int_decr:N \l_jd_tmp_int }
+    \int_set:Nn \l_jd_wd_int
+    {
+        \int_mod:nn { \l_jd_tmp_int + \int_div_truncate:nn { \l_jd_tmp_int } {4}
+            - \int_div_truncate:nn { \l_jd_tmp_int } {100} + \int_div_truncate:nn { \l_jd_tmp_int } {400}
+            + \jd_sakamoto_month_code:n {#2} + #3 } {7}
+    }
+}
+
+% ------------------------------------------------
+% Core: Gregorian -> Jalali
+% ------------------------------------------------
+\cs_new_protected:Npn \jd_convert_gregorian_to_jalali_core:nnn #1#2#3
+{
+    \group_begin:
+    \int_set:Nn \l_jd_tmp_int { #1 - 1600 }
+    \int_set:Nn \l_jd_days_int { 365 * \l_jd_tmp_int + \int_div_truncate:nn { \l_jd_tmp_int + 3 } {4} - \int_div_truncate:nn { \l_jd_tmp_int + 99 } {100} + \int_div_truncate:nn { \l_jd_tmp_int + 399 } {400} }
+
+    \int_case:nn {#2} { {1}{ \int_add:Nn \l_jd_days_int {0} } {2}{ \int_add:Nn \l_jd_days_int {31} } {3}{ \int_add:Nn \l_jd_days_int {59} } {4}{ \int_add:Nn \l_jd_days_int {90} } {5}{ \int_add:Nn \l_jd_days_int {120} } {6}{ \int_add:Nn \l_jd_days_int {151} } {7}{ \int_add:Nn \l_jd_days_int {181} } {8}{ \int_add:Nn \l_jd_days_int {212} } {9}{ \int_add:Nn \l_jd_days_int {243} } {10}{ \int_add:Nn \l_jd_days_int {273} } {11}{ \int_add:Nn \l_jd_days_int {304} } {12}{ \int_add:Nn \l_jd_days_int {334} } }
+    \int_compare:nT { #2 > 2 } { \int_add:Nn \l_jd_days_int { \jd_is_gregorian_leap:n {#1} } }
+    \int_add:Nn \l_jd_days_int { #3 - 1 }
+
+    \int_set:Nn \l_jd_days_int { \l_jd_days_int - 79 }
+
+    \int_set:Nn \l_jd_tmp_int { \int_div_truncate:nn { \l_jd_days_int } {12053} }
+    \int_set:Nn \l_jd_days_int { \int_mod:nn { \l_jd_days_int } {12053} }
+    \int_set:Nn \l_jd_y_int { 979 + 33 * \l_jd_tmp_int + 4 * \int_div_truncate:nn { \l_jd_days_int } {1461} }
+    \int_set:Nn \l_jd_days_int { \int_mod:nn { \l_jd_days_int } {1461} }
+
+    \int_compare:nT { \l_jd_days_int > 365 }
+    {
+        \int_add:Nn \l_jd_y_int { \int_div_truncate:nn { \l_jd_days_int - 1 } {365} }
+        \int_set:Nn \l_jd_days_int { \int_mod:nn { \l_jd_days_int - 1 } {365} }
+    }
+
+    \int_compare:nTF { \l_jd_days_int < 186 }
+    { \int_set:Nn \l_jd_m_int { 1 + \int_div_truncate:nn { \l_jd_days_int } {31} } \int_set:Nn \l_jd_d_int { 1 + \int_mod:nn { \l_jd_days_int } {31} } }
+    { \int_set:Nn \l_jd_m_int { 7 + \int_div_truncate:nn { \l_jd_days_int - 186 } {30} } \int_set:Nn \l_jd_d_int { 1 + \int_mod:nn { \l_jd_days_int - 186 } {30} } }
+
+    \int_gset:Nn \g_jd_gy_int {#1} \int_gset:Nn \g_jd_gm_int {#2} \int_gset:Nn \g_jd_gd_int {#3}
+    \int_gset:Nn \g_jd_jy_int { \l_jd_y_int } \int_gset:Nn \g_jd_jm_int { \l_jd_m_int } \int_gset:Nn \g_jd_jd_int { \l_jd_d_int }
+
+    \jd_calculate_weekday_logic:nnn {#1}{#2}{#3}
+    \int_gset_eq:NN \g_jd_wd_int \l_jd_wd_int
+
+    \group_end:
+}
+
+% ------------------------------------------------
+% Core: Jalali -> Gregorian
+% ------------------------------------------------
+\cs_new_protected:Npn \jd_convert_jalali_to_gregorian_core:nnn #1#2#3
+{
+    \group_begin:
+    \int_set:Nn \l_jd_tmp_int { #1 - 979 }
+    \int_set:Nn \l_jd_days_int { 365 * \l_jd_tmp_int + \int_div_truncate:nn { \l_jd_tmp_int } {33} * 8 + \int_div_truncate:nn { \int_mod:nn { \l_jd_tmp_int } {33} + 3 } {4} }
+    \int_compare:nTF { #2 < 7 } { \int_add:Nn \l_jd_days_int { ( #2 - 1 ) * 31 } } { \int_add:Nn \l_jd_days_int { ( #2 - 1 ) * 30 + 6 } }
+    \int_add:Nn \l_jd_days_int { #3 + 78 }
+
+    \int_set:Nn \l_jd_y_int { 1600 + 400 * \int_div_truncate:nn { \l_jd_days_int } {146097} }
+    \int_set:Nn \l_jd_days_int { \int_mod:nn { \l_jd_days_int } {146097} }
+    \int_compare:nT { \l_jd_days_int > 36524 }
+    { \int_sub:Nn \l_jd_days_int { 1 } \int_add:Nn \l_jd_y_int { 100 * \int_div_truncate:nn { \l_jd_days_int } {36524} } \int_set:Nn \l_jd_days_int { \int_mod:nn { \l_jd_days_int } {36524} } \int_compare:nT { \l_jd_days_int >= 365 } { \int_add:Nn \l_jd_days_int { 1 } } }
+
+    \int_add:Nn \l_jd_y_int { 4 * \int_div_truncate:nn { \l_jd_days_int } {1461} }
+    \int_set:Nn \l_jd_days_int { \int_mod:nn { \l_jd_days_int } {1461} }
+    \int_compare:nT { \l_jd_days_int > 365 } { \int_add:Nn \l_jd_y_int { \int_div_truncate:nn { \l_jd_days_int - 1 } {365} } \int_set:Nn \l_jd_days_int { \int_mod:nn { \l_jd_days_int - 1 } {365} } }
+
+    \int_set:Nn \l_jd_d_int { \l_jd_days_int + 1 }
+    \int_set:Nn \l_jd_m_int { 1 }
+    \int_set:Nn \l_jd_leap_int { \jd_is_gregorian_leap:n { \l_jd_y_int } }
+
+    \int_step_inline:nn {12}
+    {
+        \int_set:Nn \l_jd_month_len_int
+        {
+            \int_case:nn {##1}
+            { {1}{31} {2}{ \int_eval:n { 28 + \l_jd_leap_int } } {3}{31} {4}{30} {5}{31} {6}{30} {7}{31} {8}{31} {9}{30} {10}{31} {11}{30} {12}{31} }
+        }
+        \int_compare:nT { \l_jd_d_int > \l_jd_month_len_int }
+        {
+            \int_sub:Nn \l_jd_d_int { \l_jd_month_len_int }
+            \int_incr:N \l_jd_m_int
+        }
+    }
+
+    \int_gset:Nn \g_jd_gy_int { \l_jd_y_int } \int_gset:Nn \g_jd_gm_int { \l_jd_m_int } \int_gset:Nn \g_jd_gd_int { \l_jd_d_int }
+    \int_gset:Nn \g_jd_jy_int {#1} \int_gset:Nn \g_jd_jm_int {#2} \int_gset:Nn \g_jd_jd_int {#3}
+
+    \jd_calculate_weekday_logic:nnn { \l_jd_y_int } { \l_jd_m_int } { \l_jd_d_int }
+    \int_gset_eq:NN \g_jd_wd_int \l_jd_wd_int
+
+    \group_end:
+}
+
+\ExplSyntaxOff

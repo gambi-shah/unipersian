@@ -1,0 +1,118 @@
+======================================================================
+Static LaTeX definition analysis - table2 checker
+======================================================================
+entries analysed : 59
+defined          : 42
+mentioned_only   : 0
+manual_review    : 0
+not_found        : 17
+files scanned    : 239
+  root unipersian /home/amer/Dropbox/Latex/packages/unipersian (exists=True, files=14)
+  root babel      /usr/local/texlive/2026/texmf-dist/tex/generic/babel (exists=True, files=60)
+  root bidi       /usr/local/texlive/2026/texmf-dist/tex/latex/bidi (exists=True, files=161)
+  root luabidi    /usr/local/texlive/2026/texmf-dist/tex/lualatex/luabidi (exists=True, files=1)
+  root fontspec   /usr/local/texlive/2026/texmf-dist/tex/latex/fontspec (exists=True, files=3)
+----------------------------------------------------------------------
+[       defined       ] \autofootnoterule (command) -> def @ bidi:footnote-xetex-bidi.def:140 role=body_definition prio=100 (defs=6, mentions=2)
+             defined in packages: bidi, luabidi
+[      not_found      ] \AutoMathDigits (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[      not_found      ] \DefaultMathDigits (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[       defined       ] \deflatinfont (command) -> DeclareDocumentCommand @ unipersian:unipersian-fonts.def:152 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: unipersian
+[       defined       ] \defpersianfont (command) -> DeclareDocumentCommand @ unipersian:unipersian-fonts.def:147 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: unipersian
+[       defined       ] \hboxL (command) -> def @ bidi:latex-xetex-bidi.def:63 role=body_definition prio=100 (defs=3, mentions=6)
+             defined in packages: bidi, luabidi
+[       defined       ] \hboxR (command) -> def @ bidi:latex-xetex-bidi.def:53 role=body_definition prio=100 (defs=3, mentions=3)
+             defined in packages: bidi, luabidi
+[      not_found      ] \keyval@eq@alias@key (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[      not_found      ] \Latincite (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[      not_found      ] \latinfont (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[       defined       ] \latintoday (command) -> DeclareRobustCommand @ unipersian:unipersian.sty:416 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: unipersian
+[       defined       ] \leftfootnoterule (command) -> def @ bidi:footnote-xetex-bidi.def:122 role=body_definition prio=100 (defs=6, mentions=3)
+             defined in packages: bidi, luabidi
+[       defined       ] \lr (command) -> def @ unipersian:unipersian.sty:285 role=body_definition prio=100 (defs=2, mentions=0)
+             defined in packages: unipersian
+[       defined       ] \LRE (command) -> providecommand @ unipersian:unipersian.sty:311 role=body_definition prio=100 (defs=3, mentions=10)
+             defined in packages: bidi, luabidi, unipersian
+[       defined       ] \LTRdblcol (command) -> newcommand @ bidi:latex-xetex-bidi.def:544 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: bidi
+[       defined       ] \LTRfootnote (command) -> def @ bidi:bidiftnxtra.sty:53 role=body_definition prio=100 (defs=20, mentions=7)
+             defined in packages: bidi, luabidi
+[       defined       ] \LTRfootnotetext (command) -> def @ bidi:footnote-xetex-bidi.def:332 role=body_definition prio=100 (defs=1, mentions=9)
+             defined in packages: bidi
+[       defined       ] \LTRthanks (command) -> renewcommand @ bidi:bidituftetitle.sty:66 role=body_definition prio=100 (defs=22, mentions=15)
+             defined in packages: bidi
+[      not_found      ] \persianday (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[      not_found      ] \persianfont (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[      not_found      ] \PersianMathDigits (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[      not_found      ] \persianmonth (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[      not_found      ] \persianyear (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[      not_found      ] \plq (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[      not_found      ] \prq (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[       defined       ] \rightfootnoterule (command) -> def @ bidi:footnote-xetex-bidi.def:126 role=body_definition prio=100 (defs=6, mentions=1)
+             defined in packages: bidi, luabidi
+[       defined       ] \rl (command) -> def @ unipersian:unipersian.sty:286 role=body_definition prio=100 (defs=2, mentions=0)
+             defined in packages: unipersian
+[       defined       ] \RLE (command) -> providecommand @ unipersian:unipersian.sty:303 role=body_definition prio=100 (defs=3, mentions=11)
+             defined in packages: bidi, luabidi, unipersian
+[       defined       ] \RTLdblcol (command) -> newcommand @ bidi:latex-xetex-bidi.def:543 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: bidi
+[       defined       ] \RTLfootnote (command) -> def @ bidi:bidiftnxtra.sty:59 role=body_definition prio=100 (defs=20, mentions=6)
+             defined in packages: bidi, luabidi
+[       defined       ] \RTLfootnotetext (command) -> def @ bidi:footnote-xetex-bidi.def:347 role=body_definition prio=100 (defs=1, mentions=10)
+             defined in packages: bidi
+[       defined       ] \RTLthanks (command) -> renewcommand @ bidi:bidituftetitle.sty:67 role=body_definition prio=100 (defs=22, mentions=15)
+             defined in packages: bidi
+[       defined       ] \@SepMark (command) -> gdef @ bidi:latex-xetex-bidi.def:187 role=body_definition prio=100 (defs=1, mentions=170)
+             defined in packages: bidi
+[       defined       ] \SepMark (command) -> def @ bidi:latex-xetex-bidi.def:187 role=body_definition prio=100 (defs=1, mentions=1)
+             defined in packages: bidi
+[       defined       ] \setdefaultbibitems (command) -> def @ bidi:latex-xetex-bidi.def:192 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: bidi
+[       defined       ] \setdefaultmarginpar (command) -> def @ bidi:latex-xetex-bidi.def:693 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: bidi
+[      not_found      ] \setmathdigitfont (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[       defined       ] \setfootnoteLR (command) -> def @ bidi:footnote-xetex-bidi.def:185 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: bidi
+[       defined       ] \setfootnoteRL (command) -> def @ bidi:footnote-xetex-bidi.def:183 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: bidi
+[       defined       ] \setlatintextfont (command) -> NewDocumentCommand @ unipersian:unipersian-fonts.def:52 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: unipersian
+[       defined       ] \setLTR (command) -> def @ bidi:latex-xetex-bidi.def:114 role=body_definition prio=100 (defs=3, mentions=12)
+             defined in packages: bidi, luabidi
+[       defined       ] \setLTRbibitems (command) -> def @ bidi:latex-xetex-bidi.def:191 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: bidi
+[       defined       ] \setLTRmarginpar (command) -> def @ bidi:latex-xetex-bidi.def:692 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: bidi
+[       defined       ] \setRTL (command) -> def @ bidi:latex-xetex-bidi.def:113 role=body_definition prio=100 (defs=3, mentions=15)
+             defined in packages: bidi, luabidi
+[       defined       ] \setRTLbibitems (command) -> def @ bidi:latex-xetex-bidi.def:190 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: bidi
+[       defined       ] \setRTLmarginpar (command) -> def @ bidi:latex-xetex-bidi.def:691 role=body_definition prio=100 (defs=1, mentions=0)
+             defined in packages: bidi
+[       defined       ] \settextfont (command) -> NewDocumentCommand @ unipersian:unipersian-fonts.def:40 role=body_definition prio=100 (defs=1, mentions=5)
+             defined in packages: unipersian
+[       defined       ] \textwidthfootnoterule (command) -> def @ bidi:footnote-xetex-bidi.def:129 role=body_definition prio=100 (defs=5, mentions=3)
+             defined in packages: bidi, luabidi
+[      not_found      ] \twocolumnstableofcontents (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[       defined       ] \unsetfootnoteRL (command) -> def @ bidi:footnote-xetex-bidi.def:184 role=body_definition prio=100 (defs=1, mentions=1)
+             defined in packages: bidi
+[       defined       ] \unsetLTR (command) -> let= @ bidi:latex-xetex-bidi.def:116 role=assignment prio=50 (defs=3, mentions=0)
+             defined in packages: bidi, luabidi
+[       defined       ] \unsetRTL (command) -> let= @ bidi:latex-xetex-bidi.def:115 role=assignment prio=50 (defs=3, mentions=0)
+             defined in packages: bidi, luabidi
+[       defined       ] \vboxL (command) -> def @ bidi:latex-xetex-bidi.def:82 role=body_definition prio=100 (defs=3, mentions=2)
+             defined in packages: bidi, luabidi
+[       defined       ] \vboxR (command) -> def @ bidi:latex-xetex-bidi.def:73 role=body_definition prio=100 (defs=3, mentions=0)
+             defined in packages: bidi, luabidi
+[       defined       ] \XeLaTeX (command) -> def @ bidi:hyperref-xetex-bidi.def:585 role=body_definition prio=100 (defs=2, mentions=4)
+             defined in packages: bidi
+[      not_found      ] \XePersian (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[      not_found      ] \xepersianversion (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[      not_found      ] \xepersiandate (command) -> None @ None:None:None role=None prio=None (defs=0, mentions=0)
+[       defined       ] \XeTeX (command) -> def @ bidi:hyperref-xetex-bidi.def:584 role=body_definition prio=100 (defs=3, mentions=4)
+             defined in packages: bidi
+----------------------------------------------------------------------
+NOTE: Pure static analysis: TeX expansion, catcodes, package load order and runtime redefinitions are NOT modelled; results may differ from actual runtime behaviour.

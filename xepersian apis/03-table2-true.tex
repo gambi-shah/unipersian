@@ -1,0 +1,147 @@
+% !TeX program = lualatex
+\documentclass[a4paper,landscape]{article}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{xltabular}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{unipersian}
+
+% Valid flexible column for xltabular.
+% Do not use X[1.2] or X[1.6] here.
+\newcolumntype{Y}{>{\hspace{0pt}\RaggedRight\arraybackslash}X}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{4pt}
+\urlstyle{same}
+
+\begin{document}
+\title{دستورها و محیط‌های تعریف‌شده}
+\author{}
+\date{}
+\maketitle
+
+\section*{بسته: \lr{unipersian}}
+\textbf{تعداد: \lr{9}}
+
+\begin{xltabular}{\textwidth}{c c c l l c c}
+\hline
+\textbf{ردیف} & \textbf{نام دستور / محیط} & \textbf{توضیحات} & \textbf{نوع} & \textbf{نوع تعریف} & \textbf{فایل منبع} & \textbf{خط} \\
+\hline
+\endfirsthead
+\hline
+\textbf{ردیف} & \textbf{نام دستور / محیط} & \textbf{توضیحات} & \textbf{نوع} & \textbf{نوع تعریف} & \textbf{فایل منبع} & \textbf{خط} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+\lr{1} & \lr{\textbackslash{}deflatinfont} & ﺗﻌﺮﯾﻒ ﻗﻠﻢ ﻻﺗﯿﻦ & دستور & \lr{DeclareDocumentCommand} & \lr{\nolinkurl{unipersian-fonts.def}} & \lr{152} \\
+\lr{2} & \lr{\textbackslash{}defpersianfont} & ﺗﻌﺮﯾﻒ ﻗﻠﻢپارسی & دستور & \lr{DeclareDocumentCommand} & \lr{\nolinkurl{unipersian-fonts.def}} & \lr{147} \\
+\lr{3} & \lr{\textbackslash{}latintoday} & ﺍﻣﺮﻭﺯﻻﺗﯿﻦ & دستور & \lr{DeclareRobustCommand} & \lr{\nolinkurl{unipersian.sty}} & \lr{416} \\
+\lr{4} & \lr{\textbackslash{}lr} & ﻣﺘﻦ ﻻﺗﯿﻦ & دستور & \lr{def} & \lr{\nolinkurl{unipersian.sty}} & \lr{285} \\
+\lr{5} & \lr{\textbackslash{}LRE} & ﭼﭗﺑﺮﺍﺳﺖ & دستور & \lr{providecommand} & \lr{\nolinkurl{unipersian.sty}} & \lr{311} \\
+\lr{6} & \lr{\textbackslash{}rl} & ﻣﺘﻦپارسی & دستور & \lr{def} & \lr{\nolinkurl{unipersian.sty}} & \lr{286} \\
+\lr{7} & \lr{\textbackslash{}RLE} & ﺭﺍﺳﺖﺑﭽﭗ & دستور & \lr{providecommand} & \lr{\nolinkurl{unipersian.sty}} & \lr{303} \\
+\lr{8} & \lr{\textbackslash{}setlatintextfont} & ﮔﺰﯾﻨﺶ ﻗﻠﻢ ﻻﺗﯿﻦ ﻣﺘﻦ & دستور & \lr{NewDocumentCommand} & \lr{\nolinkurl{unipersian-fonts.def}} & \lr{52} \\
+\lr{9} & \lr{\textbackslash{}settextfont} & ﮔﺰﯾﻨﺶ ﻗﻠﻢ ﻣﺘﻦ & دستور & \lr{NewDocumentCommand} & \lr{\nolinkurl{unipersian-fonts.def}} & \lr{40} \\
+\end{xltabular}
+
+\section*{بسته: \lr{babel}}
+\textbf{تعداد: \lr{0}}
+
+برای این بسته دستور یا محیط تعریف‌شده‌ای یافت نشد.
+
+\section*{بسته: \lr{bidi}}
+\textbf{تعداد: \lr{35}}
+
+\begin{xltabular}{\textwidth}{c c c l l c c}
+\hline
+\textbf{ردیف} & \textbf{نام دستور / محیط} & \textbf{توضیحات} & \textbf{نوع} & \textbf{نوع تعریف} & \textbf{فایل منبع} & \textbf{خط} \\
+\hline
+\endfirsthead
+\hline
+\textbf{ردیف} & \textbf{نام دستور / محیط} & \textbf{توضیحات} & \textbf{نوع} & \textbf{نوع تعریف} & \textbf{فایل منبع} & \textbf{خط} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+\lr{1} & \lr{\textbackslash{}autofootnoterule} & ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﺧﻮﺩﮐﺎﺭ & دستور & \lr{def} & \lr{\nolinkurl{footnote-xetex-bidi.def}} & \lr{140} \\
+\lr{2} & \lr{\textbackslash{}hboxL} & ﮐﺎﺩﺭﺍﭼﭗ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{63} \\
+\lr{3} & \lr{\textbackslash{}hboxR} & ﮐﺎﺩﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{53} \\
+\lr{4} & \lr{\textbackslash{}leftfootnoterule} & ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﭼﭗ & دستور & \lr{def} & \lr{\nolinkurl{footnote-xetex-bidi.def}} & \lr{122} \\
+\lr{5} & \lr{\textbackslash{}LRE} & ﭼﭗﺑﺮﺍﺳﺖ & دستور & \lr{let} & \lr{\nolinkurl{hyperref-xetex-bidi.def}} & \lr{580} \\
+\lr{6} & \lr{\textbackslash{}LTRdblcol} & ﺩﻭﺳﺘﻮﯽﻧ ﭼﭗ & دستور & \lr{newcommand} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{544} \\
+\lr{7} & \lr{\textbackslash{}LTRfootnote} & ﭘﺎﻧﻮﯾﺲ & دستور & \lr{def} & \lr{\nolinkurl{bidiftnxtra.sty}} & \lr{53} \\
+\lr{8} & \lr{\textbackslash{}LTRfootnotetext} & ﻣﺘﻦﭘﺎﻧﻮﯾﺲ & دستور & \lr{def} & \lr{\nolinkurl{footnote-xetex-bidi.def}} & \lr{332} \\
+\lr{9} & \lr{\textbackslash{}LTRthanks} & ﭘﺎﻧﻮﯾﺲ ﻋﻨﻮﺍﻥ & دستور & \lr{renewcommand} & \lr{\nolinkurl{bidituftetitle.sty}} & \lr{66} \\
+\lr{10} & \lr{\textbackslash{}rightfootnoterule} & ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{footnote-xetex-bidi.def}} & \lr{126} \\
+\lr{11} & \lr{\textbackslash{}RLE} & ﺭﺍﺳﺖﺑﭽﭗ & دستور & \lr{let} & \lr{\nolinkurl{hyperref-xetex-bidi.def}} & \lr{582} \\
+\lr{12} & \lr{\textbackslash{}RTLdblcol} & ﺩﻭﺳﺘﻮﯽﻧ ﺭﺍﺳﺖ & دستور & \lr{newcommand} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{543} \\
+\lr{13} & \lr{\textbackslash{}RTLfootnote} & ﭘﺎﻧﻮﺷﺖ & دستور & \lr{def} & \lr{\nolinkurl{bidiftnxtra.sty}} & \lr{59} \\
+\lr{14} & \lr{\textbackslash{}RTLfootnotetext} & ﻣﺘﻦﭘﺎﻧﻮﺷﺖ & دستور & \lr{def} & \lr{\nolinkurl{footnote-xetex-bidi.def}} & \lr{347} \\
+\lr{15} & \lr{\textbackslash{}RTLthanks} & ﭘﺎﻧﻮﺷﺖ ﻋﻨﻮﺍﻥ & دستور & \lr{renewcommand} & \lr{\nolinkurl{bidituftetitle.sty}} & \lr{67} \\
+\lr{16} & \lr{\textbackslash{}@SepMark} & @ﻋﻼﻣﺖﺑﯿﻦ & دستور & \lr{gdef} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{187} \\
+\lr{17} & \lr{\textbackslash{}SepMark} & ﻋﻼﻣﺖﺑﯿﻦ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{187} \\
+\lr{18} & \lr{\textbackslash{}setdefaultbibitems} & ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﻋﺎﺩﯼ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{192} \\
+\lr{19} & \lr{\textbackslash{}setdefaultmarginpar} & ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﻋﺎﺩﯼ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{693} \\
+\lr{20} & \lr{\textbackslash{}setfootnoteLR} & ﺑﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﭼﭗ & دستور & \lr{def} & \lr{\nolinkurl{footnote-xetex-bidi.def}} & \lr{185} \\
+\lr{21} & \lr{\textbackslash{}setfootnoteRL} & ﺑﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{footnote-xetex-bidi.def}} & \lr{183} \\
+\lr{22} & \lr{\textbackslash{}setLTR} & ﺑﮕﺬﺍﺭﻣﺘﻦ ﭼﭗ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{114} \\
+\lr{23} & \lr{\textbackslash{}setLTRbibitems} & ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﭼﭗ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{191} \\
+\lr{24} & \lr{\textbackslash{}setLTRmarginpar} & ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﭼﭗ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{692} \\
+\lr{25} & \lr{\textbackslash{}setRTL} & ﺑﮕﺬﺍﺭﻣﺘﻦ ﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{113} \\
+\lr{26} & \lr{\textbackslash{}setRTLbibitems} & ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{190} \\
+\lr{27} & \lr{\textbackslash{}setRTLmarginpar} & ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{691} \\
+\lr{28} & \lr{\textbackslash{}textwidthfootnoterule} & ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲﭘﻬﻨﺎﯼ ﻣﺘﻦ & دستور & \lr{def} & \lr{\nolinkurl{footnote-xetex-bidi.def}} & \lr{129} \\
+\lr{29} & \lr{\textbackslash{}unsetfootnoteRL} & ﻧﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{footnote-xetex-bidi.def}} & \lr{184} \\
+\lr{30} & \lr{\textbackslash{}unsetLTR} & ﻧﮕﺬﺍﺭﻣﺘﻦ ﭼﭗ & دستور & \lr{let=} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{116} \\
+\lr{31} & \lr{\textbackslash{}unsetRTL} & ﻧﮕﺬﺍﺭﻣﺘﻦ ﺭﺍﺳﺖ & دستور & \lr{let=} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{115} \\
+\lr{32} & \lr{\textbackslash{}vboxL} & ﮐﺎﺩﺭﻭﺍﺯﭼﭗ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{82} \\
+\lr{33} & \lr{\textbackslash{}vboxR} & ﮐﺎﺩﺭﻭﺍﺯﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{latex-xetex-bidi.def}} & \lr{73} \\
+\lr{34} & \lr{\textbackslash{}XeLaTeX} & ﺯﯼ ﻻﺗﮏ & دستور & \lr{def} & \lr{\nolinkurl{hyperref-xetex-bidi.def}} & \lr{585} \\
+\lr{35} & \lr{\textbackslash{}XeTeX} & ﺯﯼ ﺗﮏ & دستور & \lr{def} & \lr{\nolinkurl{hyperref-xetex-bidi.def}} & \lr{584} \\
+\end{xltabular}
+
+\section*{بسته: \lr{luabidi}}
+\textbf{تعداد: \lr{16}}
+
+\begin{xltabular}{\textwidth}{c c c l l c c}
+\hline
+\textbf{ردیف} & \textbf{نام دستور / محیط} & \textbf{توضیحات} & \textbf{نوع} & \textbf{نوع تعریف} & \textbf{فایل منبع} & \textbf{خط} \\
+\hline
+\endfirsthead
+\hline
+\textbf{ردیف} & \textbf{نام دستور / محیط} & \textbf{توضیحات} & \textbf{نوع} & \textbf{نوع تعریف} & \textbf{فایل منبع} & \textbf{خط} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+\lr{1} & \lr{\textbackslash{}autofootnoterule} & ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﺧﻮﺩﮐﺎﺭ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{271} \\
+\lr{2} & \lr{\textbackslash{}hboxL} & ﮐﺎﺩﺭﺍﭼﭗ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{99} \\
+\lr{3} & \lr{\textbackslash{}hboxR} & ﮐﺎﺩﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{95} \\
+\lr{4} & \lr{\textbackslash{}leftfootnoterule} & ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﭼﭗ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{268} \\
+\lr{5} & \lr{\textbackslash{}LRE} & ﭼﭗﺑﺮﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{88} \\
+\lr{6} & \lr{\textbackslash{}LTRfootnote} & ﭘﺎﻧﻮﯾﺲ & دستور & \lr{DeclareDocumentCommand} & \lr{\nolinkurl{luabidi.sty}} & \lr{206} \\
+\lr{7} & \lr{\textbackslash{}rightfootnoterule} & ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{269} \\
+\lr{8} & \lr{\textbackslash{}RLE} & ﺭﺍﺳﺖﺑﭽﭗ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{89} \\
+\lr{9} & \lr{\textbackslash{}RTLfootnote} & ﭘﺎﻧﻮﺷﺖ & دستور & \lr{DeclareDocumentCommand} & \lr{\nolinkurl{luabidi.sty}} & \lr{217} \\
+\lr{10} & \lr{\textbackslash{}setLTR} & ﺑﮕﺬﺍﺭﻣﺘﻦ ﭼﭗ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{70} \\
+\lr{11} & \lr{\textbackslash{}setRTL} & ﺑﮕﺬﺍﺭﻣﺘﻦ ﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{62} \\
+\lr{12} & \lr{\textbackslash{}textwidthfootnoterule} & ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲﭘﻬﻨﺎﯼ ﻣﺘﻦ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{270} \\
+\lr{13} & \lr{\textbackslash{}unsetLTR} & ﻧﮕﺬﺍﺭﻣﺘﻦ ﭼﭗ & دستور & \lr{let=} & \lr{\nolinkurl{luabidi.sty}} & \lr{107} \\
+\lr{14} & \lr{\textbackslash{}unsetRTL} & ﻧﮕﺬﺍﺭﻣﺘﻦ ﺭﺍﺳﺖ & دستور & \lr{let=} & \lr{\nolinkurl{luabidi.sty}} & \lr{106} \\
+\lr{15} & \lr{\textbackslash{}vboxL} & ﮐﺎﺩﺭﻭﺍﺯﭼﭗ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{100} \\
+\lr{16} & \lr{\textbackslash{}vboxR} & ﮐﺎﺩﺭﻭﺍﺯﺭﺍﺳﺖ & دستور & \lr{def} & \lr{\nolinkurl{luabidi.sty}} & \lr{96} \\
+\end{xltabular}
+
+\section*{بسته: \lr{fontspec}}
+\textbf{تعداد: \lr{0}}
+
+برای این بسته دستور یا محیط تعریف‌شده‌ای یافت نشد.
+
+\end{document}

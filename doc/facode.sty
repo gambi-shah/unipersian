@@ -1,0 +1,333 @@
+% This file is a documentation support file for the unipersian package.
+%
+% It is used solely for typesetting the documentation of unipersian
+% and is not part of the unipersian package itself.
+%
+% This file is currently distributed only as part of the source
+% of the unipersian documentation and is not intended as an
+% independently released package.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{facode}[2026/09/08 Documentation support for the unipersian package]
+
+\RequirePackage{xcolor}
+\RequirePackage{listings}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{dirtreex}
+\RequirePackage{etoolbox}
+\RequirePackage{xparse}
+\RequirePackage{unipersian-listings}
+\RequirePackage{xkeyval}
+\tcbuselibrary{listings,skins,breakable,theorems}
+
+
+% --------------------------------
+% delimiter 
+% --------------------------------
+
+\makeatletter
+
+\def\facode@delimA{^}
+\def\facode@delimB{^}
+
+\def\facode@applyescape{%
+    \edef\facode@temp{%
+        \noexpand\lstdefinestyle{facode-listing-escape}{%
+            escapeinside={\facode@delimA}{\facode@delimB}%
+        }%
+    }%
+    \facode@temp
+}
+
+\facode@applyescape
+
+\newcommand{\facodesetdelimiter}[2]{%
+    \def\facode@delimA{#1}%
+    \def\facode@delimB{#2}%
+    \facode@applyescape
+}
+
+\makeatother
+
+
+% --------------------------------
+% colors
+% --------------------------------
+
+\definecolor{faTermBg}{RGB}{30,30,40}
+\definecolor{faTermFg}{RGB}{255,255,255}
+\definecolor{faTermPrompt}{RGB}{0,255,0}
+\definecolor{faTermPath}{RGB}{0,150,255}
+\definecolor{faTermComment}{RGB}{120,220,120}
+
+\definecolor{faPhpBg}{RGB}{252,252,252}
+\definecolor{faPhpFrame}{RGB}{210,210,210}
+\definecolor{faPhpKey}{RGB}{0,0,180}
+\definecolor{faPhpComment}{RGB}{34,139,34}
+\definecolor{faPhpStr}{RGB}{163,21,21}
+
+\definecolor{faPyBg}{RGB}{245,247,255}
+\definecolor{faPyFrame}{RGB}{190,210,245}
+\definecolor{faPyKey}{RGB}{14,110,190}
+\definecolor{faPyComment}{RGB}{110,110,110}
+\definecolor{faPyStr}{RGB}{20,140,80}
+
+\definecolor{faLtxBg}{RGB}{255,255,245}
+\definecolor{faLtxFrame}{RGB}{235,200,140}
+\definecolor{faLtxComment}{RGB}{140,140,140}
+\definecolor{faLtxCmd}{RGB}{139,0,0}
+
+\definecolor{faNum}{RGB}{130,130,130}
+
+\definecolor{faTreeBg}{RGB}{250,250,250}
+\definecolor{faTreeFrame}{RGB}{200,200,200}
+\definecolor{faTreeLine}{RGB}{100,100,100}
+
+% --------------------------------
+% listings styles
+% --------------------------------
+
+\lstdefinestyle{facode-listing-base}{
+    style=facode-listing-escape,
+    basicstyle=\ttfamily\small,
+    showstringspaces=false,
+    breaklines=true,
+    keepspaces=true,
+    columns=fullflexible,
+    upquote=true,
+    tabsize=4,
+    showspaces=false,
+    showtabs=false,
+    breakatwhitespace=false,
+    frame=none,
+    numbers=none,
+    aboveskip=0pt,
+    belowskip=0pt,}
+
+\lstdefinestyle{facode-listing-terminal}{
+    style=facode-listing-base,
+    language=bash,
+    basicstyle=\ttfamily\small\color{faTermFg},
+    commentstyle=\color{faTermComment}
+}
+
+\lstdefinestyle{facode-listing-php}{
+    style=facode-listing-base,
+    language=PHP,
+    numbers=left,
+    numberstyle=\tiny\color{faNum},
+    numbersep=10pt,
+    keywordstyle=\color{faPhpKey}\bfseries,
+    commentstyle=\color{faPhpComment},
+    stringstyle=\color{faPhpStr}
+}
+
+\lstdefinestyle{facode-listing-python}{
+    style=facode-listing-base,
+    language=Python,
+    numbers=left,
+    numberstyle=\tiny\color{faNum},
+    numbersep=10pt,
+    keywordstyle=\color{faPyKey}\bfseries,
+    commentstyle=\color{faPyComment},
+    stringstyle=\color{faPyStr}
+}
+
+\lstdefinestyle{facode-listing-latex}{
+    style=facode-listing-base,
+    language=[LaTeX]TeX,
+    numberstyle=\tiny\color{faNum},
+    commentstyle=\color{faLtxComment},
+    texcsstyle=*\color{faLtxCmd}\bfseries
+}
+
+
+% --------------------------------
+% configurable terminal prompt
+% --------------------------------
+
+\makeatletter
+
+% تعریف دستور کوتاه برای نمایش پرامپت
+\newcommand{\faprompt}{%
+    \textcolor{faTermPrompt}{\small\bfseries\ttfamily root}%
+    \textcolor{white}{:}%
+    \textcolor{faTermPath}{\small\bfseries\ttfamily\textfractionsolidus}%
+    \textcolor{white}{\$ }%
+}
+
+% تعریف کلید با نام کوتاه prompt
+\define@key{facode}{prompt}{\gdef\faprompt{#1}}
+
+% تنظیم گزینه پکیج
+\DeclareOptionX{prompt}{\setkeys{facode}{prompt={#1}}}
+
+\ProcessOptionsX\relax
+
+\makeatother
+
+% --------------------------------
+% tcolorbox styles
+% --------------------------------
+\makeatletter
+
+\colorlet{facode@base}{black}
+\colorlet{facode@frame}{black}
+\colorlet{facode@title}{black}
+\colorlet{facode@back}{gray!5}
+
+\tcbset{
+    facodebase/.code={
+            \colorlet{facode@base}{#1}
+            \colorlet{facode@frame}{facode@base!85!black}
+            \colorlet{facode@title}{facode@base!90!black}
+            \colorlet{facode@back}{facode@base!8!white}
+        }
+}
+\makeatother
+
+\tcbset{
+    % ۱. استایل بصری مشترک (بدون تنظیمات لیستینگ)
+    facode-box-visual-base/.style={
+            enhanced,
+            breakable,
+            arc=2mm,
+            boxrule=0.5pt,
+            boxsep=0pt,
+            left=10mm,
+            right=2mm,
+            top=4mm,
+            bottom=4mm,
+            colback=facode@back,
+            colframe=facode@frame,
+            drop fuzzy shadow,
+            fonttitle=\small\bfseries,
+            before title=\vspace{1mm}\begin{RTL},
+                after title=\end{RTL},
+            attach boxed title to top right={yshift=-\tcboxedtitleheight/2,xshift=-5mm},
+            boxed title style={
+                    arc=2mm,
+                    boxrule=0.5pt,
+                    colback=facode@title,
+                    colframe=facode@title
+                },
+            halign title=right,
+            toptitle=1.5mm,
+            bottomtitle=1.5mm
+        },
+    % ۲. استایل مخصوص کدها (ارث‌بری از بصری + تنظیمات لیستینگ)
+    facode-box-listing-base/.style={
+            facode-box-visual-base,
+            listing only,
+            listing engine=listings,
+            before upper=\begin{LTR},
+                after upper=\end{LTR}
+        },
+    % ۳. استایل‌های تخصصی کد (ارث‌بری از listing-base)
+    facode-box-terminal/.style={
+            facode-box-listing-base,
+            left=4mm,
+            facodebase=yellow!75!black,
+            colback=faTermBg,
+            colupper=white,
+            drop fuzzy shadow=black!50,
+            every listing line={\faprompt}
+        },
+    facode-box-php/.style={
+            facode-box-listing-base,
+            facodebase=faPhpFrame,
+            colback=faPhpBg
+        },
+    facode-box-python/.style={
+            facode-box-listing-base,
+            facodebase=faPyFrame,
+            colback=faPyBg
+        },
+    facode-box-latex/.style={
+            facode-box-listing-base,
+            facodebase=faLtxFrame,
+            colback=faLtxBg
+        },
+    % ۴. استایل درخت (ارث‌بری مستقیم از بصری - بدون لیستینگ)
+    facode-box-tree/.style={
+            facode-box-visual-base,
+            left=6mm,
+            right=2mm,
+            facodebase=faTreeFrame,
+            colback=faTreeBg
+        }
+}
+
+
+
+% --------------------------------
+% public environments
+% --------------------------------
+
+\DeclareTCBListing{facode}{ !O{} !O{} }{%
+    facode-box-listing-base,
+    listing options={style=facode-listing-base,#2},
+    #1
+}
+
+\DeclareTCBListing{terminal}{ !O{} !O{} }{%
+    facode-box-terminal,
+    listing options={style=facode-listing-terminal,#2},
+    #1
+}
+
+\DeclareTCBListing{php}{!O{} !O{} }{%
+    facode-box-php,
+    listing options={style=facode-listing-php,#2},
+    #1
+}
+
+\DeclareTCBListing{python}{ !O{} !O{} }{%
+    facode-box-python,
+    listing options={style=facode-listing-python,#2},
+    #1
+}
+
+\DeclareTCBListing{latex}{ !O{} !O{} }{%
+    facode-box-latex,
+    listing options={style=facode-listing-latex,#2},
+    #1
+}
+
+% --------------------------------
+% tree environment
+% --------------------------------
+
+\NewDocumentEnvironment{tree}{O{} m +b}{%
+    \begin{tcolorbox}[facode-box-tree,#1]
+        \begin{LTR} % اجبار به چپ‌چین شدن کل ساختار درختی
+            \begingroup
+            \let\olddir\dir \let\oldfile\file
+            \renewcommand{\dir}[3]{%
+                \ifstrempty{##2}%
+                {\olddir{##1}{}{##3}}%
+                {\olddir{##1}{\fa{##2}}{##3}}%
+            }%
+            \renewcommand{\file}[2]{%
+                \ifstrempty{##2}%
+                {\oldfile{##1}{}}%
+                {\oldfile{##1}{\fa{##2}}}%
+            }%
+            \begin{dirtreex}[line color=faTreeLine, line width=0.4pt, box={false}]
+                \dir{#2}{}{#3}
+            \end{dirtreex}
+            \endgroup
+        \end{LTR}
+    \end{tcolorbox}
+}{}
+
+
+\tcbset{
+    % نام‌های کوتاه برای استفاده کاربر در آپشن‌های محیط‌ها
+    fa-base/.style={facode-box-visual-base},
+    fa-code/.style={facode-box-listing-base},
+    fa-php/.style={facode-box-php},
+    fa-python/.style={facode-box-python},
+    fa-terminal/.style={facode-box-terminal},
+    fa-tree/.style={facode-box-tree}
+}

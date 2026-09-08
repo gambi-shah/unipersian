@@ -1,0 +1,310 @@
+% unipersian-luatex.def
+%
+% UniPersian: Persian language support for LaTeX.
+%
+% Copyright (C) 2026 Amer Amikhteh
+%
+% This file is part of the UniPersian package.
+%
+% This work is free software: you may redistribute it and/or modify
+% it under the terms of the LaTeX Project Public License as published
+% by the LaTeX Project, either version 1.3c of the License, or
+% (at your option) any later version.
+%
+% This work is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%
+% The full license text is available at:
+% https://www.latex-project.org/lppl/
+%
+% This work is "maintained" by Amer Amikhteh.
+%
+% The current maintainer of this work is Amer Amikhteh.
+
+
+
+\ProvidesFile{unipersian-luatex.def}
+[2026/09/08 v0.1.0 LuaTeX support for unipersian]
+
+\makeatletter
+
+
+% ------------------------------------------
+% basic bidi commands
+% ------------------------------------------
+\def\setparLTR{%
+  \@RTLfalse
+  \pardir TLT\relax
+  \textdir TLT\relax
+}%
+
+\def\setparRTL{%
+  \@RTLtrue
+  \pardir TRT\relax
+  \textdir TRT\relax
+}%
+
+\@ifundefined{beginR}{%
+  \protected\def\beginR{%
+    \@RTLtrue
+    \begingroup
+    \textdir TRT\relax
+  }%
+}{}%
+
+\@ifundefined{endR}{%
+  \protected\def\endR{%
+    \endgroup
+  }%
+}{}%
+
+\@ifundefined{beginL}{%
+  \protected\def\beginL{%
+    \@RTLfalse
+    \begingroup
+    \textdir TLT\relax
+  }%
+}{}%
+
+\@ifundefined{endL}{%
+  \protected\def\endL{%
+    \endgroup
+  }%
+}{}%
+
+
+
+% ------------------------------------------
+% Footnote Hook
+% ------------------------------------------
+
+\def\footnoterule{%
+  \kern-3\p@
+  \hbox dir TLT to \columnwidth{%
+    \hss
+    \vrule width .4\columnwidth height 0.4\p@ depth 0pt%
+  }%
+  \kern 2.6\p@
+}%
+
+\let\uper@fn@dir\relax
+\newtoks\uper@fn@pending@toks
+\newif\ifuper@fn@pending
+
+\def\uper@fn@setdir{%
+  \if@RTL
+    \global\let\uper@fn@dir\relax
+  \else
+    \global\let\uper@fn@dir\setparLTR
+  \fi
+}%
+
+\@ifundefined{bbl@footnote}{}{%
+  \let\uper@orig@bbl@footnote\bbl@footnote
+  \def\bbl@footnote#1#2#3{%
+    \uper@fn@setdir
+    \uper@orig@bbl@footnote{#1}{#2}{#3}}%
+}%
+
+\let\uper@fn@makefntext\@makefntext
+\def\@makefntext#1{%
+  \uper@fn@dir
+  \uper@fn@makefntext{#1}%
+}%
+
+\let\uper@orig@footnotetext\@footnotetext
+
+
+\def\uper@fn@deferred@footnotetext#1{%
+  \global\let\uper@fn@dir\setparRTL
+  \uper@orig@footnotetext{#1}%
+}%
+
+\def\uper@fn@flush{%
+  \ifuper@fn@pending
+    \global\uper@fn@pendingfalse
+    \the\uper@fn@pending@toks
+    \global\uper@fn@pending@toks{}%
+  \fi
+}%
+
+\def\@footnotetext#1{%
+  \ifmmode
+    \global\uper@fn@pendingtrue
+    \global\uper@fn@pending@toks\expandafter{%
+      \the\uper@fn@pending@toks
+      \uper@fn@deferred@footnotetext{#1}%
+    }%
+    \aftergroup\uper@fn@flush
+  \else
+    \uper@orig@footnotetext{#1}%
+  \fi
+}%
+
+\let\uper@orig@fn@fntext\fn@fntext
+
+\def\fn@fntext#1{%
+  \ifmmode
+    \global\let\uper@fn@dir\setparRTL
+  \fi
+  \uper@orig@fn@fntext{#1}%
+}
+
+% ------------------------------------------
+% makebox r and l
+% ------------------------------------------
+
+\def\bm@l{%
+  \if@RTL
+    \hss\unhbox\@tempboxa
+  \else
+    \unhbox\@tempboxa\hss
+  \fi
+}
+\let\bm@t\bm@l
+
+\def\bm@r{%
+  \if@RTL
+    \unhbox\@tempboxa\hss
+  \else
+    \hss\unhbox\@tempboxa
+  \fi
+}
+\let\bm@b\bm@r
+
+% ------------------------------------------
+% tabular alignment
+% ------------------------------------------
+
+\def\uper@swap@lr@chnum@do{%
+  \ifcase\@chnum\relax
+  \or
+    \@chnum=\tw@
+  \or
+    \@chnum=\@ne
+  \fi
+}
+
+\def\uper@swap@lr@chnum{%
+  \if@RTL
+    \uper@swap@lr@chnum@do
+  \fi
+}
+
+\def\uper@patch@kernel@tabular{%
+  \@ifundefined{uper@kernel@tabular@patched}{%
+    \@ifundefined{@tabclassz}{}{%
+      \let\uper@orig@tabclassz\@tabclassz
+      \def\uper@kernel@tabular@patched{}%
+      \def\@tabclassz{%
+        \uper@swap@lr@chnum
+        \uper@orig@tabclassz
+      }%
+    }%
+  }{}%
+}
+
+\def\uper@patch@array@tabular{%
+  \@ifundefined{uper@array@tabular@patched}{%
+    \@ifundefined{@classz}{}{%
+      \let\uper@orig@classz\@classz
+      \def\uper@array@tabular@patched{}%
+      \def\@classz{%
+        \uper@swap@lr@chnum
+        \uper@orig@classz
+      }%
+    }%
+  }{}%
+}
+
+\@ifundefined{AddToHook}{%
+  \AtBeginDocument{%
+    \@ifpackageloaded{array}{%
+      \uper@patch@array@tabular
+    }{%
+      \uper@patch@kernel@tabular
+    }%
+  }%
+}{%
+  \AddToHook{package/array/after}{%
+    \uper@patch@array@tabular
+  }%
+  \AtBeginDocument{%
+    \@ifpackageloaded{array}{%
+      \uper@patch@array@tabular
+    }{%
+      \uper@patch@kernel@tabular
+    }%
+  }%
+}
+
+% ------------------------------------------
+%   Tikz
+% ------------------------------------------
+\ifuper@beamerrl
+\else
+  \AtBeginEnvironment{tikzpicture}{%
+    \pardir TLT%
+    % \textdir TLT%
+  }
+
+  \AtEndEnvironment{tikzpicture}{%
+    \pardir TRT%
+    % \textdir TRT%
+  }
+\fi
+% ------------------------------------------
+%   fancyhdr
+% ------------------------------------------
+
+\def\uper@patch@fancyhdr{%
+  \setlength{\headheight}{14.5pt}%
+}
+
+\@ifundefined{AddToHook}{%
+  \AtBeginDocument{%
+    \@ifpackageloaded{fancyhdr}{%
+      \uper@patch@fancyhdr
+    }{}%
+  }%
+}{%
+  \AddToHook{package/fancyhdr/after}{%
+    \uper@patch@fancyhdr
+    \@ifundefined{beginL}{}{%
+      \AddToHook{fancyhdr/head/begin}{\beginL}%
+      \AddToHook{fancyhdr/head/end}{\endL}%
+      \AddToHook{fancyhdr/foot/begin}{\beginL}%
+      \AddToHook{fancyhdr/foot/end}{\endL}%
+    }%
+  }%
+  \AtBeginDocument{%
+    \@ifpackageloaded{fancyhdr}{%
+      \uper@patch@fancyhdr
+    }{}%
+  }%
+}
+
+% ------------------------------------------
+% bidi items / bibliography items
+% ------------------------------------------
+
+\newenvironment{LTRitems}
+{\par\setparLTR\ignorespaces}
+{\par}
+
+\newenvironment{RTLitems}
+{\par\setparRTL\ignorespaces}
+{\par}
+
+\newenvironment{LTRbibitems}
+{\par\setparLTR\ignorespaces}
+{\par}
+
+\newenvironment{RTLbibitems}
+{\par\setparRTL\ignorespaces}
+{\par}
+
+\makeatother
+
+\endinput

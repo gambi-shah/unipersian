@@ -1,0 +1,92 @@
+% This file is a documentation support file for the unipersian package.
+%
+% It provides date-related functionality used in the documentation
+% of unipersian. It is not part of the unipersian package itself.
+%
+% This file is currently distributed only as part of the source
+% of the unipersian documentation and is not intended as an
+% independently released package.
+
+\NeedsTeXFormat{LaTeX2e}
+
+\ProvidesPackage{shamsi}[2026/09/08 Documentation support for the unipersian package]
+
+\RequirePackage{expl3}
+\RequirePackage{xparse}
+\RequirePackage{jalali-engine}
+
+\ExplSyntaxOn
+
+
+
+% --- ذخیره‌سازی داده‌ها ---
+\DeclareDocumentCommand{\NewShamsi}{mmmm}
+{
+    \jd_convert_jalali_to_gregorian_core:nnn {#2} {#3} {#4}
+    \cs_gset:cpx { sh_#1_gy } { \int_use:N \g_jd_gy_int }
+    \cs_gset:cpx { sh_#1_gm } { \int_use:N \g_jd_gm_int }
+    \cs_gset:cpx { sh_#1_gd } { \int_use:N \g_jd_gd_int }
+    \cs_gset:cpx { sh_#1_jy } { \int_use:N \g_jd_jy_int }
+    \cs_gset:cpx { sh_#1_jm } { \int_use:N \g_jd_jm_int }
+    \cs_gset:cpx { sh_#1_jd } { \int_use:N \g_jd_jd_int }
+    \cs_gset:cpx { sh_#1_wd } { \int_use:N \g_jd_wd_int }
+}
+
+\DeclareDocumentCommand{\NewMiladi}{mmmm}
+{
+    \jd_convert_gregorian_to_jalali_core:nnn {#2} {#3} {#4}
+    \cs_gset:cpx { sh_#1_gy } { \int_use:N \g_jd_gy_int }
+    \cs_gset:cpx { sh_#1_gm } { \int_use:N \g_jd_gm_int }
+    \cs_gset:cpx { sh_#1_gd } { \int_use:N \g_jd_gd_int }
+    \cs_gset:cpx { sh_#1_jy } { \int_use:N \g_jd_jy_int }
+    \cs_gset:cpx { sh_#1_jm } { \int_use:N \g_jd_jm_int }
+    \cs_gset:cpx { sh_#1_jd } { \int_use:N \g_jd_jd_int }
+    \cs_gset:cpx { sh_#1_wd } { \int_use:N \g_jd_wd_int }
+}
+
+% --- چاپ اعداد (سازگار با فونت فارسی) ---
+\cs_new:Npn \sh_print:n #1
+{ \cs_if_exist:cTF { persiannumber } { \persiannumber{#1} } { #1 } }
+
+% --- استخراج اجزاء تاریخ ---
+\DeclareDocumentCommand{\Year}{m} { \sh_print:n { \use:c { sh_#1_gy } } }
+\DeclareDocumentCommand{\Month}{m} { \sh_print:n { \use:c { sh_#1_gm } } }
+\DeclareDocumentCommand{\Day}{m} { \sh_print:n { \use:c { sh_#1_gd } } }
+\DeclareDocumentCommand{\Persianyear}{m} { \sh_print:n { \use:c { sh_#1_jy } } }
+\DeclareDocumentCommand{\Persianmonth}{m} { \sh_print:n { \use:c { sh_#1_jm } } }
+\DeclareDocumentCommand{\Persianday}{m} { \sh_print:n { \use:c { sh_#1_jd } } }
+
+% --- نام‌ها (بدون جهت‌دهی داخلی) ---
+\DeclareDocumentCommand{\Persianmonthname}{m}
+{ \ifcase \use:c { sh_#1_jm } \or فروردین\or اردیبهشت\or خرداد\or تیر\or مرداد\or شهریور\or مهر\or آبان\or آذر\or دی\or بهمن\or اسفند\fi }
+
+\DeclareDocumentCommand{\Monthname}{m}
+{ \ifcase \use:c { sh_#1_gm } \or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi }
+
+\DeclareDocumentCommand{\PersianMiladimonthname}{m}
+{ \ifcase \use:c { sh_#1_gm } \or ژانویه\or فوریه\or مارس\or آوریل\or مه\or ژوئن\or ژوئیه\or اوت\or سپتامبر\or اکتبر\or نوامبر\or دسامبر\fi }
+
+\DeclareDocumentCommand{\Persianweekday}{m}
+{ \ifcase \use:c { sh_#1_wd } یکشنبه\or دوشنبه\or سه‌شنبه\or چهارشنبه\or پنجشنبه\or جمعه\or شنبه\fi }
+
+\DeclareDocumentCommand{\Weekday}{m}
+{ \ifcase \use:c { sh_#1_wd } Sunday\or Monday\or Tuesday\or Wednesday\or Thursday\or Friday\or Saturday\fi }
+
+% --- دستورات ترکیبی نهایی با جهت RTL ---
+\DeclareDocumentCommand{\ShortShamsi}{m}
+{ \RL{\Persianyear{#1}/\Persianmonth{#1}/\Persianday{#1}} }
+
+\DeclareDocumentCommand{\ShortMiladi}{m}
+{ \LR{\Year{#1}/\Month{#1}/\Day{#1}} }
+
+\DeclareDocumentCommand{\Shamsi}{m}
+{ \RL{\Persianday{#1}~\Persianmonthname{#1}~\Persianyear{#1}} }
+
+\DeclareDocumentCommand{\Miladi}{m}
+{ \LR{\Monthname{#1}~\Day{#1},~\Year{#1}} }
+
+\DeclareDocumentCommand{\FaMiladi}{m}
+{ \RL{\Day{#1}~\PersianMiladimonthname{#1}~\Year{#1}} }
+
+
+\ExplSyntaxOff

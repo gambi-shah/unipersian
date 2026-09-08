@@ -1,0 +1,80 @@
+% unipersian-pdftex.def
+%
+% UniPersian: Persian language support for LaTeX.
+%
+% Copyright (C) 2026 Amer Amikhteh
+%
+% This file is part of the UniPersian package.
+%
+% This work is free software: you may redistribute it and/or modify
+% it under the terms of the LaTeX Project Public License as published
+% by the LaTeX Project, either version 1.3c of the License, or
+% (at your option) any later version.
+%
+% This work is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%
+% The full license text is available at:
+% https://www.latex-project.org/lppl/
+%
+% This work is "maintained" by Amer Amikhteh.
+%
+% The current maintainer of this work is Amer Amikhteh.
+
+
+
+\ProvidesFile{unipersian-pdftex.def}
+[2026/09/08 v0.1.0 pdfTeX support for unipersian]
+
+\makeatletter
+
+
+\providecommand{\persianmainlanguage}{farsi}
+
+% ------------------------------------------------
+% counters of arabicore package for beamer
+% ------------------------------------------------
+\ifuper@beamer
+  \providecommand{\labelitemiv}
+  {\if@rl\protect $-$ %
+    \else\protect\textperiodcentred\fi}
+  \providecommand{\labelitemi}
+  {\if@rl\protect\textLR{$\bullet$} %
+    \else\protect\textbullet\fi}
+
+  \providecommand{\labelitemii}
+  {\if@rl\protect\textLR{$\circ$} %
+    \else\protect\textLR{ \normalfont\bfseries\textendash}\fi}
+
+  \providecommand{\labelitemiii}
+  {\if@rl\protect\textLR{$*$} %
+    \else\protect\textasteriskcentered\fi}
+
+  \providecommand{\labelenumi}
+  {\if@rl(\I{\number\c@enumi}).%
+    \else{\number\c@enumi}.\fi}
+
+  \providecommand{\labelenumii}
+  {\if@rl\abjadnumeral{\number\c@enumii}. %
+    \else({\number\c@enumii})\fi}
+
+  \providecommand{\labelenumiii}
+  {\if@rl\I{\number\c@enumiii}$\space-\space$ %
+    \else({\number\c@enumiii})\fi}
+
+  \providecommand{\labelenumiv}
+  {\if@rl\abjadnumeral{\number\c@enumiv}$\space-\space$ %
+    \else({\number\c@enumiv})\fi}
+\fi
+
+% ------------------------------------------------
+% DeclareUnicodeCharacters
+% ------------------------------------------------
+% U+0654 = ARABIC HAMZA ABOVE
+\DeclareUnicodeCharacter{0654}{\makebox[0pt][r]{
+    \raisebox{1.11ex}{ء}
+    \kern 0.12em}}
+
+\makeatother
+\endinput

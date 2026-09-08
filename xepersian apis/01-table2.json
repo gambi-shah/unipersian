@@ -1,0 +1,241 @@
+{
+  "entry_count": 59,
+  "entries": [
+    {
+      "command": "autofootnoterule",
+      "description": "ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﺧﻮﺩﮐﺎﺭ"
+    },
+    {
+      "command": "AutoMathDigits",
+      "description": "ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎﺧﻮﺩﮐﺎﺭ"
+    },
+    {
+      "command": "DefaultMathDigits",
+      "description": "ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎﻻﺗﯿﻦ"
+    },
+    {
+      "command": "deflatinfont",
+      "description": "ﺗﻌﺮﯾﻒ ﻗﻠﻢ ﻻﺗﯿﻦ"
+    },
+    {
+      "command": "defpersianfont",
+      "description": "ﺗﻌﺮﯾﻒ ﻗﻠﻢپارسی"
+    },
+    {
+      "command": "hboxL",
+      "description": "ﮐﺎﺩﺭﺍﭼﭗ"
+    },
+    {
+      "command": "hboxR",
+      "description": "ﮐﺎﺩﺭﺍﺳﺖ"
+    },
+    {
+      "command": "keyval@eq@alias@key",
+      "description": "ﻣﻌﺎﺩﻝ@ﮐﻠﯿﺪ"
+    },
+    {
+      "command": "Latincite",
+      "description": "ﻣﺮﺟﻊ ﻻﺗﯿﻦ"
+    },
+    {
+      "command": "latinfont",
+      "description": "ﻗﻠﻢ ﻻﺗﯿﻦ"
+    },
+    {
+      "command": "latintoday",
+      "description": "ﺍﻣﺮﻭﺯﻻﺗﯿﻦ"
+    },
+    {
+      "command": "leftfootnoterule",
+      "description": "ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﭼﭗ"
+    },
+    {
+      "command": "lr",
+      "description": "ﻣﺘﻦ ﻻﺗﯿﻦ"
+    },
+    {
+      "command": "LRE",
+      "description": "ﭼﭗﺑﺮﺍﺳﺖ"
+    },
+    {
+      "command": "LTRdblcol",
+      "description": "ﺩﻭﺳﺘﻮﯽﻧ ﭼﭗ"
+    },
+    {
+      "command": "LTRfootnote",
+      "description": "ﭘﺎﻧﻮﯾﺲ"
+    },
+    {
+      "command": "LTRfootnotetext",
+      "description": "ﻣﺘﻦﭘﺎﻧﻮﯾﺲ"
+    },
+    {
+      "command": "LTRthanks",
+      "description": "ﭘﺎﻧﻮﯾﺲ ﻋﻨﻮﺍﻥ"
+    },
+    {
+      "command": "persianday",
+      "description": "ﺭﻭﺯپارسی"
+    },
+    {
+      "command": "persianfont",
+      "description": "ﻗﻠﻢپارسی"
+    },
+    {
+      "command": "PersianMathDigits",
+      "description": "ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎپارسی"
+    },
+    {
+      "command": "persianmonth",
+      "description": "ﻣﺎﻩپارسی"
+    },
+    {
+      "command": "persianyear",
+      "description": "ﺳﺎﻝپارسی"
+    },
+    {
+      "command": "plq",
+      "description": "ﻋﻼﻣﺖ ﭼﭗ ﻧﻘﻞ ﻗﻮﻝپارسی"
+    },
+    {
+      "command": "prq",
+      "description": "ﻋﻼﻣﺖ ﺭﺍﺳﺖ ﻧﻘﻞ ﻗﻮﻝپارسی"
+    },
+    {
+      "command": "rightfootnoterule",
+      "description": "ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ"
+    },
+    {
+      "command": "rl",
+      "description": "ﻣﺘﻦپارسی"
+    },
+    {
+      "command": "RLE",
+      "description": "ﺭﺍﺳﺖﺑﭽﭗ"
+    },
+    {
+      "command": "RTLdblcol",
+      "description": "ﺩﻭﺳﺘﻮﯽﻧ ﺭﺍﺳﺖ"
+    },
+    {
+      "command": "RTLfootnote",
+      "description": "ﭘﺎﻧﻮﺷﺖ"
+    },
+    {
+      "command": "RTLfootnotetext",
+      "description": "ﻣﺘﻦﭘﺎﻧﻮﺷﺖ"
+    },
+    {
+      "command": "RTLthanks",
+      "description": "ﭘﺎﻧﻮﺷﺖ ﻋﻨﻮﺍﻥ"
+    },
+    {
+      "command": "@SepMark",
+      "description": "@ﻋﻼﻣﺖﺑﯿﻦ"
+    },
+    {
+      "command": "SepMark",
+      "description": "ﻋﻼﻣﺖﺑﯿﻦ"
+    },
+    {
+      "command": "setdefaultbibitems",
+      "description": "ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﻋﺎﺩﯼ"
+    },
+    {
+      "command": "setdefaultmarginpar",
+      "description": "ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﻋﺎﺩﯼ"
+    },
+    {
+      "command": "setmathdigitfont",
+      "description": "ﮔﺰﯾﻨﺶ ﻗﻠﻢ ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎ"
+    },
+    {
+      "command": "setfootnoteLR",
+      "description": "ﺑﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﭼﭗ"
+    },
+    {
+      "command": "setfootnoteRL",
+      "description": "ﺑﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ"
+    },
+    {
+      "command": "setlatintextfont",
+      "description": "ﮔﺰﯾﻨﺶ ﻗﻠﻢ ﻻﺗﯿﻦ ﻣﺘﻦ"
+    },
+    {
+      "command": "setLTR",
+      "description": "ﺑﮕﺬﺍﺭﻣﺘﻦ ﭼﭗ"
+    },
+    {
+      "command": "setLTRbibitems",
+      "description": "ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﭼﭗ"
+    },
+    {
+      "command": "setLTRmarginpar",
+      "description": "ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﭼﭗ"
+    },
+    {
+      "command": "setRTL",
+      "description": "ﺑﮕﺬﺍﺭﻣﺘﻦ ﺭﺍﺳﺖ"
+    },
+    {
+      "command": "setRTLbibitems",
+      "description": "ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﺭﺍﺳﺖ"
+    },
+    {
+      "command": "setRTLmarginpar",
+      "description": "ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﺭﺍﺳﺖ"
+    },
+    {
+      "command": "settextfont",
+      "description": "ﮔﺰﯾﻨﺶ ﻗﻠﻢ ﻣﺘﻦ"
+    },
+    {
+      "command": "textwidthfootnoterule",
+      "description": "ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲﭘﻬﻨﺎﯼ ﻣﺘﻦ"
+    },
+    {
+      "command": "twocolumnstableofcontents",
+      "description": "ﻓﻬﺮﺳﺖ ﻣﻄﺎﻟﺐ ﺩﻭﺳﺘﻮﯽﻧ"
+    },
+    {
+      "command": "unsetfootnoteRL",
+      "description": "ﻧﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ"
+    },
+    {
+      "command": "unsetLTR",
+      "description": "ﻧﮕﺬﺍﺭﻣﺘﻦ ﭼﭗ"
+    },
+    {
+      "command": "unsetRTL",
+      "description": "ﻧﮕﺬﺍﺭﻣﺘﻦ ﺭﺍﺳﺖ"
+    },
+    {
+      "command": "vboxL",
+      "description": "ﮐﺎﺩﺭﻭﺍﺯﭼﭗ"
+    },
+    {
+      "command": "vboxR",
+      "description": "ﮐﺎﺩﺭﻭﺍﺯﺭﺍﺳﺖ"
+    },
+    {
+      "command": "XeLaTeX",
+      "description": "ﺯﯼ ﻻﺗﮏ"
+    },
+    {
+      "command": "XePersian",
+      "description": "ﺯﯼﭘﺮﺷﯿﻦ"
+    },
+    {
+      "command": "xepersianversion",
+      "description": "ﮔﻮﻧﻪ ﺯﯼﭘﺮﺷﯿﻦ"
+    },
+    {
+      "command": "xepersiandate",
+      "description": "ﺗﺎﺭﯾﺦ ﮔﻮﻧﻪ ﺯﯼﭘﺮﺷﯿﻦ"
+    },
+    {
+      "command": "XeTeX",
+      "description": "ﺯﯼ ﺗﮏ"
+    }
+  ]
+}

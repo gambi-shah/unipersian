@@ -1,0 +1,173 @@
+% UniPersian translations for LaTeX captions and package/class names.
+%
+% The translation data in this file were derived from XePersian, Babel,
+% and Polyglossia as distributed with TeX Live 2026.
+%
+% The original data were extracted and processed on Linux Mint using
+% dedicated Python scripts, and subsequently reviewed and refined. The
+% resulting work includes both technical and code-level modifications
+% as well as corrections and improvements to the Persian translations.
+%
+% This file is part of the UniPersian package.
+%
+% Copyright (C) 2026 Amer Amikhteh
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3c
+% of this license or (at your option) any later version.
+%
+% The latest version of this license is in
+% https://www.latex-project.org/lppl/
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008 or later.
+%
+% This work is "maintained" by Amer Amikhteh.
+%
+% The current maintainer of this work is Amer Amikhteh.
+%
+
+
+
+\ProvidesFile{unipersian-captions.def}
+[2026/09/08 v0.1.0 Persian translations for LaTeX captions and package/class names]
+
+\makeatletter
+\def\uper@captions{%
+    \def\abstractname{چکیده}%
+    \def\alsoname{نیز ببینید}%
+    \def\appendixname{پیوست}%
+    \def\bibname{کتاب‌نامه}%
+    \def\ccname{رونوشت}%
+    \def\chaptername{فصل}%
+    \def\contentsname{فهرست مطالب}%
+    \def\datename{تاریخ:}%
+    \def\enclname{پیوست}%
+    \def\figurename{شکل}%
+    \def\glossaryname{واژه‌نامه}%
+    \def\headtoname{به}%
+    \def\indexname{نمایه}%
+    \def\listfigurename{فهرست شکل‌ها}%
+    \def\listtablename{فهرست جدول‌ها}%
+    \def\pagename{صفحه}%
+    \def\partname{بخش}%
+    \def\prefacename{پیش‌گفتار}%
+    \def\proofname{اثبات}%
+    \def\refname{منابع}%
+    \def\seename{ببینید}%
+    \def\tablename{جدول}%
+
+    \IfPackageLoadedTF{algorithm}{%
+        \def\ALG@name{الگوریتم}%
+        \def\ALGS@name{الگوریتم‌ها}%
+        \def\listalgorithmname{فهرست \ALGS@name}%
+    }{}%
+
+    \IfPackageLoadedTF{algorithmic}{%
+        \def\algorithmicensure{\textbf{خروجی:}}%
+        \def\algorithmicrequire{\textbf{ورودی:}}%
+    }{}%
+
+    \IfPackageLoadedTF{backref}{%
+        \def\backrefpagesname{صفحات}%
+    }{}%
+
+    \IfPackageLoadedTF{bidimoderncv}{%
+        \def\refname{تألیفات}%
+    }{}%
+
+    \IfPackageLoadedTF{fancyref}{%
+        \def\Frefenumname{مورد}%
+        \def\Frefeqname{معادله}%
+        \def\Freffnname{پانویس}%
+        \def\Frefonname{در}%
+        \def\Frefsecname{قسمت}%
+        \def\Frefseename{ببینید}%
+    }{}%
+
+    \IfPackageLoadedTF{framed}{%
+        \def\LastFrameCommand{ادامه}%
+    }{}%
+
+    \IfPackageLoadedTF{hyperref}{%
+        \def\appendixautorefname{پیوست}%
+        \def\chapterautorefname{فصل}%
+        \def\equationautorefname{معادله}%
+        \def\FancyVerbLineautorefname{سطر}%
+        \def\figureautorefname{شکل}%
+        \def\footnoteautorefname{پانویس}%
+        \def\itemautorefname{مورد}%
+        \def\pageautorefname{صفحه}%
+        \def\paragraphautorefname{پاراگراف}%
+        \def\partautorefname{بخش}%
+        \def\sectionautorefname{قسمت}%
+        \def\subparagraphautorefname{زیرپاراگراف}%
+        \def\subsectionautorefname{زیرقسمت}%
+        \def\subsubsectionautorefname{زیرزیرقسمت}%
+        \def\tableautorefname{جدول}%
+        \def\theoremautorefname{قضیه}%
+    }{}%
+
+    \IfPackageLoadedTF{listings}{%
+        \def\lstlistingname{کد}%
+        \def\lstlistlistingname{فهرست کدها}%
+    }{}%
+
+    \IfPackageLoadedTF{minitoc}{%
+        \def\mlftitle{شکل‌ها}%
+        \def\mlttitle{جدول‌ها}%
+        \def\mtctitle{فهرست}%
+        \def\plftitle{فهرست شکل‌ها}%
+        \def\plttitle{فهرست جدول‌ها}%
+        \def\ptctitle{فهرست مطالب}%
+        \def\slftitle{شکل‌ها}%
+        \def\slttitle{جدول‌ها}%
+        \def\stctitle{عناوین}%
+    }{}%
+
+    \IfPackageLoadedTF{tocloft}{%
+        \def\cftchapname{فصل}%
+        \def\cftfigname{شکل}%
+        \def\cftparaname{پاراگراف}%
+        \def\cftsecname{قسمت}%
+        \def\cftsubfigname{زیرشکل}%
+        \def\cftsubparaname{زیرپاراگراف}%
+        \def\cftsubsecname{زیرقسمت}%
+        \def\cftsubsubsecname{زیرزیرقسمت}%
+        \def\cftsubtabname{زیرجدول}%
+        \def\cfttabname{جدول}%
+    }{}%
+
+    \IfPackageLoadedTF{varioref}{%
+        \def\reftextafter{در صفحه \reftextvario{بعد}{بعد}}%
+        \def\reftextbefore{در صفحه \reftextvario{قبل}{قبل}}%
+        \def\reftextcurrent{در \reftextvario{همین صفحه}{این صفحه}}%
+        \def\reftextfaceafter{در صفحه \reftextvario{مقابل}{بعد}}%
+        \def\reftextfacebefore{در صفحه \reftextvario{مقابل}{قبل}}%
+        \def\reftextfaraway##1{در صفحه ~\pageref{##1}}%
+        \def\reftextlabelrange##1##2{\ref{##1} تا~\ref{##2}}%
+        \def\reftextpagerange##1##2{در صفحه‌های ~\pageref{##1}--\pageref{##2}}%
+    }{}%
+
+    \IfClassLoadedTF{beamer}{%
+        \languagepath{Persian}%
+        \deftranslation[to=Persian]{Corollary}{نتیجه}%
+        \deftranslation[to=Persian]{Definition}{تعریف}%
+        \deftranslation[to=Persian]{Definitions}{تعریف‌ها}%
+        \deftranslation[to=Persian]{Example}{مثال}%
+        \deftranslation[to=Persian]{Examples}{مثال‌ها}%
+        \deftranslation[to=Persian]{Fact}{واقعیت}%
+        \deftranslation[to=Persian]{From?}{از}%
+        \deftranslation[to=Persian]{Lemma}{لم}%
+        \deftranslation[to=Persian]{Problem}{مسئله}%
+        \deftranslation[to=Persian]{Section}{قسمت}%
+        \deftranslation[to=Persian]{Solution}{راه‌حل}%
+        \deftranslation[to=Persian]{Subsection}{زیرقسمت}%
+        \deftranslation[to=Persian]{Theorem}{قضیه}%
+        \deftranslation[to=Persian]{When?}{زمان}%
+        \deftranslation[to=Persian]{Who?}{ارائه‌دهنده}%
+    }{}%
+
+}%
+\makeatother
+
+\endinput

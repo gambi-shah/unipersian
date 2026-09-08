@@ -1,0 +1,62 @@
+      Table 2: The Equivalent XePersian Commands
+
+Command in XePersian      Equivalent Persian Command
+\autofootnoterule                ‫\ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﺧﻮﺩﮐﺎﺭ‬
+\AutoMathDigits                  ‫\ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎﺧﻮﺩﮐﺎﺭ‬
+\DefaultMathDigits                  ‫\ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎﻻﺗﯿﻦ‬
+\deflatinfont                         ‫\ﺗﻌﺮﯾﻒ ﻗﻠﻢ ﻻﺗﯿﻦ‬
+\defpersianfont                       ‫\ﺗﻌﺮﯾﻒ ﻗﻠﻢپارسی‬
+\hboxL                                       ‫\ﮐﺎﺩﺭﺍﭼﭗ‬
+\hboxR                                      ‫\ﮐﺎﺩﺭﺍﺳﺖ‬
+\keyval@eq@alias@key                     ‫\ﻣﻌﺎﺩﻝ@ﮐﻠﯿﺪ‬
+\Latincite                                 ‫\ﻣﺮﺟﻊ ﻻﺗﯿﻦ‬
+\latinfont                                   ‫\ﻗﻠﻢ ﻻﺗﯿﻦ‬
+\latintoday                                 ‫\ﺍﻣﺮﻭﺯﻻﺗﯿﻦ‬
+\leftfootnoterule                   ‫\ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﭼﭗ‬
+\lr                                          ‫\ﻣﺘﻦ ﻻﺗﯿﻦ‬
+\LRE                                       ‫\ﭼﭗﺑﺮﺍﺳﺖ‬
+\LTRdblcol                             ‫\ﺩﻭﺳﺘﻮﯽﻧ ﭼﭗ‬
+\LTRfootnote                                  ‫\ﭘﺎﻧﻮﯾﺲ‬
+\LTRfootnotetext                           ‫\ﻣﺘﻦﭘﺎﻧﻮﯾﺲ‬
+\LTRthanks                              ‫\ﭘﺎﻧﻮﯾﺲ ﻋﻨﻮﺍﻥ‬
+\persianday                                  ‫\ﺭﻭﺯپارسی‬
+\persianfont                                 ‫\ﻗﻠﻢپارسی‬
+\PersianMathDigits                 ‫\ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎپارسی‬
+\persianmonth                                ‫\ﻣﺎﻩپارسی‬
+\persianyear                               ‫\ﺳﺎﻝپارسی‬
+\plq                        ‫\ﻋﻼﻣﺖ ﭼﭗ ﻧﻘﻞ ﻗﻮﻝپارسی‬
+\prq                      ‫\ﻋﻼﻣﺖ ﺭﺍﺳﺖ ﻧﻘﻞ ﻗﻮﻝپارسی‬
+\rightfootnoterule                ‫\ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ‬
+\rl                                         ‫\ﻣﺘﻦپارسی‬
+\RLE                                       ‫\ﺭﺍﺳﺖﺑﭽﭗ‬
+\RTLdblcol                            ‫\ﺩﻭﺳﺘﻮﯽﻧ ﺭﺍﺳﺖ‬
+\RTLfootnote                                 ‫\ﭘﺎﻧﻮﺷﺖ‬
+\RTLfootnotetext                                ‫\ﻣﺘﻦﭘﺎﻧﻮﺷﺖ‬
+\RTLthanks                                   ‫\ﭘﺎﻧﻮﺷﺖ ﻋﻨﻮﺍﻥ‬
+\@SepMark                                      ‫\@ﻋﻼﻣﺖﺑﯿﻦ‬
+\SepMark                                          ‫\ﻋﻼﻣﺖﺑﯿﻦ‬
+\setdefaultbibitems                    ‫\ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﻋﺎﺩﯼ‬
+\setdefaultmarginpar                    ‫\ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﻋﺎﺩﯼ‬
+\setmathdigitfont                  ‫\ﮔﺰﯾﻨﺶ ﻗﻠﻢ ﺍﻋﺪﺍﺩﻓﺮﻣﻮﻟﻬﺎ‬
+\setfootnoteLR                          ‫\ﺑﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﭼﭗ‬
+\setfootnoteRL                         ‫\ﺑﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ‬
+\setlatintextfont                      ‫\ﮔﺰﯾﻨﺶ ﻗﻠﻢ ﻻﺗﯿﻦ ﻣﺘﻦ‬
+\setLTR                                       ‫\ﺑﮕﺬﺍﺭﻣﺘﻦ ﭼﭗ‬
+\setLTRbibitems                         ‫\ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﭼﭗ‬
+\setLTRmarginpar                         ‫\ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﭼﭗ‬
+\setRTL                                     ‫\ﺑﮕﺬﺍﺭﻣﺘﻦ ﺭﺍﺳﺖ‬
+\setRTLbibitems                       ‫\ﺑﮕﺬﺍﺭﻣﺮﺟﻮﻋﺎﺕ ﺭﺍﺳﺖ‬
+\setRTLmarginpar                       ‫\ﺑﮕﺬﺍﺭﺩﺭﺣﺎﺷﯿﻪ ﺭﺍﺳﺖ‬
+\settextfont                                ‫\ﮔﺰﯾﻨﺶ ﻗﻠﻢ ﻣﺘﻦ‬
+\textwidthfootnoterule               ‫\ﺧﻂ ﺯﯾﺮﻧﻮﯾﺲﭘﻬﻨﺎﯼ ﻣﺘﻦ‬
+\twocolumnstableofcontents        ‫\ﻓﻬﺮﺳﺖ ﻣﻄﺎﻟﺐ ﺩﻭﺳﺘﻮﯽﻧ‬
+\unsetfootnoteRL                       ‫\ﻧﮕﺬﺍﺭﺯﯾﺮﻧﻮﯾﺲ ﺭﺍﺳﺖ‬
+\unsetLTR                                     ‫\ﻧﮕﺬﺍﺭﻣﺘﻦ ﭼﭗ‬
+\unsetRTL                                   ‫\ﻧﮕﺬﺍﺭﻣﺘﻦ ﺭﺍﺳﺖ‬
+\vboxL                                           ‫\ﮐﺎﺩﺭﻭﺍﺯﭼﭗ‬
+\vboxR                                        ‫\ﮐﺎﺩﺭﻭﺍﺯﺭﺍﺳﺖ‬
+\XeLaTeX                                           ‫\ﺯﯼ ﻻﺗﮏ‬
+\XePersian                                        ‫\ﺯﯼﭘﺮﺷﯿﻦ‬
+\xepersianversion                            ‫\ﮔﻮﻧﻪ ﺯﯼﭘﺮﺷﯿﻦ‬
+\xepersiandate                         ‫\ﺗﺎﺭﯾﺦ ﮔﻮﻧﻪ ﺯﯼﭘﺮﺷﯿﻦ‬
+\XeTeX                                               ‫\ﺯﯼ ﺗﮏ‬

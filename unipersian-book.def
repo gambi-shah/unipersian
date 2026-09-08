@@ -1,0 +1,60 @@
+% unipersian-book.def
+%
+% UniPersian: Persian language support for LaTeX.
+%
+% Copyright (C) 2026 Amer Amikhteh
+%
+% This file is part of the UniPersian package.
+%
+% This work is free software: you may redistribute it and/or modify
+% it under the terms of the LaTeX Project Public License as published
+% by the LaTeX Project, either version 1.3c of the License, or
+% (at your option) any later version.
+%
+% This work is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%
+% The full license text is available at:
+% https://www.latex-project.org/lppl/
+%
+% This work is "maintained" by Amer Amikhteh.
+%
+% The current maintainer of this work is Amer Amikhteh.
+
+\ProvidesFile{unipersian-book.def}
+[2026/09/08 v0.1.0 Book/report adaptations for persian]
+
+\makeatletter
+
+\AtBeginDocument{%
+
+  \@ifundefined{frontmatter}{}{%
+    \renewcommand\frontmatter{%
+      \cleardoublepage
+      \@mainmatterfalse
+      \pagenumbering{harfi}%
+    }%
+  }%
+
+  \@ifundefined{thepart}{}{%
+    \renewcommand\thepart{%
+      \tartibi{part}%
+    }%
+  }%
+
+  \@ifundefined{appendix}{}{%
+    \renewcommand\appendix{%
+      \par
+      \setcounter{chapter}{0}%
+      \setcounter{section}{0}%
+      \gdef\@chapapp{\appendixname}%
+      \gdef\thechapter{\harfi{chapter}}%
+    }%
+  }%
+
+}
+
+\makeatother
+
+\endinput
