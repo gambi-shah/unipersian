@@ -16,7 +16,19 @@ This package provides a convenient interface for typesetting Persian as the main
 
 ## Installation
 
-Manual installation from GitHub:
+### From CTAN
+
+The latest official release is available from CTAN:
+
+https://ctan.org/pkg/unipersian
+
+With TeX Live, install the package with:
+
+~~~bash
+tlmgr install unipersian
+~~~
+
+### Manual installation from GitHub
 
 ~~~bash
 git clone https://github.com/gambi-shah/unipersian.git

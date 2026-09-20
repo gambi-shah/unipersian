@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 \usepackage{facode}
 
-\usepackage{shamsi}
+
 
 
 
@@ -31,9 +31,11 @@
 
 \makeatletter
 
-\NewMiladi{unipersian}{\uper@year}{\uper@month}{\uper@day}
-
-\date{\Shamsi{unipersian}
+\date{%\Shamsi{unipersian}
+    \localedate[
+    calendar=persian,
+    convert
+    ]{\uper@year}{\uper@month}{\uper@day}
     نسخه
     \lr{\uper@version}
 }
@@ -205,6 +207,24 @@
           تغییرات محدودی انجام شود.
 \end{enumerate}
 
+
+\section{دریافت و نصب}
+
+نسخهٔ رسمی بستهٔ \code{unipersian} از طریق آرشیو
+\lr{CTAN} در دسترس است:
+
+\begin{center}
+    \url{https://ctan.org/pkg/unipersian}
+\end{center}
+
+در
+\lr{\TeX{} Live}،
+ در صورت به‌روز بودن فهرست بسته‌ها، می‌توان بسته را با
+دستور زیر نصب کرد:
+
+\begin{verbatim}
+    tlmgr install unipersian
+\end{verbatim}
 
 \section{موتورهای پشتیبانی‌شده}
 
@@ -700,7 +720,9 @@
 \textbf{عامر آمیخته}
 نگهداری و توسعه داده می‌شود.
 
-مخزن پروژه:
+کد منبع، نسخه‌های توسعه و امکان گزارش مشکلات در مخزن پروژه در دسترس
+است:
+
 \hfill \url{https://github.com/gambi-shah/unipersian}
 
 \end{document}
