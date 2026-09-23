@@ -27,11 +27,11 @@
 
 \def\uper@year{2026}
 \def\uper@month{09}
-\def\uper@day{20}
+\def\uper@day{23}
 \def\uper@date{%
-  \uper@year/\uper@month/\uper@day
+    \uper@year/\uper@month/\uper@day
 }
-\def\uper@version{0.1.1}
+\def\uper@version{0.2.0}
 
 \ProvidesPackage{unipersian}
 [\uper@date\space v\uper@version\space Persian support for pdfTeX, XeTeX, and LuaTeX]
@@ -43,7 +43,7 @@
 \makeatletter
 
 \@ifpackageloaded{listings}{%
-  \RequirePackage{unipersian-listings}%
+    \RequirePackage{unipersian-listings}%
 }{}
 
 
@@ -53,44 +53,44 @@
 % ------------------------------------------
 
 \define@key{persian}{bidi}{%
-  \gdef\uper@bidi{#1}%
+    \gdef\uper@bidi{#1}%
 }
 
 \define@key{persian}{layout}{%
-  \edef\uper@layout{%
-    \uper@layout\space#1%
-  }%
+    \edef\uper@layout{%
+        \uper@layout\space#1%
+    }%
 }
 
 \def\uper@layout{}
 
 \ifPDFTeX
-  \setkeys{persian}{bidi=default}
+    \setkeys{persian}{bidi=default}
 \fi
 
 \ifXeTeX
-  \setkeys{persian}{bidi=bidi-r}
+    \setkeys{persian}{bidi=bidi-r}
 \fi
 
 \ifLuaTeX
-  \setkeys{persian}{%
-    bidi=basic,
-    layout=counters tabular graphics footnotes
-  }
+    \setkeys{persian}{%
+        bidi=basic,
+        layout=counters tabular graphics footnotes lists
+    }
 \fi
 
 \DeclareOptionX{bidi}{%
-  \setkeys{persian}{bidi=#1}%
+    \setkeys{persian}{bidi=#1}%
 }
 
 \DeclareOptionX{layout}{%
-  \setkeys{persian}{layout=#1}%
+    \setkeys{persian}{layout=#1}%
 }
 
 \DeclareOptionX*{%
-  \edef\uper@babeloptions{%
-    \uper@babeloptions,\CurrentOption
-  }%
+    \edef\uper@babeloptions{%
+        \uper@babeloptions,\CurrentOption
+    }%
 }
 
 \def\uper@babeloptions{}
@@ -108,84 +108,84 @@
 
 
 % ------------------------------------------
-% Resolve Bug of arabiccore Package
+% Resolve Bug of arabiccore Package or beamer
 % ------------------------------------------
 
 \@ifundefined{if@rl}{%
-  \newif\if@rl
+    \newif\if@rl
 }{}
 
 \ifPDFTeX
-  \ifuper@beamer
-    \providecommand{\labelitemiv}
-    {\if@rl\protect $-$ %
-      \else\protect\textperiodcentred\fi}
-    \providecommand{\labelitemi}
-    {\if@rl\protect\textLR{$\bullet$}
-      \else\protect\textbullet\fi}
+    \ifuper@beamer
+        \providecommand{\labelitemiv}
+        {\if@rl\protect $-$ %
+            \else\protect\textperiodcentred\fi}
+        \providecommand{\labelitemi}
+        {\if@rl\protect\textLR{$\bullet$}
+            \else\protect\textbullet\fi}
 
-    \providecommand{\labelitemii}
-    {\if@rl\protect\textLR{$\circ$} %
-      \else\protect\textLR{ \normalfont\bfseries\textendash}\fi}
+        \providecommand{\labelitemii}
+        {\if@rl\protect\textLR{$\circ$} %
+            \else\protect\textLR{ \normalfont\bfseries\textendash}\fi}
 
-    \providecommand{\labelitemiii}
-    {\if@rl\protect\textLR{$*$} %
-      \else\protect\textasteriskcentered\fi}
+        \providecommand{\labelitemiii}
+        {\if@rl\protect\textLR{$*$} %
+            \else\protect\textasteriskcentered\fi}
 
-    \providecommand{\labelenumi}
-    {\if@rl(\I{\number\c@enumi}).%
-      \else{\number\c@enumi}.\fi}
+        \providecommand{\labelenumi}
+        {\if@rl(\I{\number\c@enumi}).%
+            \else{\number\c@enumi}.\fi}
 
-    \providecommand{\labelenumii}
-    {\if@rl\abjadnumeral{\number\c@enumii}. %
-      \else({\number\c@enumii})\fi}
+        \providecommand{\labelenumii}
+        {\if@rl\abjadnumeral{\number\c@enumii}. %
+            \else({\number\c@enumii})\fi}
 
-    \providecommand{\labelenumiii}
-    {\if@rl\I{\number\c@enumiii}$\space-\space$ %
-      \else({\number\c@enumiii})\fi}
+        \providecommand{\labelenumiii}
+        {\if@rl\I{\number\c@enumiii}$\space-\space$ %
+            \else({\number\c@enumiii})\fi}
 
-    \providecommand{\labelenumiv}
-    {\if@rl\abjadnumeral{\number\c@enumiv}$\space-\space$ %
-      \else({\number\c@enumiv})\fi}
-  \fi \fi
+        \providecommand{\labelenumiv}
+        {\if@rl\abjadnumeral{\number\c@enumiv}$\space-\space$ %
+            \else({\number\c@enumiv})\fi}
+    \fi \fi
 
 % ------------------------------------------
 % Engine setup
 % ------------------------------------------
 
 \ifPDFTeX
-  \RequirePackage[utf8]{inputenc}
-  \RequirePackage[LAE,LFE,T1]{fontenc}
-  \RequirePackage[bidi=\uper@bidi,\uper@babeloptions,english,farsi]{babel}
+    \RequirePackage[utf8]{inputenc}
+    \RequirePackage[LAE,LFE,T1]{fontenc}
+    \RequirePackage[bidi=\uper@bidi,\uper@babeloptions,english,farsi]{babel}
 \fi
 
 \ifXeTeX
-  \RequirePackage[
-    bidi=\uper@bidi,
-    \uper@babeloptions
-  ]{babel}
+    \RequirePackage[
+        bidi=\uper@bidi,
+        \uper@babeloptions
+    ]{babel}
 
-  \babelprovide[import,main]{persian}
-  \babelprovide[import]{english}
+    \babelprovide[import,main]{persian}
+    \babelprovide[import]{english}
 \fi
 
 \ifLuaTeX
 
-  \RequirePackage{fontspec}
+    \RequirePackage{fontspec}
 
-  \ifuper@beamerrl
+    \ifuper@beamerrl
 
-  \else
-    \RequirePackage[
-      bidi=\uper@bidi,
-      layout=\uper@layout,
-      \uper@babeloptions
-    ]{babel}
+    \else
+        \RequirePackage[
+            bidi=\uper@bidi,
+            layout=\uper@layout,
+            \uper@babeloptions
+        ]{babel}
 
-  \fi
+    \fi
 
-  \babelprovide[import,main,mapdigits]{persian}
-  \babelprovide[import]{english}
+    \babelprovide[import,main,mapdigits,onchar=ids fonts letters]{persian}
+    \babelprovide[import,onchar=ids fonts letters]{english}
 
 \fi
 
@@ -204,7 +204,7 @@
 \ifTUTeX \input{unipersian-fonts.def} \fi
 \ifPDFTeX \input{unipersian-pdftex.def} \fi
 \ifXeTeX
-  \input{unipersian-xetex.def}
+    \input{unipersian-xetex.def}
 \fi
 \ifLuaTeX \input{unipersian-luatex.def} \fi
 
@@ -215,10 +215,10 @@
 
 \makeatletter
 \ifuper@beamer
-  \ifuper@beamerrl
-  \else
-    \ifLuaTeX \input{unipersian-beamer-luatex.def} \fi
-  \fi
+    \ifuper@beamerrl
+    \else
+        \ifLuaTeX \input{unipersian-beamer-luatex.def} \fi
+    \fi
 \fi
 \makeatother
 
@@ -233,33 +233,33 @@
 \long\def\uper@firstofone#1{#1}
 
 \def\uper@strip@babel@bidi{%
-  \@ifundefined{babelsublr}{}{%
-    \let\babelsublr\uper@firstofone
-  }%
-  \@ifundefined{babelsubrl}{}{%
-    \let\babelsubrl\uper@firstofone
-  }%
+    \@ifundefined{babelsublr}{}{%
+        \let\babelsublr\uper@firstofone
+    }%
+    \@ifundefined{babelsubrl}{}{%
+        \let\babelsubrl\uper@firstofone
+    }%
 }
 
 \newif\ifuper@label@patched
 
 \def\uper@patch@label{%
-  \ifuper@label@patched
-  \else
-    \global\uper@label@patchedtrue
-    \let\uper@orig@label\label
-    \protected\def\label##1{%
-      \begingroup
-      \uper@strip@babel@bidi
-      \edef\uper@tmp{##1}%
-      \expandafter\endgroup
-      \expandafter\uper@orig@label\expandafter{\uper@tmp}%
-    }%
-  \fi
+    \ifuper@label@patched
+    \else
+        \global\uper@label@patchedtrue
+        \let\uper@orig@label\label
+        \protected\def\label##1{%
+            \begingroup
+            \uper@strip@babel@bidi
+            \edef\uper@tmp{##1}%
+            \expandafter\endgroup
+            \expandafter\uper@orig@label\expandafter{\uper@tmp}%
+        }%
+    \fi
 }
 
 \AddToHook{begindocument/end}{%
-  \uper@patch@label
+    \uper@patch@label
 }
 
 
@@ -269,24 +269,24 @@
 % ------------------------------------------
 
 \AtBeginDocument{%
-  \@ifpackageloaded{hyperref}{%
-    \pdfstringdefDisableCommands{%
-      \def\harfi#1{}%
-      \def\adadi#1{}%
-      \def\tartibi#1{}%
-      \def\abjad#1{}%
-      \def\Abjad#1{}%
-      \def\@harfi#1{}%
-      \def\@adadi#1{}%
-      \def\@tartibi#1{}%
-      \def\@abjad#1{}%
-      \def\@Abjad#1{}%
-      \def\lr#1{#1}%
-      \def\rl#1{#1}%
-      \def\LR#1{#1}%
-      \def\RL#1{#1}%
-    }%
-  }{}%
+    \@ifpackageloaded{hyperref}{%
+        \pdfstringdefDisableCommands{%
+            \def\harfi#1{}%
+            \def\adadi#1{}%
+            \def\tartibi#1{}%
+            \def\abjad#1{}%
+            \def\Abjad#1{}%
+            \def\@harfi#1{}%
+            \def\@adadi#1{}%
+            \def\@tartibi#1{}%
+            \def\@abjad#1{}%
+            \def\@Abjad#1{}%
+            \def\lr#1{#1}%
+            \def\rl#1{#1}%
+            \def\LR#1{#1}%
+            \def\RL#1{#1}%
+        }%
+    }{}%
 }
 
 
@@ -300,46 +300,46 @@
 
 
 \providecommand{\RLE}[1]{%
-  \leavevmode
-  {%
-    \bbl@textdir{1}%
-    #1%
-  }%
+    \leavevmode
+    {%
+        \bbl@textdir{1}%
+        #1%
+    }%
 }%
 
 \providecommand{\LRE}[1]{%
-  \leavevmode
-  {%
-    \bbl@textdir{0}%
-    #1%
-  }%
+    \leavevmode
+    {%
+        \bbl@textdir{0}%
+        #1%
+    }%
 }%
 
 \ProvideDocumentEnvironment{RTL}{}
 {%
-  \par
-  \begingroup
-  \bbl@pardir{1}%
-  \bbl@textdir{1}%
-  \bbl@bodydir{1}
+    \par
+    \begingroup
+    \bbl@pardir{1}%
+    \bbl@textdir{1}%
+    \bbl@bodydir{1}
 }
 {%
-  \par
-  \endgroup
+    \par
+    \endgroup
 }%
 
 
 \ProvideDocumentEnvironment{LTR}{}
 {%
-  \par
-  \begingroup
-  \bbl@pardir{0}%
-  \bbl@textdir{0}%
-  \bbl@bodydir{0}
+    \par
+    \begingroup
+    \bbl@pardir{0}%
+    \bbl@textdir{0}%
+    \bbl@bodydir{0}
 }
 {%
-  \par
-  \endgroup
+    \par
+    \endgroup
 }%
 
 \let\LR\LRE
@@ -350,25 +350,25 @@
 % ------------------------------------------
 
 \ProvideDocumentCommand{\lr}{m}{%
-  \mbox{\unskip
-    \@ifundefined{LatinAlphs}{}{\LatinAlphs}%
-    \ifx\languagename\englishlanguage
-      #1%
-    \else
-      \foreignlanguage[captions]{english}{#1}%
-    \fi
-  }\unskip
+    \mbox{\unskip
+        \@ifundefined{LatinAlphs}{}{\LatinAlphs}%
+        \ifx\languagename\englishlanguage
+            #1%
+        \else
+            \foreignlanguage[captions]{english}{#1}%
+        \fi
+    }\unskip
 }
 
 \ProvideDocumentCommand{\rl}{m}{%
-  \mbox{\unskip
-    \@ifundefined{PersianAlphs}{}{\PersianAlphs}%
-    \ifx\languagename\persianmainlanguage
-      #1%
-    \else
-      \foreignlanguage[captions]{\persianmainlanguage}{#1}%
-    \fi
-  }\unskip
+    \mbox{\unskip
+        \@ifundefined{PersianAlphs}{}{\PersianAlphs}%
+        \ifx\languagename\persianmainlanguage
+            #1%
+        \else
+            \foreignlanguage[captions]{\persianmainlanguage}{#1}%
+        \fi
+    }\unskip
 }
 
 
@@ -378,28 +378,28 @@
 
 \ProvideDocumentEnvironment{latin}{}%
 {%
-  \begin{LTR}
-  \begin{otherlanguage*}[captions]{english}%
-  \@ifundefined{LatinAlphs}{}{%
-    \LatinAlphs
-  }%
+    \begin{LTR}
+    \begin{otherlanguage*}[captions]{english}%
+    \@ifundefined{LatinAlphs}{}{%
+        \LatinAlphs
+    }%
 }%
 {%
-  \end{otherlanguage*}%
-  \end{LTR}
+    \end{otherlanguage*}%
+    \end{LTR}
 }%
 
 \ProvideDocumentEnvironment{persian}{}%
 {%
-  \begin{RTL}
-  \begin{otherlanguage*}[captions]{\persianmainlanguage}%
-  \@ifundefined{PersianAlphs}{}{%
-    \PersianAlphs
-  }%
+    \begin{RTL}
+    \begin{otherlanguage*}[captions]{\persianmainlanguage}%
+    \@ifundefined{PersianAlphs}{}{%
+        \PersianAlphs
+    }%
 }%
 {%
-  \end{otherlanguage*}%
-  \end{RTL}
+    \end{otherlanguage*}%
+    \end{RTL}
 }%
 
 % ------------------------------------------
@@ -407,7 +407,7 @@
 % ------------------------------------------
 
 \ProvideDocumentCommand{\resetlatinfont}{}{%
-  \selectlanguage{english}%
+    \selectlanguage{english}%
 }
 
 % ------------------------------------------
@@ -415,7 +415,7 @@
 % ------------------------------------------
 
 \DeclareRobustCommand{\latintoday}{%
-  \foreignlanguage[date]{english}{\today}%
+    \foreignlanguage[date]{english}{\today}%
 }
 
 
@@ -424,27 +424,27 @@
 % ------------------------------------------------
 
 \def\verbatim@font{%
-  \normalfont
-  \ifTUTeX \latinttfamily \else  \ttfamily\fontencoding{T1}\selectfont\fi
-  \bbl@pardir{0}%
-  \bbl@textdir{0}%
-  \bbl@bodydir{0}
-  \ifLuaTeX\ifhmode\unskip\fi\else\ifhmode\unskip\fi\beginL\fi
+    \normalfont
+    \ifTUTeX \latinttfamily \else  \ttfamily\fontencoding{T1}\selectfont\fi
+    \bbl@pardir{0}%
+    \bbl@textdir{0}%
+    \bbl@bodydir{0}
+    \ifLuaTeX\ifhmode\unskip\fi\else\ifhmode\unskip\fi\beginL\fi
 }
 
-\AddToHook{cmd/verb/before}{%
-  \unskip
-}
+% \AddToHook{cmd/verb/before}{%
+%     \unskip
+% }
 
 \AddToHook{env/verbatim/before}{%
-  \ifLuaTeX\else\vspace{-\baselineskip}\fi
-  \removelastskip%
-  \ifPDFTeX\bgroup\selectlanguage{english}\fi
+    \ifLuaTeX\else\vspace{-\baselineskip}\fi
+    \removelastskip%
+    \ifPDFTeX\bgroup\selectlanguage{english}\fi
 }
 
 \AddToHook{env/verbatim/after}{%
-  \ifXeTeX\endL\removelastskip\fi
-  \ifPDFTeX\egroup\fi
+    \ifXeTeX\endL\removelastskip\fi
+    \ifPDFTeX\egroup\fi
 }
 
 \g@addto@macro\verb@egroup{\ifLuaTeX\else\endL\fi}
@@ -455,26 +455,70 @@
 % ------------------------------------------------
 
 \@ifpackageloaded{listings}{%
-  \lst@AddToHook{Init}{%
-    \lst@ifdisplaystyle
-    \par
-    \selectlanguage{english}
-    \else
-    \ifXeTeX\unskip\fi
-    \begin{otherlanguage*}{english}
-    \ifXeTeX\beginL\fi
-    \unskip
-    \fi
-  }
-  \lst@AddToHook{DeInit}{%
-    \lst@ifdisplaystyle
-    \else
-    \end{otherlanguage*}
-    \ifXeTeX \endL  \fi
-    \unskip
-    \fi
-  }
+    \lst@AddToHook{Init}{%
+        \lst@ifdisplaystyle
+        \par
+        \selectlanguage{english}
+        \else
+        \ifXeTeX\unskip\fi
+        \begin{otherlanguage*}{english}
+        \ifXeTeX\beginL\fi
+        \unskip
+        \fi
+    }
+    \lst@AddToHook{DeInit}{%
+        \lst@ifdisplaystyle
+        \else
+        \end{otherlanguage*}
+        \ifXeTeX \endL  \fi
+        \unskip
+        \fi
+    }
 }{}
+
+% ------------------------------------------------
+% Minted Package
+% ------------------------------------------------
+
+\@ifpackageloaded{minted}{%
+    \NewCommandCopy{\uper@RobustMintProcess}{\RobustMintProcess}
+    \RenewDocumentCommand{\RobustMintProcess}{m m m}{%
+        \begin{latin}
+            \ifLuaTeX
+                \vspace{\topsep}
+                \begin{minipage}{\linewidth}%
+            \fi
+            \uper@RobustMintProcess{#1}{#2}{#3}%
+            \ifLuaTeX
+                \end{minipage}%
+                \vspace{\topsep}%
+            \fi
+        \end{latin}%
+    }
+
+    \NewCommandCopy{\uper@mintinline}{\mintinline}
+    \RenewDocumentCommand{\mintinline}{s O{} m m}{%
+        \lr{\unskip
+            \IfBooleanTF{#1}
+            {%
+                \uper@mintinline*[#2]{#3}{#4}%
+            }
+            {%
+                \uper@mintinline[#2]{#3}{#4}%
+            }%
+        }\unskip
+    }
+
+    \AddToHook{env/minted/before}{%
+        \begin{latin}
+        \ifLuaTeX\noindent\begin{minipage}[t]{\linewidth}\fi
+    }
+    \AddToHook{env/minted/after}{%
+        \ifLuaTeX\end{minipage}\vspace{\topsep}\fi
+        \end{latin}
+    }
+}{}
+
 
 \makeatother
 

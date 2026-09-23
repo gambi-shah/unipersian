@@ -1,0 +1,215 @@
+% unipersian-fonts-fallback.def
+%
+% UniPersian: Persian language support for LaTeX.
+%
+% Copyright (C) 2026 Amer Amikhteh
+%
+% This file is part of the UniPersian package.
+%
+% This work is free software: you may redistribute it and/or modify
+% it under the terms of the LaTeX Project Public License as published
+% by the LaTeX Project, either version 1.3c of the License, or
+% (at your option) any later version.
+%
+% This work is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%
+% The full license text is available at:
+% https://www.latex-project.org/lppl/
+%
+% This work is "maintained" by Amer Amikhteh.
+%
+% The current maintainer of this work is Amer Amikhteh.
+
+\ProvidesFile{unipersian-fonts-fallback.def}
+[2026/09/23 v0.2.0 LuaTeX font fallbacks for UniPersian]
+
+% ------------------------------------------------
+% Font names and options
+% ------------------------------------------------
+
+\def\uper@persianrmfont{}
+\def\uper@persianrmoptions{}
+
+\def\uper@persiansffont{}
+\def\uper@persiansfoptions{}
+
+\def\uper@persianmonofont{}
+\def\uper@persianmonooptions{}
+
+\def\uper@latinrmfont{}
+\def\uper@latinrmoptions{}
+
+\def\uper@latinsffont{}
+\def\uper@latinsfoptions{}
+
+\def\uper@latinmonofont{}
+\def\uper@latinmonooptions{}
+
+% ------------------------------------------------
+% Define rm fallbacks
+% ------------------------------------------------
+
+\def\uper@define@rm@fallbacks{%
+    \ifx\uper@persianrmfont\@empty
+    \else
+        \ifx\uper@latinrmfont\@empty
+        \else
+            \directlua{%
+                luaotfload.add_fallback(
+                "unipersian-persian-rm-fallback",
+                {
+                    "\luaescapestring{\uper@latinrmfont}:mode=node;script=latn"
+                }
+                )
+                luaotfload.add_fallback(
+                "unipersian-latin-rm-fallback",
+                {
+                    "\luaescapestring{\uper@persianrmfont}:mode=node;script=arab"
+                }
+                )
+            }%
+        \fi
+    \fi
+}
+
+% ------------------------------------------------
+% Define sf fallbacks
+% ------------------------------------------------
+
+\def\uper@define@sf@fallbacks{%
+    \ifx\uper@persiansffont\@empty
+    \else
+        \ifx\uper@latinsffont\@empty
+        \else
+            \directlua{%
+                luaotfload.add_fallback(
+                "unipersian-persian-sf-fallback",
+                {
+                    "\luaescapestring{\uper@latinsffont}:mode=node;script=latn"
+                }
+                )
+                luaotfload.add_fallback(
+                "unipersian-latin-sf-fallback",
+                {
+                    "\luaescapestring{\uper@persiansffont}:mode=node;script=arab"
+                }
+                )
+            }%
+        \fi
+    \fi
+}
+
+% ------------------------------------------------
+% Define tt fallbacks
+% ------------------------------------------------
+
+\def\uper@define@mono@fallbacks{%
+    \ifx\uper@persianmonofont\@empty
+    \else
+        \ifx\uper@latinmonofont\@empty
+        \else
+            \directlua{%
+                luaotfload.add_fallback(
+                "unipersian-persian-mono-fallback",
+                {
+                    "\luaescapestring{\uper@latinmonofont}:mode=node;script=latn"
+                }
+                )
+                luaotfload.add_fallback(
+                "unipersian-latin-mono-fallback",
+                {
+                    "\luaescapestring{\uper@persianmonofont}:mode=node;script=arab"
+                }
+                )
+            }%
+        \fi
+    \fi
+}
+
+% ------------------------------------------------
+% Define all fallbacks
+% ------------------------------------------------
+
+\def\uper@define@fallbacks{%
+    \uper@define@rm@fallbacks
+    \uper@define@sf@fallbacks
+    \uper@define@mono@fallbacks
+}
+
+% ------------------------------------------------
+% Apply rm fallbacks to Babel fonts
+% ------------------------------------------------
+
+\def\uper@apply@rm@fallbacks{%
+    \ifx\uper@persianrmfont\@empty
+    \else
+        \ifx\uper@latinrmfont\@empty
+        \else
+            \babelfont[persian]{rm}[
+                RawFeature={fallback=unipersian-persian-rm-fallback},
+                \uper@persianrmoptions
+            ]{\uper@persianrmfont}%
+            \babelfont[english]{rm}[
+                RawFeature={fallback=unipersian-latin-rm-fallback},
+                \uper@latinrmoptions
+            ]{\uper@latinrmfont}%
+        \fi
+    \fi
+}
+
+% ------------------------------------------------
+% Apply sf fallbacks to Babel fonts
+% ------------------------------------------------
+
+\def\uper@apply@sf@fallbacks{%
+    \ifx\uper@persiansffont\@empty
+    \else
+        \ifx\uper@latinsffont\@empty
+        \else
+            \babelfont[persian]{sf}[
+                RawFeature={fallback=unipersian-persian-sf-fallback},
+                \uper@persiansfoptions
+            ]{\uper@persiansffont}%
+            \babelfont[english]{sf}[
+                RawFeature={fallback=unipersian-latin-sf-fallback},
+                \uper@latinsfoptions
+            ]{\uper@latinsffont}%
+        \fi
+    \fi
+}
+
+% ------------------------------------------------
+% Apply tt fallbacks to Babel fonts
+% ------------------------------------------------
+
+\def\uper@apply@mono@fallbacks{%
+    \ifx\uper@persianmonofont\@empty
+    \else
+        \ifx\uper@latinmonofont\@empty
+        \else
+            \babelfont[persian]{tt}[
+                RawFeature={fallback=unipersian-persian-mono-fallback},
+                \uper@persianmonooptions
+            ]{\uper@persianmonofont}%
+            \babelfont[english]{tt}[
+                RawFeature={fallback=unipersian-latin-mono-fallback},
+                \uper@latinmonooptions
+            ]{\uper@latinmonofont}%
+        \fi
+    \fi
+}
+
+% ------------------------------------------------
+% Update all fallbacks
+% ------------------------------------------------
+
+\def\uper@update@fallbacks{%
+    \uper@define@fallbacks
+    \uper@apply@rm@fallbacks
+    \uper@apply@sf@fallbacks
+    \uper@apply@mono@fallbacks
+}
+
+\endinput

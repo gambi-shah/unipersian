@@ -24,7 +24,7 @@
 
 
 \ProvidesFile{unipersian-fonts.def}
-[2026/09/08 v0.1.0 Common definitions for fonts in XeTeX and LuaTeX]
+[2026/09/23 v0.2.0 Common definitions for fonts in XeTeX and LuaTeX]
 
 
 
@@ -32,6 +32,10 @@
 
 
 \providecommand{\persianmainlanguage}{persian}
+
+\ifLuaTeX
+    \input{unipersian-fonts-fallback.def}
+\fi
 
 % --------------------------------------
 % Main Persian and Latin fonts
@@ -44,14 +48,28 @@
         \babelfont[persian]{sf}%
         [Mapping=farsidigits,#1]{#2}
     \else
+        \def\uper@persianrmfont{#2}%
+        \def\uper@persianrmoptions{#1}%
+        \def\uper@persiansffont{#2}%
+        \def\uper@persiansfoptions{#1}%
         \babelfont[persian]{rm}[#1]{#2}%
         \babelfont[persian]{sf}[#1]{#2}%
+        \uper@update@fallbacks
     \fi
 }
 
 \NewDocumentCommand{\setlatintextfont}{O{} m}{%
+    \ifLuaTeX
+        \def\uper@latinrmfont{#2}%
+        \def\uper@latinrmoptions{#1}%
+        \def\uper@latinsffont{#2}%
+        \def\uper@latinsfoptions{#1}%
+    \fi
     \babelfont[english]{rm}[#1]{#2}%
-    \babelfont[english]{sf}[#1]{#2}
+    \babelfont[english]{sf}[#1]{#2}%
+    \ifLuaTeX
+        \uper@update@fallbacks
+    \fi
 }
 
 
@@ -78,14 +96,24 @@
         \babelfont[persian]{sf}%
         [Mapping=farsidigits,#1]{#2}%
     \else
+        \def\uper@persiansffont{#2}%
+        \def\uper@persiansfoptions{#1}%
         \babelfont[persian]{sf}[#1]{#2}%
+        \uper@update@fallbacks
     \fi
 }
 
 \providecommand\persianttdefault{}
 
 \NewDocumentCommand{\setpersianmonofont}{O{} m}{%
+    \ifLuaTeX
+        \def\uper@persianmonofont{#2}%
+        \def\uper@persianmonooptions{#1}%
+    \fi
     \babelfont[persian]{tt}[#1]{#2}%
+    \ifLuaTeX
+        \uper@update@fallbacks
+    \fi
     \begingroup
     \selectlanguage{persian}%
     \ttfamily
@@ -112,14 +140,28 @@
 % --------------------------------------
 
 \NewDocumentCommand{\setlatinsansfont}{O{} m}{%
+    \ifLuaTeX
+        \def\uper@latinsffont{#2}%
+        \def\uper@latinsfoptions{#1}%
+    \fi
     \babelfont[english]{sf}[#1]{#2}%
+    \ifLuaTeX
+        \uper@update@fallbacks
+    \fi
 }
 
 \providecommand\latinttdefault{}
 \providecommand\latinttfamily{}
 
 \NewDocumentCommand{\setlatinmonofont}{O{} m}{%
+    \ifLuaTeX
+        \def\uper@latinmonofont{#2}%
+        \def\uper@latinmonooptions{#1}%
+    \fi
     \babelfont[english]{tt}[#1]{#2}%
+    \ifLuaTeX
+        \uper@update@fallbacks
+    \fi
     \begingroup
     \selectlanguage{english}%
     \ttfamily
