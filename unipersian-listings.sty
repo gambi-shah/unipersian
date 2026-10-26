@@ -23,15 +23,18 @@
 % The current maintainer of this work is Amer Amikhteh.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{unipersian-listings}[2026/09/08 v0.1.0 Persian support for listings package]
+\ProvidesPackage{unipersian-listings}[2026/10/18 v0.3.0 Persian support for listings package]
 
 \RequirePackage{listings}
+
+
+\makeatletter
+
 
 \@ifpackageloaded{xepersian}{%
     \input{unipersian-listings-fallback.def}%
 }{}
 
-\makeatletter
 
 \let\falst@style\relax
 \lst@AddToHook{Output}{\global\let\falst@style\lst@thestyle}

@@ -1,0 +1,24 @@
+\documentclass{article}
+
+\usepackage[french]{unipersian}
+%\babelprovide[main]{persian}
+
+\begin{document}
+    \makeatletter
+    \lr{\bbl@main@language}
+    
+    %\languagename
+    
+    \ifuper@main@persian
+    \lr{Per}
+    \else
+   \lr{Non-Per}
+    \fi
+    \makeatother
+    
+    
+   \rl{سلام}
+   \lr{Hey}
+\end{document}
+
+

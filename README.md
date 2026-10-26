@@ -1,45 +1,42 @@
-# The `unipersian` package
+LaTeX Package: Unipersian v0.3.0 2026-10-26
+----------------------------------------
 
-Persian language support for LaTeX, LuaLaTeX, and XeLaTeX using Babel.
+Persian typesetting for LaTeX, LuaLaTeX, and XeLaTeX using BabelBidi (based on Babel).
 
 ## Description
 
-This package provides a convenient interface for typesetting Persian as the main language, with English text in LaTeX, based on the Babel package and using LuaTeX (recommended), XeTeX (fallback), or pdfTeX (last resort) as the underlying engine. It provides Persian captions and numerals, bidirectional text support, and adaptations for common document classes and Beamer.
+UniPersian provides Persian typesetting with LuaLaTeX (recommended), XeLaTeX, and pdfTeX (basic support), using BabelBidi (based on Babel). It supports Persian as the main or a secondary language, with Persian captions, numerals, and font configuration.
+
 
 ## Features
 
-- Persian captions and Persian numerals (Arabic-Indic digits, Abjad,
-  `adadi`, `harfi`, `tartibi`).
-- Direction commands `\lr{...}` and `\rl{...}`.
-- Automatic Beamer detection with adapted list labels.
-- Book/report adaptations and hyperref-safe bookmarks and labels.
+- Persian captions and numerals, including Abjad, `adadi`, `harfi`, and `tartibi`.
+- Font configuration for Persian and Latin text.
+- Automatic character-based language and font selection under LuaLaTeX.
+- Adaptations for common document classes and Beamer.
+- Integration with `minted` and `listings` for code containing Persian text.
 
 ## Installation
 
 ### From CTAN
 
-The latest official release is available from CTAN:
-
 https://ctan.org/pkg/unipersian
 
-With TeX Live, install the package with:
+With TeX Live:
 
 ~~~bash
 tlmgr install unipersian
 ~~~
 
-### Manual installation from GitHub
+### From GitHub
 
 ~~~bash
 git clone https://github.com/gambi-shah/unipersian.git
 ~~~
 
-Copy `unipersian.sty` and the `unipersian-*.def` files into a TeX-searchable
-directory (run `mktexlsr` if needed) or keep them next to your document.
+Copy the package files into a TeX-searchable directory or keep them next to your document.
 
 ## Usage
-
-Minimal example — no font setup required:
 
 ~~~latex
 \documentclass{article}
@@ -50,26 +47,15 @@ Minimal example — no font setup required:
 \end{document}
 ~~~
 
-Compile with LuaLaTeX (recommended), XeLaTeX (fallback) or pdfTeX (last resort).
+Compile with LuaLaTeX (recommended), XeLaTeX, or pdfTeX (basic support).
 
-`UniPersian` accepts the same package options as `babel`; see the Babel
-manual for the complete list.
+UniPersian accepts Babel options and provides the package-specific options `persianprovide`, `englishprovide`, and `encodings`. For Persian presentations, the `beamer-rl` class is recommended with LuaLaTeX; the standard `beamer` class is also supported.
 
-## Core APIs
-
-The four core APIs are:
-
-- `\settextfont[opts]{font}` — selects text font for Unicode
-  engines.
-- `\lr{...}` — typesets an inline english run.
-- `\rl{...}` — typesets an inline persian run.
-- `latin` environment — typesets a longer english block:
-
-The package also provides further APIs for captions, numerals, counters,
-and document classes; see the [main manual](doc/unipersian.pdf) for the complete documentation.
+## Documentation
+See the [main manual](doc/unipersian.pdf) for configuration and examples.
 
 ## License and maintainer
 
 - License: LPPL 1.3c or later.
 - Maintainer: Amer Amikhteh.
-- Report bugs at the repository issue tracker.
+- Report bugs at the [issue tracker](https://github.com/gambi-shah/unipersian/issues).

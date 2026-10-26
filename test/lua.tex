@@ -1,0 +1,87 @@
+
+
+\documentclass[]{article}
+
+%\usepackage{babel}
+\usepackage%[main=english,bidi=bidi]
+{unipersian}
+%\babelprovide[main]{english}
+%\babelprovide[import]{arabic}
+%\babelfont[arabic]{rm}{Amiri}
+
+\begin{document}
+    
+    \tableofcontents
+    
+
+\bgroup
+
+\egroup
+
+    \selectlanguage{persian}
+    \makeatletter
+    
+\if@RTLmain
+RTL
+\else
+LTR
+\fi
+    \makeatother
+    
+    \today
+    
+    \persiantoday
+    
+  \englishtoday
+    
+%    \arabictoday
+    
+    سلام
+    \section{قسمت اول}
+    \footnote{پانویس فارسی}
+    \footnote{english footnote}
+    \section{قسمت دوم}
+    \subsection{زیرقسمت اول}
+    \makebox[3cm][l]{A}B
+    
+    \begin{enumerate}
+        \item 
+        \begin{enumerate}
+            \item 
+        \end{enumerate}
+    \end{enumerate}
+    
+    \selectlanguage{persian}
+ \begin{enumerate}
+     \item 
+     سطح ۱
+     \begin{enumerate}
+         \item 
+         سطح ۲
+         \begin{enumerate}
+             \item 
+             سطح ۳
+             \begin{enumerate}
+                 \item 
+                 سطح ۴
+             \end{enumerate}
+         \end{enumerate}
+     \end{enumerate}
+ \end{enumerate}
+ 
+ \selectlanguage{english}
+ \rl{سلام}
+ \begin{enumerate}
+     \item Level 1
+     \begin{enumerate}
+         \item Level 2
+         \begin{enumerate}
+             \item Level 3
+             \begin{enumerate}
+                 \item 
+                 Level 4
+             \end{enumerate}
+         \end{enumerate}
+     \end{enumerate}
+ \end{enumerate}
+\end{document}

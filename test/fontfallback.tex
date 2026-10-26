@@ -1,0 +1,31 @@
+% Compile with LuaLaTeX; include babelbidi/test in TEXINPUTS for assertions.
+\documentclass{article}
+\ifdefined\FBcacheoff\PassOptionsToPackage{fontcache=false}{unipersian}\fi
+\usepackage{unipersian}
+\ifdefined\FBfontorder
+  \setlatintextfont[Color=FF0000,Scale=0.9]{TeX Gyre Termes}
+  \settextfont[Color=0000FF,Scale=1.2]{Amiri}
+\else
+  \settextfont[Color=0000FF,Scale=1.2]{Amiri}
+  \setlatintextfont[Color=FF0000,Scale=0.9]{TeX Gyre Termes}
+\fi
+% Materialize the English families, then change the Persian fallback font.
+\setlatinmonofont{TeX Gyre Cursor}
+\settextfont[Color=0000FF,Scale=1.2,ItalicFont=Vazirmatn]{Vazirmatn}
+\setpersiansansfont[Color=0000FF,ItalicFont=Vazirmatn]{Vazirmatn}
+\setlatinsansfont{TeX Gyre Heros}
+\setpersianmonofont[Color=0000FF]{DejaVu Sans Mono}
+\directlua{FB = dofile(kpse.find_file('fontfallback.lua'))}
+\newcommand\FBcase[5]{%
+  \setbox0=\hbox{#2}%
+  \directlua{FB.check('#1', '\luaescapestring{#3}', #4, #5)}%
+  \box0\par
+}
+\begin{document}
+\FBcase{redefined-target}{\foreignlanguage{english}{Aĸ}}{Vazirmatn Regular}{12}{0x0138}
+\FBcase{redefined-target-bold}{\foreignlanguage{english}{\bfseries Aĸ}}{Vazirmatn Bold}{12}{0x0138}
+\FBcase{onchar-effective-font}{\bfseries Aĸ}{Vazirmatn Bold}{12}{0x0138}
+\FBcase{sf-family}{\sffamily\bfseries Aĸ}{Vazirmatn Bold}{10}{0x0138}
+\FBcase{tt-family}{\ttfamily Aĸ}{DejaVu Sans Mono}{10}{0x0138}
+\FBcase{reverse-relation}{\foreignlanguage{persian}{\bfseries AΩ}}{TeXGyreTermes-Bold}{9}{0x03A9}
+\end{document}
