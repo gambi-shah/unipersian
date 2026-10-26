@@ -1,0 +1,69 @@
+% Compile twice with LuaLaTeX or XeLaTeX.
+\documentclass{article}
+\usepackage[svgnames]{xcolor}
+\usepackage{minted}
+\usepackage{unipersian}
+\usepackage{unipersian-listings}
+\let\listingsfa\fa
+\usepackage{unipersian-minted}
+\settextfont{HM XNiloofar}
+\setlatinmonofont{JetBrains Mono}
+\setpersianmonofont[ItalicFont={Vazir Code},BoldFont={Vazir Code}]{Vazir Code}
+\setminted{escapeinside=||,breaklines,breakanywhere,fontsize=\small,
+    bgcolor=Gold,bgcolorpadding=0.5em}
+\newcounter{shouldnotrun}
+\newcommand{\neverexecute}{\stepcounter{shouldnotrun}}
+\newcommand{\checkmintedlanguage}[1]{%
+    \edef\actualmintedlanguage{\languagename}%
+    \ifdefstring{\actualmintedlanguage}{#1}{}{%
+        \PackageError{unipersian-minted-test}{Language leaked: \languagename}{}%
+    }%
+}
+\begin{filecontents*}[overwrite]{\jobname.py}
+name = |\minteden[s]{\textquotedbl\mintedfa{سلام دنیا!}\textquotedbl}|
+value = 123
+\end{filecontents*}
+
+\begin{document}
+متن فارسی پیش از کد 123
+\ifx\fa\listingsfa\else
+    \PackageError{unipersian-minted-test}{The listings command was changed}{}%
+\fi
+
+\begin{minted}[textlanguage=english,linenos,firstnumber=12,
+    formatcom=\checkmintedlanguage{english}]{latex}
+|\mintedfa{این روش در \minteden{\mintedcs{\lr}\{Chapter 2 (Examples)\}} توضیح داده شده است.}|
+A Persian phrase: \rl{|\mintedfa{کتاب (مفرد)}|}.
+|\mintedcs{\neverexecute}|
+\end{minted}
+
+\begin{minted}[textlanguage=persian,
+    formatcom=\checkmintedlanguage{persian}]{text}
+این یک عبارت فارسی با |\minteden{Chapter 2 (Examples)}| است.
+\end{minted}
+
+\begin{minted}[texcomments,textlanguage=english]{python}
+# \mintedfa{توضیح فارسی با (پرانتز)}
+name = |\minteden[s]{\textquotedbl\mintedfa{سلام دنیا!}\textquotedbl}|
+value = 123
+\end{minted}
+
+\begin{minted}[style=monokai,bgcolor=black!90,textlanguage=english]{latex}
+\lr{A native command}
+|\minteden{\mintedcs{\lr}\{An escaped command\}}|
+\end{minted}
+
+\begin{minted}[textlanguage=english]{text}
+A long English line can still break automatically before or after a short Persian phrase: |\mintedfa{کتاب (مفرد)}|, and this additional English text makes the example long enough to need automatic line wrapping.
+\end{minted}
+
+\inputminted[textlanguage=english]{python}{\jobname.py}
+\mintinline[bgcolor={}]{text}{A normal inline example 123.}
+\ifnum\value{shouldnotrun}=0\else
+    \PackageError{unipersian-minted-test}{A displayed command was executed}{}%
+\fi
+\ifx\fa\listingsfa\else
+    \PackageError{unipersian-minted-test}{The listings command was changed}{}%
+\fi
+متن فارسی پس از کد 123
+\end{document}

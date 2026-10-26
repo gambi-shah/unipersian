@@ -330,3 +330,6 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 __pycache__/
+
+# Root-level text files
+/*.txt

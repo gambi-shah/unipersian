@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\usepackage[
+encodings={LGR},
+main=farsi
+]{unipersian}
+
+\usepackage{serto}
+
+\begin{document}
+    
+    این متن فارسی است.
+    
+    This is English text.
+    
+    \foreignlanguage{greek}{Καλημέρα κόσμε!}
+    
+    {\serto\beginR \uppersyriac{2}{x}z \uppersyriac{1}{\char148{}}\uppersyriac{3}{L}l\uppersyriac{2}{\char153{}}B M\char159{}A \uppersyriac{2}{\char155{}}\char155{}\uppersyriac{1}{\char148{}}\uppersyriac{1}{L}\char151{}\endR}
+    
+    این متن فارسی پس از سریانی است.
+    
+\end{document}

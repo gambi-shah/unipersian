@@ -24,65 +24,70 @@
 
 
 \ProvidesFile{unipersian-fonts.def}
-[2026/09/23 v0.2.0 Common definitions for fonts in XeTeX and LuaTeX]
+[2026/10/18 v0.3.0 Common definitions for fonts in XeTeX and LuaTeX]
 
 
 
 \makeatletter
 
 
-\providecommand{\persianmainlanguage}{persian}
-
 \ifLuaTeX
-    \input{unipersian-fonts-fallback.def}
+    \fontfallback{english}{persian}
+    \fontfallback{persian}{english}
 \fi
 
 % --------------------------------------
-% Main Persian and Latin fonts
+% Main fonts
 % --------------------------------------
 
-\NewDocumentCommand{\settextfont}{O{} m}{%
+\NewCommandCopy\uper@settextfont\settextfont
+
+\RenewDocumentCommand{\settextfont}{O{} m}{%
+    \ifXeTeX
+        \ifx\bbl@main@language\uper@per
+            \uper@settextfont
+            [Mapping=farsidigits,#1]{#2}%
+        \else
+            \uper@settextfont
+            [#1]{#2}%
+        \fi
+    \else
+        \uper@settextfont
+        [#1]{#2}%
+    \fi
+}
+
+\NewDocumentCommand{\setpersiantextfont}{O{} m}{%
     \ifXeTeX
         \babelfont[persian]{rm}%
         [Mapping=farsidigits,#1]{#2}%
         \babelfont[persian]{sf}%
         [Mapping=farsidigits,#1]{#2}
+        \babelfont[persian]{tt}%
+        [Mapping=farsidigits,#1]{#2}
     \else
-        \def\uper@persianrmfont{#2}%
-        \def\uper@persianrmoptions{#1}%
-        \def\uper@persiansffont{#2}%
-        \def\uper@persiansfoptions{#1}%
         \babelfont[persian]{rm}[#1]{#2}%
         \babelfont[persian]{sf}[#1]{#2}%
-        \uper@update@fallbacks
+        \babelfont[persian]{tt}[#1]{#2}%
     \fi
 }
 
-\NewDocumentCommand{\setlatintextfont}{O{} m}{%
-    \ifLuaTeX
-        \def\uper@latinrmfont{#2}%
-        \def\uper@latinrmoptions{#1}%
-        \def\uper@latinsffont{#2}%
-        \def\uper@latinsfoptions{#1}%
-    \fi
-    \babelfont[english]{rm}[#1]{#2}%
-    \babelfont[english]{sf}[#1]{#2}%
-    \ifLuaTeX
-        \uper@update@fallbacks
-    \fi
-}
 
+\DeclareDocumentCommand \defpersianfont { m o m }
+{
+    \newfontfamily#1{#3}[Script=Arabic,Renderer=Harfbuzz,#2]
+}
 
 % ------------------------------------------
 % Default fonts
 % ------------------------------------------
 \ifnum\bbl@bidimode>\@ne
     % هر bidi غیر از default
-    \IfFontExistsTF{HM XNiloofar}{\settextfont{HM XNiloofar}}
-    {\IfFontExistsTF{Vazirmatn}{\settextfont[ItalicFont={Vazirmatn}]{Vazirmatn}}
-        {\IfFontExistsTF{Amiri}{\settextfont{Amiri}}
-            {\IfFontExistsTF{FreeSerif}{\settextfont{FreeSerif}}
-                {\IfFontExistsTF{Tahoma}{\settextfont{Tahoma}}
+    \IfFontExistsTF{HM XNiloofar}{\setpersiantextfont{HM XNiloofar}}
+    {\IfFontExistsTF{Vazirmatn}{\setpersiantextfont[ItalicFont={Vazirmatn}]{Vazirmatn}}
+        {\IfFontExistsTF{Amiri}{\setpersiantextfont{Amiri}}
+            {\IfFontExistsTF{FreeSerif}{\setpersiantextfont{FreeSerif}}
+                {\IfFontExistsTF{Tahoma}{\setpersiantextfont{Tahoma}}
                     {\typeout{Warning: No suitable Persian font found!}
                     }}}}}
 \fi
@@ -96,24 +101,14 @@
         \babelfont[persian]{sf}%
         [Mapping=farsidigits,#1]{#2}%
     \else
-        \def\uper@persiansffont{#2}%
-        \def\uper@persiansfoptions{#1}%
         \babelfont[persian]{sf}[#1]{#2}%
-        \uper@update@fallbacks
     \fi
 }
 
 \providecommand\persianttdefault{}
 
 \NewDocumentCommand{\setpersianmonofont}{O{} m}{%
-    \ifLuaTeX
-        \def\uper@persianmonofont{#2}%
-        \def\uper@persianmonooptions{#1}%
-    \fi
     \babelfont[persian]{tt}[#1]{#2}%
-    \ifLuaTeX
-        \uper@update@fallbacks
-    \fi
     \begingroup
     \selectlanguage{persian}%
     \ttfamily
@@ -122,79 +117,12 @@
 }
 
 
-
-\providecommand\persianttdefault{}
-
 \DeclareRobustCommand\persianttfamily{%
     \not@math@alphabet\persianttfamily\mathpersiantt
     \fontfamily\persianttdefault
     \selectfont
 }
 
-\DeclareTextFontCommand{\textpersiantt}{\persianttfamily}
-
-
-
-% --------------------------------------
-% Latin sans and monospaced fonts
-% --------------------------------------
-
-\NewDocumentCommand{\setlatinsansfont}{O{} m}{%
-    \ifLuaTeX
-        \def\uper@latinsffont{#2}%
-        \def\uper@latinsfoptions{#1}%
-    \fi
-    \babelfont[english]{sf}[#1]{#2}%
-    \ifLuaTeX
-        \uper@update@fallbacks
-    \fi
-}
-
-\providecommand\latinttdefault{}
-\providecommand\latinttfamily{}
-
-\NewDocumentCommand{\setlatinmonofont}{O{} m}{%
-    \ifLuaTeX
-        \def\uper@latinmonofont{#2}%
-        \def\uper@latinmonooptions{#1}%
-    \fi
-    \babelfont[english]{tt}[#1]{#2}%
-    \ifLuaTeX
-        \uper@update@fallbacks
-    \fi
-    \begingroup
-    \selectlanguage{english}%
-    \ttfamily
-    \xdef\latinttdefault{\f@family}%
-    \endgroup
-}
-
-\DeclareRobustCommand\latinttfamily{%
-    \not@math@alphabet\latinttfamily\mathtt
-    \fontfamily\latinttdefault
-    \selectfont
-    % \babeladjust{bidi.mapdigits=off}
-    \ifLuaTeX\setattribute\bbl@attr@locale 0\fi
-}
-
-\DeclareTextFontCommand{\textlatintt}{\latinttfamily}
-
-
-
-
-% --------------------------------------
-% User-defined Persian fonts
-% --------------------------------------
-
-\DeclareDocumentCommand \defpersianfont { m o m }
-{
-    \newfontfamily#1{#3}[Script=Arabic,Renderer=Harfbuzz,#2]
-}
-
-\DeclareDocumentCommand \deflatinfont { m o m }
-{
-    \newfontfamily#1{#3}[Script=Latin,#2]
-}
 
 
 \makeatother

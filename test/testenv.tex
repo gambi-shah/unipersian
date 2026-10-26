@@ -1,0 +1,99 @@
+\documentclass[]{book}
+\usepackage[testsdir=./csv]{testenv}
+\usetestlibrary{csv}
+
+
+\usepackage{babelbidi}
+\babelprovide[import]{english}
+\babelprovide[import,main]{arabic}
+
+\babelfont[arabic]{rm}{HM XNiloofar}
+\babelfont[english]{rm}{Latin Modern Roman}
+
+
+
+\begin{document}
+سلام
+
+\begin{test}[4]{
+    سوال اول
+    }{1405}{1}
+    \task\T
+    1
+    \task
+    2
+    \task
+    3
+    \task
+    4
+\end{test}
+
+\begin{ans}
+    پاسخ اول
+\end{ans}
+
+
+
+\begin{test}[4]{
+        سوال دوم
+    }{1405}{4}
+    \task\T
+    1
+    \task
+    2
+    \task
+    3
+    \task
+    4
+\end{test}
+
+\begin{ans}
+    پاسخ دوم
+\end{ans}
+
+
+
+
+
+\begin{test}[4]{
+        سوال سوم
+    }{1405}{3}
+    \task\T
+    1
+    \task
+    2
+    \task
+    3
+    \task
+    4
+\end{test}
+
+\begin{ans}
+    پاسخ سوم
+\end{ans}
+
+
+
+
+
+\begin{test}[4]{
+        سوال چهارم
+    }{1405}{2}
+    \task\T
+    1
+    \task
+    2
+    \task
+    3
+    \task
+    4
+\end{test}
+
+\begin{ans}
+    پاسخ چهارم
+\end{ans}
+
+
+\AnswerKeyFull
+
+\end{document}
